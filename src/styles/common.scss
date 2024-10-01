@@ -13,19 +13,6 @@ body {
 
 main {
   overflow: hidden;
-  padding: 85px 0 0;
-
-  @media (min-width: 701px) {
-    padding: 105px 0 0;
-  }
-
-  @media (min-width: 1101px) {
-    padding: 125px 0 0;
-  }
-
-  @media (min-width: 1401px) {
-    padding: 140px 0 0;
-  }
 }
 
 input {
