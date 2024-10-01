@@ -1,0 +1,58 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: red;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+main {
+  overflow: hidden;
+  padding: 85px 0 0;
+
+  @media (min-width: 701px) {
+    padding: 105px 0 0;
+  }
+
+  @media (min-width: 1101px) {
+    padding: 125px 0 0;
+  }
+
+  @media (min-width: 1401px) {
+    padding: 140px 0 0;
+  }
+}
+
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+iframe {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+}
