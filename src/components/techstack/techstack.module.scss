@@ -1,0 +1,23 @@
+.root {
+  background: var(--black);
+  padding: 40px;
+  margin: 40px 0;
+  border-radius: var(--radiusS);
+  color: var(--white);
+
+  .items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .item {
+      background: #353535;
+      padding: 20px 35px;
+      border-radius: var(--radiusL);
+      color: var(--white);
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}

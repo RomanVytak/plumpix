@@ -1,0 +1,17 @@
+.root {
+  background: var(--plump);
+  padding: 40px;
+  border-radius: var(--radiusS);
+  margin: 40px 0;
+  color: var(--white);
+
+  .slider {
+    color: var(--black);
+
+    .slide {
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radiusS);
+    }
+  }
+}
