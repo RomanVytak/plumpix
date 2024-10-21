@@ -1,7 +1,7 @@
-import { Button } from "../../../components/button/button"
+import { Button } from "../button/button"
 import s from './home.module.scss'
 
-export const HomeStep = () => {
+export const HomeText = () => {
   return (
     <div className={s.root}>
       <h1>{`Custom Software Product Development Company`}</h1>

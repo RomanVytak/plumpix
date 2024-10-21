@@ -1,12 +1,18 @@
+@import 'src/styles/mixin.scss';
+
 .root {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  @include maxWrap;
 
   .logo {
-    width: auto;
-    height: auto;
+    display: flex;
+
+    img {
+      width: auto;
+      height: auto;
+    }
   }
 
   .menu {
@@ -18,6 +24,7 @@
       padding: 20px 35px;
       border-radius: var(--radiusL);
       text-decoration: none;
+      color: #8987A1;
 
       &:hover {
         background: var(--plump);

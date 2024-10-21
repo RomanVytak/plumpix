@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  background: var(--gray);
+  border-radius: var(--radiusL);
+
+  a {
+    padding: 20px 35px;
+    border-radius: var(--radiusL);
+    transition: background var(--transition), color var(--transition);
+    text-decoration: none;
+    color: #8987A1;
+
+    &:hover {
+      background: var(--plump);
+      color: var(--white);
+    }
+  }
+}

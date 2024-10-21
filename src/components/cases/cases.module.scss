@@ -1,4 +1,8 @@
+@import 'src/styles/mixin.scss';
+
 .root {
+  @include maxWrap;
+
   .items {
     display: flex;
     flex-direction: column;
@@ -9,7 +13,7 @@
       gap: 15px;
 
       .image {
-        width: 40%;
+        width: 35%;
         border-radius: var(--radiusS);
         overflow: hidden;
         aspect-ratio: 402 / 428;
@@ -22,7 +26,7 @@
       }
 
       .content {
-        width: 60%;
+        width: 65%;
         background: var(--gray);
         padding: 40px;
         border-radius: var(--radiusS);

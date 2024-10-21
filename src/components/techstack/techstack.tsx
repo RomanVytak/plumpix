@@ -3,31 +3,59 @@ import s from './techstack.module.scss'
 
 const temp = [
   {
-    icon: '/icons/techstack/ts.svg',
-    name: 'React.JS',
+    icon: '/icons/techstack/react.svg',
+    name: 'React',
   },
   {
-    icon: '/icons/techstack/ts.svg',
-    name: 'Next.JS',
+    icon: '/icons/techstack/next.svg',
+    name: 'Next.js',
   },
   {
-    icon: '/icons/techstack/ts.svg',
-    name: 'WordPress',
-  },
-  {
-    icon: '/icons/techstack/ts.svg',
+    icon: '/icons/techstack/typescript.svg',
     name: 'TypeScript',
   },
   {
-    icon: '/icons/techstack/ts.svg',
+    icon: '/icons/techstack/node.svg',
+    name: 'Node.js',
+  },
+  {
+    icon: '/icons/techstack/angular.svg',
+    name: 'Angular',
+  },
+  {
+    icon: '/icons/techstack/vue.svg',
+    name: 'Vue',
+  },
+  {
+    icon: '/icons/techstack/python.svg',
+    name: 'Python',
+  },
+  {
+    icon: '/icons/techstack/aws.svg',
+    name: 'AWS',
+  },
+  {
+    icon: '/icons/techstack/gcp.svg',
+    name: 'GCP',
+  },
+  {
+    icon: '/icons/techstack/azure.svg',
+    name: 'Azure',
+  },
+  {
+    icon: '/icons/techstack/wordpress.svg',
+    name: 'WordPress',
+  },
+  {
+    icon: '/icons/techstack/laravel.svg',
     name: 'Laravel',
   },
   {
-    icon: '/icons/techstack/ts.svg',
+    icon: '/icons/techstack/symphony.svg',
     name: 'Symphony',
   },
   {
-    icon: '/icons/techstack/ts.svg',
+    icon: '/icons/techstack/net.svg',
     name: '.NET',
   },
 ]
@@ -39,7 +67,7 @@ export const TechStack = () => {
       <div className={s.items}>
         {temp.map((t) => {
           return (
-            <div className={s.item}>
+            <div key={t.name} className={s.item}>
               <Image src={t.icon} alt={t.name} width={30} height={30} />
               <span>{t.name}</span>
             </div>

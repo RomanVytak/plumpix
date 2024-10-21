@@ -1,4 +1,8 @@
+@import 'src/styles/mixin.scss';
+
 .root {
+  @include maxWrap;
+
   .wrap {
     display: flex;
     gap: 12px;

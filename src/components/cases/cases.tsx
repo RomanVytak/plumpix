@@ -2,36 +2,12 @@ import Image from 'next/image'
 import { Button } from '../button/button'
 import s from './cases.module.scss'
 
-const temp = [
-  {
-    image: '/img/cases/case.jpg',
-    name: 'Corporate EdTech Solution',
-    tags: ['Team Extension', 'Team: 4', 'Duration: 12+ month'],
-    text: 'Learning management platform assists companies in their change management and employee training efforts. Users can create courses, upload videos, track progress of their employees and integrate quizzes and forms into the platform.',
-    link: '#',
-  },
-  {
-    image: '/img/cases/case.jpg',
-    name: 'Corporate EdTech Solution',
-    tags: ['Team Extension', 'Team: 4', 'Duration: 12+ month'],
-    text: 'Learning management platform assists companies in their change management and employee training efforts. Users can create courses, upload videos, track progress of their employees and integrate quizzes and forms into the platform.',
-    link: '#',
-  },
-  {
-    image: '/img/cases/case.jpg',
-    name: 'Corporate EdTech Solution',
-    tags: ['Team Extension', 'Team: 4', 'Duration: 12+ month'],
-    text: 'Learning management platform assists companies in their change management and employee training efforts. Users can create courses, upload videos, track progress of their employees and integrate quizzes and forms into the platform.',
-    link: '#',
-  },
-]
-
-export const Cases = () => {
+export const Cases = ({ data }) => {
   return (
     <div className={s.root}>
       <h2>{`Our cases of software product development service`}</h2>
       <div className={s.items}>
-        {temp.map((t) => {
+        {data.map((t) => {
           return (
             <div key={t.name} className={s.item}>
               <div className={s.image}>
@@ -42,7 +18,7 @@ export const Cases = () => {
                 <div className={s.tags}>
                   {t.tags.map((tag) => {
                     return (
-                      <span>{tag}</span>
+                      <span key={tag}>{tag}</span>
                     )
                   })}
                 </div>

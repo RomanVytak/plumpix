@@ -1,7 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import 'normalize.css/normalize.css';
-import '../styles/common.scss';
+import '@/styles/common.scss';
 import { Raleway } from 'next/font/google';
 import Head from 'next/head';
 
@@ -32,6 +32,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
             --radiusS: 25px;
             --radiusL: 42px;
+
+            --transition: 0.2s ease;
           }
           body {
             font-family: ${ralewayFont.style.fontFamily};

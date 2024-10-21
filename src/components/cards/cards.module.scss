@@ -1,0 +1,18 @@
+@import 'src/styles/mixin.scss';
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  @include maxWrap;
+
+  .card {
+    background: var(--gray);
+    border-radius: var(--radiusS);
+    padding: 36px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

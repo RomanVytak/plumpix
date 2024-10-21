@@ -29,14 +29,14 @@ export const Tabs = ({ title }: { title?: string }) => {
         <div className={s.tabs}>
           {temp.map((t) => {
             return (
-              <div className={s.tab}>{t.tab}</div>
+              <div key={t.name} className={s.tab}>{t.tab}</div>
             )
           })}
         </div>
         <div className={s.content}>
           {temp.map((t) => {
             return (
-              <div>
+              <div key={t.name}>
                 <h3>{t.name}</h3>
                 <p>{t.text}</p>
               </div>

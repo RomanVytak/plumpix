@@ -1,19 +1,26 @@
+@import 'src/styles/mixin.scss';
+
 .root {
   background: var(--black);
-  padding: 40px;
+  padding: 50px 40px;
   margin: 40px 0;
   border-radius: var(--radiusS);
   color: var(--white);
+  @include maxWrap;
 
   .items {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 40px 0 0 0;
 
     .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       background: #353535;
-      padding: 20px 35px;
+      padding: 10px 20px;
       border-radius: var(--radiusL);
       color: var(--white);
       font-weight: 600;
