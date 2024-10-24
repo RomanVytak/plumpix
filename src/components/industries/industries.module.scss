@@ -1,0 +1,14 @@
+@import 'src/styles/mixin.scss';
+
+.root {
+  @include maxWrap;
+
+  .items {
+    display: flex;
+
+    .item {
+      background: var(--gray);
+      border-radius: var(--radiusS);
+    }
+  }
+}

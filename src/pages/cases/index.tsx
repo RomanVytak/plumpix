@@ -1,11 +1,11 @@
 import { Cases } from "../../components/cases/cases"
-import { cases_home } from "../../data"
 import Layout from "../../layout"
+import { cases } from "./_/data"
 
 const CasesPage = () => {
   return (
     <Layout>
-      <Cases data={cases_home} />
+      <Cases data={cases} />
     </Layout>
   )
 }

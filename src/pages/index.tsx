@@ -1,22 +1,24 @@
 import { Cards } from "../components/cards/cards"
 import { Cases } from "../components/cases/cases"
 import { Form } from "../components/form/form"
-import { HomeText } from "../components/home/home"
+import { HomeText } from "../components/homeText/homeText"
+import { Industries } from "../components/industries/industries"
 import { Reviews } from "../components/reviews/reviews"
 import { Tabs } from "../components/tabs/tabs"
 import { TechStack } from "../components/techstack/techstack"
-import { cases_home, offers_home } from "../data"
+import { offers_home } from "../data"
 import Layout from "../layout"
+import { cases } from "./cases/_/data"
 
 const Home = () => {
   return (
     <Layout>
       <HomeText />
-      <TechStack />
-      <Cards data={offers_home} />
+      <Cards title="Some title" data={offers_home} />
       <Reviews />
-      <Cases data={cases_home} />
-      <Tabs title="Stages of our  development process" />
+      <Cases data={cases} />
+      <Industries />
+      <TechStack />
       <Form />
     </Layout>
   )

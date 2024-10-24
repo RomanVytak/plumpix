@@ -1,7 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import 'normalize.css/normalize.css';
-import '@/styles/common.scss';
+import '/src/styles/common.scss';
 import { Raleway } from 'next/font/google';
 import Head from 'next/head';
 

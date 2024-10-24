@@ -1,5 +1,5 @@
 import { Button } from "../button/button"
-import s from './home.module.scss'
+import s from './homeText.module.scss'
 
 export const HomeText = () => {
   return (

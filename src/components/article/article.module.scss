@@ -1,0 +1,32 @@
+@import 'src/styles/mixin.scss';
+
+.root {
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  @include maxWrap;
+
+  .text {
+    width: 70%;
+
+    h2 {
+      max-width: 660px;
+    }
+
+    p {
+      max-width: 580px;
+    }
+  }
+
+  .image {
+    width: 30%;
+    background: var(--plump);
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

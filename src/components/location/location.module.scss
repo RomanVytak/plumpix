@@ -1,9 +1,10 @@
 @import 'src/styles/mixin.scss';
 
 .root {
-  background: var(--black);
-  border-radius: var(--radiusS);
+  background: var(--plump);
   padding: 40px;
+  border-radius: var(--radiusS);
+  margin: 40px 0;
   color: var(--white);
   @include maxWrap;
 }
