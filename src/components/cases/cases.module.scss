@@ -7,16 +7,28 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include titleItems;
 
     .item {
       display: flex;
-      gap: 15px;
+      flex-direction: column;
+      background: var(--gray);
+      border-radius: var(--radiusS);
+
+      @media (min-width: 801px) {
+        padding: 15px;
+        flex-direction: row;
+      }
 
       .image {
-        width: 35%;
         border-radius: var(--radiusS);
         overflow: hidden;
-        aspect-ratio: 402 / 428;
+        aspect-ratio: 3 / 1.6;
+
+        @media (min-width: 801px) {
+          width: 35%;
+          aspect-ratio: 402 / 428;
+        }
 
         img {
           width: 100%;
@@ -26,11 +38,51 @@
       }
 
       .content {
-        width: 65%;
-        background: var(--gray);
-        padding: 40px;
-        border-radius: var(--radiusS);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (min-width: 801px) {
+          width: 65%;
+          padding: 40px;
+        }
+
+        h2 {
+          margin: 0 0 15px;
+        }
+
+        .tags {
+          margin: 0 0 15px;
+
+          @media (min-width: 801px) {
+            margin: 0 0 30px;
+          }
+        }
+
+        .button {
+          margin: 20px 0 0;
+
+          @media (min-width: 801px) {
+            margin: 80px 0 0;
+          }
+        }
       }
     }
+  }
+}
+
+.caseContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  @include maxWrap;
+
+  .leftContent {
+    width: 40%;
+  }
+
+  .rightContent {
+    width: 60%;
   }
 }

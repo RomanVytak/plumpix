@@ -28,13 +28,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             --plump: #4D62C2;
             --white: #fff;
             --black: #000;
-            --gray: #F7F7F7;
+            --gray: #F5F5F5;
 
-            --radiusS: 25px;
+            --radiusS: clamp(10px, 2vw + 5px, 25px);
             --radiusL: 42px;
 
             --transition: 0.2s ease;
+
+            --paddingTag: clamp(10px, 2vw + 4px, 15px) clamp(20px, 2.5vw + 5px, 25px);
           }
+
           body {
             font-family: ${ralewayFont.style.fontFamily};
           }

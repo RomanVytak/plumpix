@@ -1,5 +1,5 @@
 import { Form } from "../../components/form/form"
-import Layout from "../../layout"
+import Layout from "../../layout/layout"
 
 const Contacts = () => {
   return (

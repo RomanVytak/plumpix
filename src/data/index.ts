@@ -1,40 +1,22 @@
 export const offers_home = [
   {
-    title: '111 Custom Software Developmen',
-    text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
-    button: 'Learn more',
-    link: '#',
-  },
-  {
-    title: 'Custom Software Developme',
-    text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
-    button: 'Learn more',
-    link: '#',
-  },
-  {
-    title: 'Custom Software Developm',
-    text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
-    button: 'Learn more',
-    link: '#',
-  },
-  {
-    title: 'Custom Software Develop',
-    text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
-    button: 'Learn more',
-    link: '#',
-  },
-  {
     title: 'Custom Software Development',
-    text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
+    text: 'to deliver personalized solutions that meet your business requirements and enhance overall efficiency',
     button: 'Learn more',
     link: '#',
   },
   {
-    title: 'Custom Software Develo',
-    text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
+    title: 'Dedicated Development Team',
+    text: 'Expertly managed dedicated engineering teams customized to meet your technology-driven requirements',
     button: 'Learn more',
     link: '#',
-  }
+  },
+  {
+    title: 'Custom Software Reengineering',
+    text: 'Enhancing your software solution by modernizing legacy systems and optimizing infrastructure',
+    button: 'Learn more',
+    link: '#',
+  },
 ]
 
 // export const cases_home = [

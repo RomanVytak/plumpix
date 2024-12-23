@@ -1,3 +1,4 @@
 import { cases } from "./data";
 
-export type CaseProps = typeof cases[0]
+export type CasesProps = typeof cases;
+export type CaseProps = CasesProps[0];

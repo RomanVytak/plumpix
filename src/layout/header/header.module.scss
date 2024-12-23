@@ -1,16 +1,32 @@
 @import 'src/styles/mixin.scss';
 
 .root {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @include maxWrap;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+  background: var(--white);
+  transition: transform var(--transition);
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include maxWrap;
+  }
 
   .logo {
     display: flex;
+    width: 140px;
 
     img {
-      width: auto;
+      width: 100%;
       height: auto;
     }
   }

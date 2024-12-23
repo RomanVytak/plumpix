@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @media (min-width: 801px) {
+    gap: 15px;
+  }
+
+  span {
+    background: var(--white);
+    padding: var(--paddingTag);
+    border-radius: var(--radiusL);
+    font-weight: 600;
+    text-align: center;
+
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+  }
+}

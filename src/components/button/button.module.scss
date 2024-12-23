@@ -1,9 +1,21 @@
 .root {
-  display: inline-block;
   background: var(--plump);
-  padding: 20px 35px;
+  padding: var(--paddingTag);
   border-radius: var(--radiusL);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   color: var(--white);
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
+
+  &.circle {
+    padding: clamp(12px, 2vw + 5px, 18px);
+  }
+
+  &.big {
+    padding: clamp(14px, 2vw + 5px, 20px) clamp(20px, 2.5vw + 5px, 35px);
+  }
 }

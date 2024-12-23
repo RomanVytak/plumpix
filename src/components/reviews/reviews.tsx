@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
 import 'swiper/css'
 import s from './reviews.module.scss'
+import glp from '../../styles/pagination.module.scss'
 import Image from 'next/image'
 import { Button } from '../button/button'
 
@@ -51,32 +53,53 @@ export const Reviews = () => {
   return (
     <div className={s.root}>
       <div className={s.wrap}>
-        <h2>What our clients say about PlumPix</h2>
+        <h2>{`What our clients say about PlumPix`}</h2>
 
         <div className={s.slider}>
           <Swiper
-            slidesPerView={3}
+            modules={[Pagination]}
+            pagination={{
+              el: '#pagination',
+              type: 'bullets',
+              bulletActiveClass: `${glp.active}`,
+            }}
+            slidesPerView={1.2}
             spaceBetween={12}
+            breakpoints={{
+              801: {
+                slidesPerView: 2,
+              },
+              1101: {
+                slidesPerView: 3,
+              }
+            }}
           >
             {temp.map((t) => {
               return (
-                <SwiperSlide key={t.name} className={s.slide}>
+                <SwiperSlide
+                  key={t.name}
+                  className={s.slide}
+                >
                   <div className={s.info}>
                     <Image src={t.image} alt={t.name} width={100} height={100} />
-                    <div className={s.wrap}>
-                      <p className={s.name}>{t.name}</p>
+                    <div className={s.nameWrap}>
+                      <h3 className={s.name}>{t.name}</h3>
                       <p className={s.position}>{t.position}</p>
                     </div>
                   </div>
-                  <div className={s.text}>{t.text}</div>
+                  <p className={s.text}>
+                    <Image src="/icons/quote.svg" alt="quote icon" width={18} height={15} />
+                    {t.text}
+                    </p>
                   <div className={s.buttons}>
                     <a className={s.site} href='#' target='_blank'>site here?</a>
-                    <Button href="#" />
+                    <Button href="#" str={true} />
                   </div>
                 </SwiperSlide>
               )
             })}
           </Swiper>
+          <div id="pagination" className={glp.pagination} />
         </div>
       </div>
     </div>

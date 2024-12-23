@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Button } from '../button/button'
 import s from './cases.module.scss'
 import { CaseProps } from '../../pages/cases/_/types'
+import { Tags } from '../tags/tags'
 
 export const Cases = ({ data }: { data: CaseProps[] }) => {
   return (
@@ -17,16 +18,14 @@ export const Cases = ({ data }: { data: CaseProps[] }) => {
               <div className={s.content}>
                 <h2>{t.home.name}</h2>
                 <div className={s.tags}>
-                  {t.home.tags.map((tag) => {
-                    return (
-                      <span key={tag}>{tag}</span>
-                    )
-                  })}
+                  <Tags tags={t.home.tags} />
                 </div>
-                <div className={s.text}>
+                <p className={s.text}>
                   {t.about}
+                </p>
+                <div className={s.button}>
+                  <Button href={`cases/${t.slug}`}>{`Learn more`}</Button>
                 </div>
-                <Button href={`cases/${t.slug}`}>Learn more</Button>
               </div>
             </div>
           )
