@@ -26,7 +26,7 @@ const progress = [
 export const HomeText = () => {
   return (
     <section className={css.intro}>
-      <div className="wrapper">
+      <div className="wrapper" data-wrapper>
         <div className={css.wrapper}>
           <h1>{data.title}</h1>
           <p className={css.text}>{data.text}</p>

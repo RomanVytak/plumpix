@@ -14,7 +14,9 @@ body {
 
 main {
   overflow: hidden;
+  padding-top: min-max(60, 90);
 
+  // TODO: remove after refactoring
   > div {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -40,7 +42,7 @@ section {
 .wrapper {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1680px;
   padding-inline: min-max(16, 110);
 }
 
@@ -107,6 +109,7 @@ a {
   background-color: var(--color);
 }
 
+// TODO: remove after refactoring
 input {
   border-radius: 0;
   -webkit-appearance: none;

@@ -1,12 +1,11 @@
 import { Cases } from "../../components/cases/cases"
-import Layout from "../../layout/layout"
 import { cases } from "./_/data"
 
 const CasesPage = () => {
   return (
-    <Layout>
+    <>
       <Cases data={cases} />
-    </Layout>
+    </>
   )
 }
 

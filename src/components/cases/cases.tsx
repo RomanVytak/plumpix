@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Button } from '../button/button'
 import s from './cases.module.scss'
 import { CaseProps } from '../../pages/cases/_/types'
 import { Tags } from '../tags/tags'

@@ -1,7 +1,12 @@
 @import "src/styles/common";
 
 .intro {
-  min-height: 100vh;
+  min-height: calc(100vh - min-max(60, 90));
+
+
+  [data-wrapper] {
+    padding-block: min-max(40, 60);
+  }
 
   .wrapper {
     max-width: min-max(500, 650);

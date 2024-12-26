@@ -8,9 +8,7 @@ import { TechStack } from "../components/techstack/techstack"
 import { offers_home } from "../data"
 import { cases } from "./cases/_/data"
 
-const formData = {
-  title: 'Let’s discuss your project'
-}
+
 
 const Home = () => {
   return (
@@ -21,7 +19,7 @@ const Home = () => {
       <Cases data={cases} />
       <Industries />
       <TechStack />
-      <Form data={formData} />
+      <Form />
     </>
   )
 }

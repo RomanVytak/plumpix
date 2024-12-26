@@ -1,22 +1,35 @@
-import Image from 'next/image'
 import css from './header.module.scss'
-import { Button } from '../../components/button/button'
 import { Menu } from '../menu/menu'
 import Link from 'next/link'
-import clsx from 'clsx'
-import { EScrollDirection, useGetScrollPosition } from '../../hooks'
+// import clsx from 'clsx'
+// import { EScrollDirection, useGetScrollPosition } from '../../hooks'
 import { PlumpixLogo } from '../../components/logo/logo'
 import { MyLink } from '../../components/link/link'
+import { useEffect, useState } from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 
 export const Header = () => {
-  const scrollDirection = useGetScrollPosition();
+  const [isDown, setDirection] = useState(false)
 
-  const prevClass = clsx(css.root, {
-    [css.hide]: scrollDirection === EScrollDirection.DOWN
-  })
+  useEffect(() => {
+    let st = null;
+
+    setTimeout(() => {
+      st = ScrollTrigger.create({
+        onUpdate: self => setDirection(self.direction === 1)
+      });
+    }, 1000)
+
+    return () => {
+      st && st.kill();
+    }
+  }, [])
 
   return (
-    <header className={css.header}>
+    <header className={css.header} {...isDown ? { 'data-hide': 'true' } : {}}>
       <div className={`wrapper ${css.wrapper}`}>
         <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo'>
           <PlumpixLogo />

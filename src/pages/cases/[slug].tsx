@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from "next/types";
-import Layout from "../../layout/layout";
 import { cases } from "./_/data";
 import { CaseHome } from "../../components/caseHome/caseHome";
 import gls from '../../components/cases/cases.module.scss'
@@ -46,7 +45,7 @@ const Case = ({ post }: { post: CaseProps }) => {
   }, [isMatches]);
 
   return (
-    <Layout>
+    <>
       <CaseHome data={post.home} />
       <div className={gls.caseContent}>
         <div className={gls.leftContent} ref={sidebarRef}>
@@ -59,7 +58,7 @@ const Case = ({ post }: { post: CaseProps }) => {
         </div>
       </div>
       <Slider data={post.slider} />
-    </Layout>
+    </>
   )
 }
 

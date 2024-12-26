@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { Button } from "../button/button"
 import s from './article.module.scss'
+import { MyLink } from "../link/link"
 
 type ArticleProps = {
   title: string
@@ -17,7 +17,7 @@ export const Article = ({ data }: { data: ArticleProps }) => {
         <h2>{data.title}</h2>
         <p>{data.text}</p>
         {data.button && data.link && (
-          <Button href={data.link}>{data.button}</Button>
+          <MyLink href={data.link} title={data.button}>{data.button}</MyLink>
         )}
       </div>
       <div className={s.image}>

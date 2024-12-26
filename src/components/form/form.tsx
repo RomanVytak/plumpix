@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FormLabels } from './components/Form'
 import css from './form.module.scss'
 
 type Props = {
-  data: {
-    title: string
+  data?: {
+    title?: string
     subtitle?: string
   }
 
@@ -24,6 +24,9 @@ const labels = {
   }
 
 }
+
+const defTitle = 'Let’s discuss your project';
+
 
 export const Form = ({ data }: Props) => {
   const [submiting, setSubmiting] = useState(false)
@@ -45,7 +48,7 @@ export const Form = ({ data }: Props) => {
 
             <div className={css.ceo}>
               <a href='/' target='_blank' className={`${css.link} font_18`} >
-              <img src="/socials/linkedin.svg" alt="Roman Vytak" />
+                <img src="/socials/linkedin.svg" alt="Roman Vytak" />
                 Roman Vytak
               </a>
               <p>CEO in PlumPi</p>
@@ -53,7 +56,7 @@ export const Form = ({ data }: Props) => {
 
           </div>
           <div className={css.wrap_form}>
-            <h2 className={data?.subtitle ? '' : 'font_48'}>{data?.title}</h2>
+            <h2 className={data?.subtitle ? '' : 'font_48'}>{data?.title || defTitle}</h2>
             {data?.subtitle && <p>{data.subtitle}</p>}
 
             <form onSubmit={onSubmit} >
