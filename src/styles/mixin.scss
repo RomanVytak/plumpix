@@ -1,5 +1,5 @@
 @mixin maxWrap {
-  max-width: 1200px;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
   // padding: 0 15px;
@@ -15,7 +15,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 
-    >div {
+    > div {
       flex: 0 0 80%;
       scroll-snap-align: start;
     }

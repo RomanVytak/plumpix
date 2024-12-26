@@ -1,0 +1,24 @@
+@import "src/styles/common";
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  text-align: center;
+  border-radius: min-max(32, 42);
+  @include font_18;
+  transition: var(--transition);
+
+  &.big {
+    padding: min-max(14, 16) min-max(24, 32);
+  }
+
+  &.color {
+    background: var(--plump);
+
+    @include hover {
+      background: #5972e5;
+    }
+  }
+}

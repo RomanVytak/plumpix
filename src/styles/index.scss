@@ -1,0 +1,83 @@
+@import "common";
+@import "global";
+@import "modern-normalize/modern-normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: var(--black);
+  @include font_16;
+}
+
+main {
+  overflow: hidden;
+
+  > div {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (min-width: 801px) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    padding: min-max(40, 60) min-max(16, 110) min-max(40, 110);
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.site-logo {
+  width: min-max(100, 141);
+  display: flex;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.mask_arrow {
+  --bg: var(--plump);
+  width: min-max(16, 20);
+  aspect-ratio: 1;
+  flex: none;
+  mask: url("/icons/arrow-right.svg") no-repeat center;
+  transition: var(--transition);
+  background-color: var(--bg);
+}
+
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+iframe {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+}

@@ -1,24 +1,61 @@
 import Link from 'next/link'
-import s from './menu.module.scss'
 
-export const Menu = () => {
+const dataMenu = [
+  {
+    title: 'Our work',
+    link: '/cases'
+  },
+  {
+    title: 'What we do',
+    link: '#',
+    sub: [
+      {
+        title: 'Custom Software Development',
+        link: '/custom-software-development'
+      },
+      {
+        title: 'Build Dedicated Development Team',
+        link: '/dedicated-team'
+      }
+    ]
+  },
+  {
+    title: 'About us',
+    link: '/about'
+  }
+
+]
+
+export const Menu = ({ showSubPages = true }) => {
   return (
-    <div className={s.root}>
+    <menu >
       <ul>
-        <li>
-          <Link href="/cases">Our work</Link>
-        </li>
-        <li>
-          <Link href="#">What we do</Link>
-          <ul className={s.sub}>
-            <li><Link href="/custom-software-development">Custom Software Development</Link></li>
-            <li><Link href="/dedicated-team">Build Dedicated Development Team</Link></li>
-          </ul>
-        </li>
-        <li>
-          <Link href="/about">About us</Link>
-        </li>
+        {
+          dataMenu.map((t) => {
+            return (
+              <li key={t.title}
+                {...(t.sub && showSubPages ? { 'data-has-sub': 'true' } : {})}
+              >
+                <Link href={t.link} data-page>{t.title}</Link>
+                {t.sub && showSubPages && (
+                  <div data-sub-menu>
+
+                    <ul data-sub >
+                      {t.sub.map((sub) => {
+                        return (
+                          <li key={sub.title}>
+                            <Link href={sub.link} data-subpage>{sub.title}</Link>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </div>
+                )}
+              </li>
+            )
+          })
+        }
       </ul>
-    </div>
+    </menu>
   )
 }

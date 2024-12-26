@@ -6,12 +6,11 @@ import { Industries } from "../components/industries/industries"
 import { Reviews } from "../components/reviews/reviews"
 import { TechStack } from "../components/techstack/techstack"
 import { offers_home } from "../data"
-import Layout from "../layout/layout"
 import { cases } from "./cases/_/data"
 
 const Home = () => {
   return (
-    <Layout>
+    <>
       <HomeText />
       <Cards title="What we can provide for you" data={offers_home} />
       <Reviews />
@@ -19,7 +18,7 @@ const Home = () => {
       <Industries />
       <TechStack />
       <Form />
-    </Layout>
+    </>
   )
 }
 

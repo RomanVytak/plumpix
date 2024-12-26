@@ -1,16 +1,16 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
-import 'normalize.css/normalize.css';
-import '/src/styles/common.scss';
-import { Raleway } from 'next/font/google';
+import '/src/styles/index.scss';
+// import { Raleway } from 'next/font/google';
 import Head from 'next/head';
+import Layout from '../layout/layout';
 
-export const ralewayFont = Raleway({
-  weight: ['400', '600', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+// export const ralewayFont = Raleway({
+//   weight: ['400', '600', '700'],
+//   style: ['normal'],
+//   subsets: ['latin'],
+//   display: 'swap',
+// })
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -18,33 +18,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>{`PlumPix.io`}</title>
       </Head>
-
-      <main>
-        <Component {...pageProps} />
-
-        <style jsx global>{
-          `
-          :root {
-            --plump: #4D62C2;
-            --white: #fff;
-            --black: #000;
-            --gray: #F5F5F5;
-
-            --radiusS: clamp(10px, 2vw + 5px, 25px);
-            --radiusL: 42px;
-
-            --transition: 0.2s ease;
-
-            --paddingTag: clamp(10px, 2vw + 4px, 15px) clamp(20px, 2.5vw + 5px, 25px);
-          }
-
-          body {
-            font-family: ${ralewayFont.style.fontFamily};
-          }
-        `
-        }</style>
-
-      </main>
+      <Layout>
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </Layout>
     </>
   )
 }

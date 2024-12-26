@@ -1,0 +1,31 @@
+// Font-faces
+
+@include font-face("Raleway-Regular", "Raleway-Regular", 400, normal, woff2);
+@include font-face("Raleway-Medium", "Raleway-Medium", 500, normal, woff2);
+@include font-face("Raleway-Bold", "Raleway-Bold", 700, normal, woff2);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+.font_48 {
+  @include font_48;
+}
+
+h2,
+.font_36 {
+  @include font_36;
+}
+
+h3,
+.font_25 {
+  @include font_25;
+}
+

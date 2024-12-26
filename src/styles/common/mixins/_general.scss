@@ -1,0 +1,90 @@
+// Image cover
+@mixin obj-cover {
+  overflow: hidden;
+  iframe,
+  picture,
+  video,
+  canvas,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@mixin obj-contain {
+  overflow: hidden;
+  iframe,
+  picture,
+  video,
+  canvas,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// Hide scrollbar
+@mixin no-scrollbar {
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+// Limit text block by lines num
+@mixin text-clamp($num: 0) {
+  @if $num == 0 {
+    display: initial;
+    overflow: visible;
+  } @else {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: $num;
+    line-clamp: $num;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// @Fontface generator
+@mixin font-face($name, $file-name, $weight: null, $style: normal, $exts: woff2) {
+  $src: null;
+  $path: "../../fonts/";
+
+  // Removed other format modifiers and format names as only woff2 is needed
+  $src: local(quote($name));
+
+  @each $ext in $exts {
+    // Simplified as only one extension is used
+    $src: append($src, url(quote($path + $file-name + "." + $ext)) format(quote($ext)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    src: $src;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+// Font declaration
+@mixin use-font($name, $size, $weight, $height, $spacing: normal) {
+  font-family: $name;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+// Hover from 1025
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

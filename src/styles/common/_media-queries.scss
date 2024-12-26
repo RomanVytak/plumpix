@@ -1,0 +1,107 @@
+// Ultrawide & 2K
+@mixin mq-min-2560 {
+  @media (width > 2560px) {
+    @content;
+  }
+}
+
+// Large screens
+@mixin mq-min-1920 {
+  @media (width > 1920px) {
+    @content;
+  }
+}
+
+// Laptop
+
+@mixin mq-min-1366 {
+  @media (width > 1366px) {
+    @content;
+  }
+}
+
+// Min Laptop
+@mixin mq-min-1025 {
+  @media (width >= 1025px) {
+    @content;
+  }
+}
+
+@mixin mq-max-1600 {
+  @media (width <= 1600px) {
+    @content;
+  }
+}
+
+@mixin mq-min-1600 {
+  @media (width > 1600px) {
+    @content;
+  }
+}
+
+@mixin mq-min-1440 {
+  @media (width > 1440px) {
+    @content;
+  }
+}
+
+@mixin mq-max-1440 {
+  @media (width <= 1440px) {
+    @content;
+  }
+}
+
+@mixin mq-max-1366 {
+  @media (width <= 1366px) {
+    @content;
+  }
+}
+
+// Max tablet
+@mixin mq-max-1024 {
+  @media (width <= 1024px) {
+    @content;
+  }
+}
+
+// Max small tablet
+@mixin mq-max-960 {
+  @media (width <= 960px) {
+    @content;
+  }
+}
+
+// Min tablet
+@mixin mq-min-768 {
+  @media (width > 768px) {
+    @content;
+  }
+}
+
+// Max phone
+@mixin mq-max-768 {
+  @media (width <= 768px) {
+    @content;
+  }
+}
+
+// Max medium phone
+@mixin mq-max-640 {
+  @media (width <= 640px) {
+    @content;
+  }
+}
+
+// Max small phone
+@mixin mq-max-375 {
+  @media (width <= 375px) {
+    @content;
+  }
+}
+
+// Custom query
+@mixin mq-custom-query($string) {
+  @media ($string) {
+    @content;
+  }
+}
