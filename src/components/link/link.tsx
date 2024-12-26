@@ -9,17 +9,20 @@ type ButtonProps = {
   size?: 'big' | 'medium'
   type?: 'color' | 'stroke'
   icon?: boolean
+  onlyIcon?: boolean
 }
 
-export const MyLink = ({ children, href, type = 'color', size = 'big', icon, title }: ButtonProps) => {
+export const MyLink = ({ children, href, type = 'color', size = 'big', onlyIcon, icon, title }: ButtonProps) => {
   return (
     <Link
       href={href}
-      className={clsx(css.link, css[type], css[size])}
+      className={clsx(css.link, css[type], css[size], {
+        [css.circle]: onlyIcon
+      })}
       aria-label={title}
     >
       {children}
-      {icon && <div className='mask_arrow' data-arrow aria-hidden='true'></div>}
+      {(onlyIcon || icon) && <div className='mask_arrow' data-arrow aria-hidden='true'></div>}
     </Link>
   )
 }

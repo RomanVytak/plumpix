@@ -1,25 +1,27 @@
 import Image from 'next/image'
-import s from './techstack.module.scss'
+import css from './techstack.module.scss'
 import { TECHSTACK } from '../../const'
 
 export const TechStack = () => {
   return (
-    <div className={s.root}>
-      <div className={s.wrap}>
-        <h2>{`Our Tech stack includes`}</h2>
-        <div className={s.items}>
-          {Object.keys(TECHSTACK).map((t) => {
-            const name = TECHSTACK[t].name;
-            const icon = TECHSTACK[t].icon;
-            return (
-              <div key={name} className={s.item}>
-                <Image src={icon} alt={name} width={30} height={30} />
-                <span>{name}</span>
-              </div>
-            )
-          })}
+    <section className={css.root}>
+      <div className="wrapper" data-wrapper>
+        <div className={css.wrap}>
+          <h2>{`Our Tech stack includes`}</h2>
+          <div className={css.items}>
+            {Object.keys(TECHSTACK).map((t) => {
+              const name = TECHSTACK[t].name;
+              const icon = TECHSTACK[t].icon;
+              return (
+                <div key={name} className={css.item}>
+                  <Image src={icon} alt={name} width={30} height={30} />
+                  <p className='font_18_reg'>{name}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -1,5 +1,12 @@
-import { Button } from "../button/button"
-import s from './homeText.module.scss'
+import { MyLink } from "../link/link"
+import css from './homeText.module.scss'
+
+const data = {
+  title: 'Transform your business with solution-driven teams',
+  text: 'Comprehensive end-to-end software engineering covering prototyping, deployment, scaling, and ongoing support.',
+  button: 'Start with a free consultation',
+  link: '#',
+}
 
 const progress = [
   {
@@ -18,20 +25,26 @@ const progress = [
 
 export const HomeText = () => {
   return (
-    <div className={s.root}>
-      <h1>{`Transform your business with solution-driven teams`}</h1>
-      <p>{`Comprehensive end-to-end software engineering covering prototyping, deployment, scaling, and ongoing support.`}</p>
-      <Button href="#" type="big">{`Start with a free consultation`}</Button>
-      <div className={s.progress}>
-        {progress.map((t) => {
-          return (
-            <div key={t.value}>
-              <p className={s.value}>{t.value}</p>
-              <p className={s.text}>{t.text}</p>
-            </div>
-          )
-        })}
+    <section className={css.intro}>
+      <div className="wrapper">
+        <div className={css.wrapper}>
+          <h1>{data.title}</h1>
+          <p className={css.text}>{data.text}</p>
+          <div >
+            <MyLink href={data.link} title='Start with a free consultation'>{data.button}</MyLink>
+          </div>
+          <div className={css.progress}>
+            {progress.map((t) => {
+              return (
+                <div key={t.value}>
+                  <p className={css.value}>{t.value}</p>
+                  <p className={css.text}>{t.text}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }

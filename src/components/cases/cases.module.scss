@@ -1,22 +1,20 @@
-@import 'src/styles/mixin.scss';
+@import "src/styles/common";
 
 .root {
-  @include maxWrap;
-
   .items {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    @include titleItems;
+    gap: min-max(16, 24);
+    margin-top: min-max(24, 40);
 
     .item {
       display: flex;
       flex-direction: column;
       background: var(--gray);
-      border-radius: var(--radiusS);
+      border-radius: min-max(12, 24);
 
-      @media (min-width: 801px) {
-        padding: 15px;
+      @include mq-min-768 {
+        padding: 16px;
         flex-direction: row;
       }
 
@@ -24,8 +22,9 @@
         border-radius: var(--radiusS);
         overflow: hidden;
         aspect-ratio: 3 / 1.6;
+        flex: none;
 
-        @media (min-width: 801px) {
+        @include mq-min-768 {
           width: 35%;
           aspect-ratio: 402 / 428;
         }
@@ -38,34 +37,17 @@
       }
 
       .content {
-        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
-        @media (min-width: 801px) {
-          width: 65%;
-          padding: 40px;
-        }
-
-        h2 {
-          margin: 0 0 15px;
-        }
+        padding: min-max(16, 32);
 
         .tags {
-          margin: 0 0 15px;
-
-          @media (min-width: 801px) {
-            margin: 0 0 30px;
-          }
+          margin: min-max(16, 24) 0 min-max(24, 30);
         }
 
         .button {
-          margin: 20px 0 0;
-
-          @media (min-width: 801px) {
-            margin: 80px 0 0;
-          }
+          margin-top: min-max(24, 60);
         }
       }
     }
@@ -76,7 +58,6 @@
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  @include maxWrap;
 
   .leftContent {
     width: 40%;

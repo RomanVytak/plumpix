@@ -1,54 +1,64 @@
-@import 'src/styles/mixin.scss';
+@import "src/styles/common";
 
 .root {
   background: var(--plump);
-  padding: 30px 0;
   color: var(--white);
 
-  @media (min-width: 801px) {
-    padding: 60px 0;
-  }
-
   .wrap {
-    @include maxWrap;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .slider {
     color: var(--black);
-    @include titleItems;
+    margin-top: min-max(24, 40);
 
     .slide {
       background: var(--white);
-      padding: 20px;
-      border-radius: var(--radiusS);
-
-      @media (min-width: 801px) {
-        padding: 40px;
-      }
+      border-radius: min-max(12, 24);
+      padding: min-max(20, 40) min-max(20, 35);
+      display: flex;
+      flex-direction: column;
+      height: auto;
     }
   }
 
   .text {
     position: relative;
-    padding: 0 0 0 30px;
+    padding-left: min-max(24, 30);
+    margin-top: min-max(24, 60);
 
     img {
       position: absolute;
       top: 5px;
       left: 0;
+      width: min-max(14, 18);
+      height: auto;
     }
   }
 
   .info {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin: 0 0 60px;
+    gap: min-max(10, 16);
+
+    img {
+      width: min-max(60, 100);
+      height: auto;
+    }
   }
 
   .buttons {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;
+    margin-top: min-max(16, 24);
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 }

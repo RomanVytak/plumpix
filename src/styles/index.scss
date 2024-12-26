@@ -32,7 +32,7 @@ section {
   align-items: center;
 
   .wrapper {
-    padding: min-max(40, 60) min-max(16, 110) min-max(40, 110);
+    padding-block: min-max(40, 60) min-max(40, 110);
     flex-direction: column;
   }
 }
@@ -41,6 +41,7 @@ section {
   display: flex;
   width: 100%;
   max-width: 1440px;
+  padding-inline: min-max(16, 110);
 }
 
 .site-logo {
@@ -58,6 +59,35 @@ a {
   transition: var(--transition);
 }
 
+.swiper-pagination {
+  --color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min-max(5, 8);
+  margin-top: min-max(12, 16);
+  padding: 2px;
+
+  &.dark {
+    --color: #8987a180;
+  }
+
+  &-bullet {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--color);
+    border-radius: 20px;
+    transition: var(--transition);
+    cursor: pointer;
+
+    &-active {
+      width: 30px;
+      background-color: var(--color);
+    }
+  }
+}
+
 .mask_arrow {
   --bg: var(--plump);
   width: min-max(16, 20);
@@ -66,6 +96,15 @@ a {
   mask: url("/icons/arrow-right.svg") no-repeat center;
   transition: var(--transition);
   background-color: var(--bg);
+}
+.mask_mail {
+  --color: var(--white);
+  width: min-max(20, 24);
+  aspect-ratio: 1;
+  flex: none;
+  mask: url("/icons/email.svg") no-repeat center;
+  transition: var(--transition);
+  background-color: var(--color);
 }
 
 input {

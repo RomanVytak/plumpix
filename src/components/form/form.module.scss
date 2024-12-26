@@ -1,9 +1,141 @@
-@import 'src/styles/mixin.scss';
+@import "src/styles/common";
 
 .root {
-  background: var(--plump);
-  padding: 40px;
-  border-radius: var(--radiusS);
-  color: var(--white);
-  @include maxWrap;
+  [data-wrapper] {
+    padding-block: min-max(16, 30);
+  }
+
+  .wrap {
+    background: var(--plump);
+    border-radius: min-max(12, 24);
+    color: var(--white);
+    padding: min-max(20, 40) min-max(16, 30);
+    display: flex;
+    gap: min-max(24, 48);
+
+    &_left {
+      width: min-max(300, 385);
+      padding-block: min-max(16, 36);
+      background-color: #697dd9;
+      flex: none;
+      border-radius: min-max(12, 24);
+      display: flex;
+    }
+
+    &_form {
+      width: 100%;
+      max-width: min-max(500, 640);
+      display: flex;
+      flex-direction: column;
+      gap: min-max(12, 16);
+    }
+  }
+
+  .ceo {
+    align-self: flex-end;
+    padding: 0 min-max(16, 24);
+
+    .link {
+      color: var(--black);
+      display: flex;
+      gap: min-max(8, 12);
+      align-items: center;
+    }
+    p {
+      margin-top: min-max(4, 8);
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: min-max(24, 35);
+    font-family: var(--raleway-medium);
+    font-weight: 500;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    input,
+    textarea {
+      background: var(--white);
+      outline: none;
+      border: none;
+      border-radius: min-max(6, 8);
+      padding: min-max(10, 12) min-max(14, 16);
+      resize: none;
+
+      &::placeholder {
+        color: #9ca4bf;
+      }
+    }
+
+    [data-error] {
+      font-size: min-max(10, 12);
+      line-height: 130%;
+      color: var(--black);
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: min-max(8, 16);
+      align-self: flex-start;
+    }
+
+    .submit {
+      --color: var(--black);
+      outline: none;
+      background-color: var(--color);
+      transition: var(--transition);
+      color: var(--white);
+      font-size: min-max(16, 18);
+      border-radius: min-max(32, 42);
+      padding: min-max(14, 16) min-max(24, 32);
+      cursor: pointer;
+      border: 1px solid var(--color);
+
+      &:valid {
+        @include hover {
+          background-color: transparent;
+          border-color: var(--white);
+        }
+      }
+      &:disabled {
+        --color: #8b8888;
+        color: var(--gray);
+        pointer-events: none;
+      }
+    }
+
+    .loader {
+      width: min-max(20, 26);
+      aspect-ratio: 1;
+      flex: none;
+      background-color: #8b8888;
+      border-radius: 50%;
+      padding: 5px;
+      animation: loader 0.5s linear infinite;
+      &::after {
+        content: "";
+        display: flex;
+        width: 4px;
+        aspect-ratio: 1;
+        background-color: var(--white);
+      }
+    }
+
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
 }

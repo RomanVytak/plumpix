@@ -1,9 +1,116 @@
-@import 'src/styles/mixin.scss';
+@import "src/styles/common";
 
-.root {
-  background: var(--black);
-  border-radius: var(--radiusS);
-  padding: 40px;
-  color: var(--white);
-  @include maxWrap;
+.footer {
+  display: flex;
+  justify-content: center;
+
+  [data-wrapper] {
+    padding-block: min-max(16, 30);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: min-max(16, 20);
+
+    a {
+      font-weight: 500;
+      font-family: var(--raleway-medium);
+      color: var(--white);
+
+      @include hover {
+        color: var(--plump);
+      }
+    }
+  }
+
+  .wrap {
+    background: var(--black);
+    border-radius: min-max(12, 24);
+    color: var(--white);
+    padding: min-max(20, 40) min-max(16, 30);
+    display: flex;
+    gap: min-max(24, 48);
+    width: 100%;
+
+    &_left {
+      width: min-max(300, 385);
+      flex: none;
+    }
+
+    &_right {
+      flex: 1;
+      display: flex;
+      gap: min-max(24, 32);
+
+      & > * {
+        flex: 5;
+      }
+    }
+
+    menu {
+      padding: 0;
+      margin: 0;
+      flex: 3;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: min-max(16, 24);
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: min-max(12, 16);
+    }
+
+    .location {
+      color: #a2a2a2;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      gap: min-max(8, 12);
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      gap: min-max(8, 12);
+      padding: min-max(4, 6) min-max(16, 24);
+      border-radius: 50px;
+      border: 1px solid #697dd9;
+
+      @include hover {
+        color: var(--plump);
+        border-color: var(--plump);
+      }
+
+      .icon {
+        width: min-max(24, 32);
+        height: auto;
+      }
+    }
+  }
+
+  .mail {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    gap: min-max(8, 12);
+
+    @include hover {
+      color: var(--plump);
+
+      [data-mail] {
+        --color: var(--plump);
+      }
+    }
+  }
 }

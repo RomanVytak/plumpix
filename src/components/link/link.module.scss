@@ -3,22 +3,51 @@
 .link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: min-max(10, 14);
   color: var(--white);
   text-align: center;
   border-radius: min-max(32, 42);
   @include font_18;
   transition: var(--transition);
+  flex: none;
 
   &.big {
     padding: min-max(14, 16) min-max(24, 32);
   }
 
+  &.medium {
+    padding: min-max(10, 12) min-max(16, 24);
+  }
+
+  &.circle {
+    padding: min-max(14, 16);
+  }
+
   &.color {
     background: var(--plump);
 
+    [data-arrow] {
+      --bg: var(--white);
+    }
+
     @include hover {
       background: #5972e5;
+    }
+  }
+
+  &.stroke {
+    border: 1px solid #deddee;
+    color: var(--plump);
+    font-size: min-max(14, 16);
+
+    @include hover {
+      border-color: var(--plump);
+      background-color: var(--plump);
+      color: var(--white);
+
+      [data-arrow] {
+        --bg: var(--white);
+      }
     }
   }
 }

@@ -4,11 +4,17 @@
 @mixin font_36 {
   @include use-font(var(--raleway-bold), min-max(28, 36), 700, 115%, 0em);
 }
+@mixin font_28 {
+  @include use-font(var(--raleway-bold), min-max(18, 28), 700, 125%, 0em);
+}
 @mixin font_25 {
   @include use-font(var(--raleway-bold), min-max(18, 25), 700, 125%, 0em);
 }
 @mixin font_18 {
   @include use-font(var(--raleway-medium), min-max(16, 18), 500, 140%, 0em);
+}
+@mixin font_18_bold {
+  @include use-font(var(--raleway-bold), min-max(16, 18), 600, 140%, 0em);
 }
 @mixin font_18_reg {
   @include use-font(var(--raleway-regular), min-max(16, 18), 400, 140%, 0em);

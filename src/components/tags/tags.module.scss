@@ -1,21 +1,15 @@
+@import "src/styles/common";
+
 .root {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-
-  @media (min-width: 801px) {
-    gap: 15px;
-  }
+  gap: min-max(8, 16);
 
   span {
     background: var(--white);
-    padding: var(--paddingTag);
+    padding: min-max(10, 16) min-max(18, 24);
     border-radius: var(--radiusL);
-    font-weight: 600;
     text-align: center;
-
-    @media (max-width: 800px) {
-      font-size: 14px;
-    }
+    font-size: min-max(14, 16);
   }
 }

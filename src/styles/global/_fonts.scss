@@ -25,7 +25,20 @@ h2,
 }
 
 h3,
-.font_25 {
+.font_28 {
+  @include font_28;
+}
+
+.font_25{
   @include font_25;
 }
 
+.font_18_bold {
+  @include font_18_bold;
+}
+.font_18 {
+  @include font_18;
+}
+.font_18_reg{
+  @include font_18_reg;
+}
