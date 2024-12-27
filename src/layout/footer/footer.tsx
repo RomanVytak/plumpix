@@ -26,7 +26,7 @@ export const Footer = () => {
 
   return (
     <footer className={css.footer}>
-      <div className="wrapper" data-wrapper>
+      <div className="wrapper md" data-wrapper>
         <div className={`wrapper-grid ${css.grid}`}>
           <div className={css.grid_left}>
             <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo'>

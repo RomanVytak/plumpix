@@ -1,9 +1,9 @@
-import { Article } from "../../components/article/article"
-import { Cards } from "../../components/cards/cards"
-import { Form } from "../../components/form/form"
-import { Founders } from "../../components/founders/founders"
-import { Mapa } from "../../components/location/location"
+import { Article } from "../../parts/sections/article/article"
+import { Form } from "../../parts/sections/form/form"
+import { Founders } from "../../parts/page-about/founders/founders"
+import { Mapa } from "../../parts/page-about/location/location"
 import { article_about, offers_home } from "../../data"
+import { Cards } from "../../parts/sections/cards/cards"
 
 const About = () => {
   return (

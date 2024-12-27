@@ -15,17 +15,6 @@ body {
 main {
   overflow: hidden;
   padding-top: min-max(60, 90);
-
-  // TODO: remove after refactoring
-  > div {
-    margin-top: 40px;
-    margin-bottom: 40px;
-
-    @media (min-width: 801px) {
-      margin-top: 100px;
-      margin-bottom: 100px;
-    }
-  }
 }
 
 section {
@@ -44,6 +33,10 @@ section {
   width: 100%;
   max-width: 1680px;
   padding-inline: min-max(16, 110);
+
+  &.md {
+    padding-block: min-max(16, 40);
+  }
 
   &-grid {
     display: grid;
@@ -68,8 +61,14 @@ a {
   transition: var(--transition);
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 .swiper-pagination {
-  --color: var(--white);
+  --bg: transparent;
+  --bg-active: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,21 +77,23 @@ a {
   padding: 2px;
 
   &.dark {
-    --color: #8987a180;
+    --bg: #8987a180;
+    --bg-active: var(--plump);
   }
 
   &-bullet {
     display: flex;
     width: 10px;
     height: 10px;
-    border: 1px solid var(--color);
+    border: 1px solid var(--white);
     border-radius: 20px;
     transition: var(--transition);
     cursor: pointer;
+    background-color: var(--bg);
 
     &-active {
       width: 30px;
-      background-color: var(--color);
+      background-color: var(--bg-active);
     }
   }
 }
@@ -114,19 +115,4 @@ a {
   mask: url("/icons/email.svg") no-repeat center;
   transition: var(--transition);
   background-color: var(--color);
-}
-
-// TODO: remove after refactoring
-input {
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-iframe {
-  border: none;
-  outline: none;
-}
-
-button {
-  border: none;
 }

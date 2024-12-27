@@ -34,13 +34,17 @@
       border-radius: min-max(32, 42);
     }
 
-    a {
+    a,
+    button {
       font-family: var(--raleway-medium);
       font-weight: 500;
       color: var(--color-3);
       padding: min-max(10, 14) min-max(16, 20);
       display: flex;
       border-radius: min-max(32, 42);
+      background-color: transparent;
+      transition: var(--transition);
+      line-height: 142%;
     }
 
     [data-page] {

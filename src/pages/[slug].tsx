@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next"
-import { Article } from "../components/article/article"
+import { Article } from "../parts/sections/article/article"
 import { pages_data } from "../data/pages"
-import { Cards } from "../components/cards/cards"
-import { Reviews } from "../components/reviews/reviews"
-import { TechStack } from "../components/techstack/techstack"
-import { Form } from "../components/form/form"
+import { Reviews } from "../parts/sections/reviews/reviews"
+import { Form } from "../parts/sections/form/form"
+import { TechStack } from "../parts/sections/techstack/techstack"
+import { Cards } from "../parts/sections/cards/cards"
 
 
 

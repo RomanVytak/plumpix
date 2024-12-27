@@ -1,13 +1,13 @@
-import { Cases } from "../../components/cases/cases"
-import { CasesText } from "../../components/casesText/text"
-import { Reviews } from "../../components/reviews/reviews"
-import { Soon } from "../../components/soon/soon"
+import { Text } from "../../parts/page-cases/intro/text"
+import { Reviews } from "../../parts/sections/reviews/reviews"
+import { Soon } from "../../parts/page-cases/soon/soon"
 import { cases } from "./_/data"
+import { Cases } from "../../parts/sections/cases/cases"
 
 const CasesPage = () => {
   return (
     <>
-      <CasesText />
+      <Text />
       <Cases data={cases} />
       <Reviews />
       <Soon />

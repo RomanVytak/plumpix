@@ -7,7 +7,7 @@ const dataMenu = [
   },
   {
     title: 'What we do',
-    link: '#',
+    link: null,
     sub: [
       {
         title: 'Custom Software Development',
@@ -32,11 +32,18 @@ export const Menu = ({ showSubPages = true }) => {
       <ul>
         {
           dataMenu.map((t) => {
+
+            if (!t.link && !showSubPages) return null
             return (
               <li key={t.title}
                 {...(t.sub && showSubPages ? { 'data-has-sub': 'true' } : {})}
               >
-                <Link href={t.link} data-page>{t.title}</Link>
+                {
+                  t.link ?
+                    <Link href={t.link} data-page>{t.title}</Link> :
+                    <button data-page aria-hidden='true'>{t.title}</button>
+                }
+
                 {t.sub && showSubPages && (
                   <div data-sub-menu>
 

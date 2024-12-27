@@ -1,12 +1,12 @@
-import { Cards } from "../components/cards/cards"
-import { Cases } from "../components/cases/cases"
-import { Form } from "../components/form/form"
-import { HomeText } from "../components/homeText/homeText"
-import { Industries } from "../components/industries/industries"
-import { Reviews } from "../components/reviews/reviews"
-import { TechStack } from "../components/techstack/techstack"
+import { Form } from "../parts/sections/form/form"
+import { Industries } from "../parts/page-home/industries/industries"
+import { Reviews } from "../parts/sections/reviews/reviews"
 import { offers_home } from "../data"
+import { HomeText } from "../parts/page-home/homeText/homeText"
 import { cases } from "./cases/_/data"
+import { TechStack } from "../parts/sections/techstack/techstack"
+import { Cases } from "../parts/sections/cases/cases"
+import { Cards } from "../parts/sections/cards/cards"
 
 
 

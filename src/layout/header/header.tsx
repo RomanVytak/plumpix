@@ -17,15 +17,19 @@ export const Header = () => {
   useEffect(() => {
     let st = null;
 
+    const rs = new ResizeObserver(() => ScrollTrigger.refresh());
+
     setTimeout(() => {
       st = ScrollTrigger.create({
         onUpdate: self => {
-          console.log(self.direction);
-          setDirection(self.direction === 1) }
+          // console.log(self.direction);
+          setDirection(self.direction === 1)
+        }
       });
     }, 1000)
-
+    rs.observe(document.body);
     return () => {
+      rs.disconnect();
       st && st.kill();
     }
   }, [])
