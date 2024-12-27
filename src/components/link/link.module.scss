@@ -3,6 +3,7 @@
 .link {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: min-max(10, 14);
   color: var(--white);
   text-align: center;
@@ -32,6 +33,20 @@
 
     @include hover {
       background: #5972e5;
+    }
+  }
+
+  &.black {
+    background: var(--black);
+    border: 1px solid var(--black);
+
+    [data-arrow] {
+      --bg: var(--white);
+    }
+
+    @include hover {
+      background-color: transparent;
+      border-color: var(--white);
     }
   }
 
