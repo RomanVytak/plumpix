@@ -27,13 +27,13 @@ export const Footer = () => {
   return (
     <footer className={css.footer}>
       <div className="wrapper" data-wrapper>
-        <div className={css.wrap}>
-          <div className={css.wrap_left}>
+        <div className={`wrapper-grid ${css.grid}`}>
+          <div className={css.grid_left}>
             <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo'>
               <PlumpixLogo textColor='white' />
             </Link>
           </div>
-          <div className={css.wrap_right}>
+          <div className={css.grid_right}>
             <div className={css.contacts}>
               <a className={css.mail} href={`mailto:${dataMail}`}>
                 <div className="mask_mail" data-mail></div>

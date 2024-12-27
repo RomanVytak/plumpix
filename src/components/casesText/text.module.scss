@@ -1,0 +1,13 @@
+@import "src/styles/common";
+
+.intro {
+  .wrapper {
+    gap: min-max(12, 16);
+    align-items: flex-start;
+    padding-block: min-max(20, 60);
+  }
+  .text {
+    margin-top: min-max(4, 8);
+    max-width: 600px;
+  }
+}

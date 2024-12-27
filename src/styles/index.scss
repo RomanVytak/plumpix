@@ -44,6 +44,13 @@ section {
   width: 100%;
   max-width: 1680px;
   padding-inline: min-max(16, 110);
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: min-max(12, 16);
+    width: 100%;
+  }
 }
 
 .site-logo {

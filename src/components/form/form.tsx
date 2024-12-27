@@ -43,19 +43,19 @@ export const Form = ({ data }: Props) => {
   return (
     <section className={css.root}>
       <div className="wrapper" data-wrapper>
-        <div className={css.wrap}>
-          <div className={css.wrap_left}>
-
+        <div className={`wrapper-grid ${css.grid}`}>
+          <div className={css.grid_left}>
             <div className={css.ceo}>
-              <a href='/' target='_blank' className={`${css.link} font_18`} >
-                <img src="/socials/linkedin.svg" alt="Roman Vytak" />
-                Roman Vytak
-              </a>
-              <p>CEO in PlumPi</p>
+              <div>
+                <a href='/' target='_blank' className={`${css.link} font_18`} >
+                  <img src="/socials/linkedin.svg" alt="Roman Vytak" />
+                  Roman Vytak
+                </a>
+                <p>CEO in PlumPi</p>
+              </div>
             </div>
-
           </div>
-          <div className={css.wrap_form}>
+          <div className={css.grid_form}>
             <h2 className={data?.subtitle ? '' : 'font_48'}>{data?.title || defTitle}</h2>
             {data?.subtitle && <p>{data.subtitle}</p>}
 
@@ -69,7 +69,6 @@ export const Form = ({ data }: Props) => {
 
 
           </div>
-
         </div>
       </div>
     </section>

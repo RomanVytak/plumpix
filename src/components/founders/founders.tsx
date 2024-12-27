@@ -1,5 +1,5 @@
 import Image from "next/image"
-import s from './founders.module.scss'
+import css from './founders.module.scss'
 
 const temp = [
   {
@@ -18,17 +18,25 @@ const temp = [
 
 export const Founders = () => {
   return (
-    <div className={s.root}>
-      <h2>{`Meet the founders`}</h2>
-      <div className={s.items}>
-        {temp.map((t) => {
-          return (
-            <div key={t.name} className={s.item}>
-              <Image src={t.image} alt={t.name} width={400} height={455} />
-            </div>
-          )
-        })}
+    <section className={css.root}>
+      <div className={`wrapper ${css.wrapper}`}>
+        <div className={`wrapper-grid ${css.grid}`}>
+          <h2>{`Meet the founders`}</h2>
+          {temp.map((t) => {
+            return (
+              <div key={t.name} className={css.item}>
+                <div className={css.ceo}>
+                  <a href='/' target='_blank' className={`${css.link} font_18`} >
+                    <img src="/socials/linkedin.svg" alt={t.name} />
+                    {t.name}
+                  </a>
+                  <p>{t.position}</p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   )
 }

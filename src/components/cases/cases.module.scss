@@ -1,11 +1,14 @@
 @import "src/styles/common";
 
 .root {
+  .wrapper {
+    gap: min-max(24, 40);
+  }
+
   .items {
     display: flex;
     flex-direction: column;
     gap: min-max(16, 24);
-    margin-top: min-max(24, 40);
 
     .item {
       display: flex;

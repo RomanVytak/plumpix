@@ -19,7 +19,9 @@ export const Header = () => {
 
     setTimeout(() => {
       st = ScrollTrigger.create({
-        onUpdate: self => setDirection(self.direction === 1)
+        onUpdate: self => {
+          console.log(self.direction);
+          setDirection(self.direction === 1) }
       });
     }, 1000)
 
