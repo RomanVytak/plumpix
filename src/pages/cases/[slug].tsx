@@ -1,17 +1,18 @@
 import { GetStaticPaths, GetStaticProps } from "next/types";
 import { cases } from "./_/data";
-import { CaseProps } from "./_/types";
+import { CaseProps, CasesProps } from "./_/types";
 import { Slider } from "../../parts/single-case/slider/slider";
 import { Intro } from "../../parts/single-case/intro/intro";
 import { Form } from "../../parts/sections/form/form";
 import { CaseContent } from "../../parts/single-case/content/content";
+import { Recent } from "../../parts/single-case/recent/recent";
 
 const formData = {
   title: "Build your project with us",
   subtitle: "Contact us to discuss all benefits of this model for  your specific business."
 }
 
-const Case = ({ post }: { post: CaseProps }) => {
+const Case = ({ post, recent }: { post: CaseProps, recent: CasesProps }) => {
 
   return (
     <>
@@ -19,6 +20,7 @@ const Case = ({ post }: { post: CaseProps }) => {
       <CaseContent data={post} />
       <Slider data={post.slider} />
       <Form data={formData} />
+      <Recent data={recent} />
     </>
   )
 }
@@ -38,6 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = cases.find((post) => post.slug === params?.slug);
+  const recent = cases.filter((post) => post.slug !== params?.slug);
 
   if (!post) {
     return {
@@ -48,6 +51,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       post,
+      recent
     },
   };
 };

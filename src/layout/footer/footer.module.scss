@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
 
-
   ul {
     list-style-type: none;
     margin: 0;
@@ -28,9 +27,14 @@
     background: var(--black);
     border-radius: min-max(12, 24);
     color: var(--white);
-    padding-block: min-max(20, 40);
+    padding-block: min-max(24, 40);
     width: 100%;
     align-items: flex-start;
+
+    @include mq-max-768 {
+      align-items: center;
+      gap: 42px;
+    }
 
     &_left {
       padding-inline: min-max(16, 30);
@@ -42,6 +46,17 @@
       display: flex;
       gap: min-max(24, 32);
       grid-column: 2/4;
+      gap: 32px;
+
+      @include mq-max-768 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        menu {
+          order: -1;
+        }
+      }
 
       & > * {
         flex: 5;
@@ -58,8 +73,11 @@
   .contacts {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: min-max(16, 24);
+
+    @include mq-min-768 {
+      align-items: flex-start;
+    }
 
     .column {
       display: flex;
@@ -80,9 +98,10 @@
       align-items: center;
       color: var(--white);
       gap: min-max(8, 12);
-      padding: min-max(4, 6) min-max(16, 24);
+      padding: 6px min-max(16, 24);
       border-radius: 50px;
       border: 1px solid #697dd9;
+      justify-content: center;
 
       @include hover {
         color: var(--plump);

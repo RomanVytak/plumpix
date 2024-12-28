@@ -62,11 +62,12 @@ export const Reviews = () => {
                 el: '#pagination',
                 clickable: true
               }}
-              slidesPerView={1.2}
+              className={s.swiper}
+              slidesPerView={1}
               spaceBetween={16}
               mousewheel={{ forceToAxis: true }}
               breakpoints={{
-                769: { slidesPerView: 2, },
+                769: { slidesPerView: 2 },
                 1024: { slidesPerView: 3, }
               }}
             >
@@ -99,6 +100,6 @@ export const Reviews = () => {
         </div>
       </div>
 
-    </section>
+    </section >
   )
 }

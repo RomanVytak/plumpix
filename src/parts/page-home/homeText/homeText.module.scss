@@ -14,7 +14,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: min-max(24, 32);
+    gap: min-max(20, 32);
     align-items: center;
   }
 
@@ -24,7 +24,7 @@
 
   .progress {
     display: flex;
-    gap: min-max(24, 40);
+    gap: min-max(16, 40);
     margin-top: min-max(16, 24);
 
     .value {

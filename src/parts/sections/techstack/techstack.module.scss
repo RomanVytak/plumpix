@@ -1,12 +1,11 @@
 @import "src/styles/common";
 
 .root {
-
   .wrap {
     background: var(--black);
     border-radius: min-max(12, 24);
     color: var(--white);
-    padding: min-max(20, 40) min-max(16, 30);
+    padding: min-max(24, 40) min-max(16, 30);
 
     .items {
       display: flex;
@@ -22,10 +21,11 @@
         background: #353535;
         border-radius: min-max(24, 42);
         color: var(--white);
-        padding: min-max(10, 14) min-max(12, 18);
+        padding: min-max(8, 14) min-max(12, 18);
+        font-size: min-max(12, 18);
 
         img {
-          width: min-max(20, 30);
+          width: min-max(16, 30);
         }
       }
     }

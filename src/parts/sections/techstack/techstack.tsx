@@ -13,9 +13,9 @@ export const TechStack = () => {
               const name = TECHSTACK[t].name;
               const icon = TECHSTACK[t].icon;
               return (
-                <div key={name} className={css.item}>
+                <div key={name} className={`${css.item} font_18_reg`}>
                   <Image src={icon} alt={name} width={30} height={30} />
-                  <p className='font_18_reg'>{name}</p>
+                  <p >{name}</p>
                 </div>
               )
             })}

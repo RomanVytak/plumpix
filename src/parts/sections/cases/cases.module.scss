@@ -15,14 +15,14 @@
       flex-direction: column;
       background: var(--gray);
       border-radius: min-max(12, 24);
+      overflow: hidden;
 
       @include mq-min-768 {
-        padding: 16px;
+        padding: min-max(24, 40) min-max(16, 32);
         flex-direction: row;
       }
 
       .image {
-        border-radius: var(--radiusS);
         overflow: hidden;
         aspect-ratio: 3 / 1.6;
         flex: none;
@@ -30,6 +30,7 @@
         @include mq-min-768 {
           width: 35%;
           aspect-ratio: 402 / 428;
+          border-radius: min-max(12, 24);
         }
 
         img {
@@ -43,7 +44,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: min-max(16, 32);
+        padding: min-max(24, 32) min-max(16, 32) ;
+
+        @include mq-max-768{
+          align-items: normal;
+        }
 
         .tags {
           margin: min-max(16, 24) 0 min-max(24, 30);

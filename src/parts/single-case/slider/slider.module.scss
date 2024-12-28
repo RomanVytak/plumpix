@@ -1,7 +1,6 @@
 @import "src/styles/common";
 
 .root {
-
   .slider {
     border-radius: min-max(12, 24);
     overflow: hidden;
@@ -12,6 +11,7 @@
     aspect-ratio: 1240 / 434;
     overflow: hidden;
     border-radius: min-max(12, 24);
+    min-height: 250px;
 
     img {
       width: 100%;

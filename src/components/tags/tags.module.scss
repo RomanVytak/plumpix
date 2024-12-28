@@ -7,9 +7,9 @@
 
   span {
     background: var(--white);
-    padding: min-max(10, 16) min-max(18, 24);
-    border-radius: var(--radiusL);
+    padding: min-max(8, 16) min-max(14, 24);
+    border-radius: min-max(24, 40);
     text-align: center;
-    font-size: min-max(14, 16);
+    font-size: min-max(12, 16);
   }
 }

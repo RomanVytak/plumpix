@@ -1,21 +1,20 @@
 @import "src/styles/common";
 
 .root {
-
   &_tags {
     display: flex;
     flex-wrap: wrap;
     gap: min-max(10, 16);
 
     span {
-      padding: min-max(2, 4) min-max(8, 14);
+      padding: 4px 14px;
       background-color: var(--gray);
       border-radius: 50px;
       display: block;
     }
   }
   &_title {
-    margin-top: min-max(12, 16);
+    margin-top: min-max(16, 24);
     max-width: 800px;
   }
 

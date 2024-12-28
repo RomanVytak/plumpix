@@ -19,12 +19,24 @@
     align-items: center;
     justify-content: space-between;
     height: min-max(60, 90);
+
+    @include mq-max-1024 {
+      flex-wrap: wrap;
+      padding-block: 8px;
+      height: auto;
+    }
   }
 
   menu {
     display: flex;
     padding: 8px 0;
     margin: 0;
+
+    @include mq-max-1024 {
+      width: 100%;
+      order: 2;
+      display: none;
+    }
 
     & > ul {
       display: flex;

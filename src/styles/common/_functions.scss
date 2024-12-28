@@ -4,7 +4,11 @@
 // Convert px to vw
 @function px2vw($px, $def_screen: 1440) {
   $vw: $def_screen * 0.01;
-  @return math.div($px, $vw) * 1vw;
+  $result: math.div($px, $vw);
+
+  // Округлення до двох десяткових знаків
+  @return round($result * 100) / 100 * 1vw;
+
 }
 
 // Define the min-max function

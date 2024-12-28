@@ -17,10 +17,18 @@
     .slide {
       background: var(--white);
       border-radius: min-max(12, 24);
-      padding: min-max(20, 40) min-max(20, 35);
+      padding: min-max(24, 40) min-max(20, 35);
       display: flex;
       flex-direction: column;
       height: auto;
+    }
+
+    @include mq-max-768 {
+      .swiper {
+        overflow: visible;
+        width: 85%;
+        margin: 0;
+      }
     }
   }
 

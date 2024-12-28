@@ -10,6 +10,13 @@
     grid-template-columns: repeat(5, 1fr);
     gap: min-max(16, 24) min-max(12, 16);
 
+    @include mq-max-768 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq-max-640 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .item {
       background: #f7f7f7;
       border-radius: min-max(12, 24);
@@ -23,7 +30,7 @@
       transition: var(--transition);
 
       &_icon {
-        width: min-max(80, 95);
+        width: min-max(60, 95);
         aspect-ratio: 1;
         display: flex;
         align-items: center;

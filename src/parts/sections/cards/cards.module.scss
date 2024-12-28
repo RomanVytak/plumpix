@@ -17,28 +17,32 @@
   .items {
     margin-top: min-max(16, 40);
 
-    // @media (max-width: 800px) {
-    //   display: flex;
-    //   margin-left: -15px;
-    //   width: calc(100% + 30px);
-    //   padding: 0 15px 10px 15px;
-    //   scroll-padding: 0 15px;
-    //   overflow-x: scroll;
-    //   scroll-snap-type: x mandatory;
-    //   > div {
-    //     flex: 0 0 80%;
-    //     scroll-snap-align: start;
-    //   }
-    // }
+    @include mq-max-768 {
+      flex-direction: row;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      width: calc(100% + min-max(32, 80));
+      margin-left: calc(-1 * min-max(16, 40));
+      padding-inline: min-max(16, 40);
+      scroll-padding: min-max(16, 40);
+
+      @include no-scrollbar;
+
+      > div {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+        align-items: normal !important;
+      }
+    }
     .card {
       background: var(--card);
       border-radius: min-max(12, 24);
       padding: min-max(24, 32) min-max(16, 30);
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       gap: min-max(12, 24);
       min-height: var(--min);
+      align-items: flex-start;
     }
   }
 

@@ -34,6 +34,10 @@ section {
   max-width: 1680px;
   padding-inline: min-max(16, 110);
 
+  @include mq-max-1024 {
+    padding-inline: min-max(16, 40);
+  }
+
   &.md {
     padding-block: min-max(16, 40);
   }
@@ -43,6 +47,12 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: min-max(12, 16);
     width: 100%;
+
+    @include mq-max-768 {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 }
 
@@ -77,6 +87,10 @@ button {
   gap: min-max(5, 8);
   margin-top: min-max(12, 16);
   padding: 2px;
+
+  &-lock{
+    display: none !important;
+  }
 
   &.dark {
     --bg: #8987a180;

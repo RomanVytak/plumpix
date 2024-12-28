@@ -1,19 +1,32 @@
 @import "src/styles/common";
 
 .root {
-
   .grid {
     background: var(--plump);
     border-radius: min-max(12, 24);
     padding-block: min-max(10, 20);
     align-items: center;
     color: var(--white);
+
+    @include mq-max-768 {
+      padding-block: 24px;
+    }
   }
 
   .info {
     display: flex;
     flex-direction: column;
-    gap: min-max(16, 24);
+    gap: min-max(12, 24);
+
+    @include mq-max-768 {
+      width: 100%;
+      padding-inline: min-max(16, 30);
+      order: -1;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   .word {

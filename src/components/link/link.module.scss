@@ -13,15 +13,15 @@
   flex: none;
 
   &.big {
-    padding: min-max(14, 16) min-max(24, 32);
+    padding: min-max(12, 16) min-max(20, 32);
   }
 
   &.medium {
-    padding: min-max(10, 12) min-max(16, 24);
+    padding: min-max(8, 12) min-max(14, 24);
   }
 
   &.circle {
-    padding: min-max(14, 16);
+    padding: min-max(12, 16);
   }
 
   &.color {
