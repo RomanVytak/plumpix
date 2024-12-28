@@ -64,9 +64,9 @@
     }
 
     &[data-open] {
-      // &::before {
-      //   opacity: 1;
-      // }
+      &::before {
+        opacity: 1;
+      }
 
       .burger {
         span {
@@ -81,9 +81,9 @@
           }
         }
       }
-      // menu {
-      //   grid-template-rows: 1fr;
-      // }
+      menu {
+        grid-template-rows: 1fr;
+      }
     }
   }
 
@@ -117,26 +117,70 @@
         overflow: hidden;
 
         > li {
-          padding: 16px 0;
-          display: flex;
-          justify-content: center;
+          padding: 6px 0;
+          padding-left: 24px;
+
+          &:nth-child(1) {
+            margin-top: 24px;
+          }
+          &:last-of-type {
+            margin-bottom: 24px;
+          }
 
           [data-page] {
-            padding: 12px 24px;
-            background-color: var(--gray);
-            border-radius: 50px;
-            font-family: var(--raleway-medium);
-            font-weight: 500;
-            font-size: 16px;
+            padding: 12px 0;
+            font-family: var(--raleway-bold);
+            font-weight: 600;
+            font-size: 18px;
             display: flex;
             color: var(--black);
-            justify-content: center;
+            gap: 10px;
+          }
+
+          &[data-has-sub] {
+            [data-page] {
+              &::after {
+                content: "";
+                width: 20px;
+                aspect-ratio: 1;
+                flex: none;
+                mask: url("/icons/arrow-right.svg") no-repeat center;
+                background-color: var(--black);
+                transition: var(--transition);
+              }
+            }
+            &[data-open] {
+              [data-page] {
+                &::after {
+                  transform: rotate(90deg);
+                }
+              }
+
+              [data-sub-menu] {
+                grid-template-rows: 1fr;
+              }
+            }
+          }
+
+          [data-subpage] {
+            font-family: var(--raleway-medium);
+            color: var(--black);
+            font-size: 16px;
+            padding: 6px 0;
+            display: flex;
+            padding-left: 24px;
           }
         }
       }
 
       [data-sub-menu] {
-        display: none;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows var(--transition);
+
+        > ul {
+          overflow: hidden;
+        }
       }
     }
 

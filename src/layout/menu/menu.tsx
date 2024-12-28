@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 const dataMenu = [
   {
@@ -26,7 +27,14 @@ const dataMenu = [
 
 ]
 
-export const Menu = ({ showSubPages = true }) => {
+export const Menu = ({ showSubPages = true, subDeps = [] }) => {
+  const [openSub, setOpenSub] = useState(false)
+
+  useEffect(() => {
+    setOpenSub(false)
+    return () => { }
+  }, [...subDeps])
+
   return (
     <menu >
       <ul>
@@ -37,11 +45,13 @@ export const Menu = ({ showSubPages = true }) => {
             return (
               <li key={t.title}
                 {...(t.sub && showSubPages ? { 'data-has-sub': 'true' } : {})}
+                {...(t.sub && openSub ? { 'data-open': 'true' } : {})}
+
               >
                 {
                   t.link ?
                     <Link href={t.link} data-page>{t.title}</Link> :
-                    <button data-page >{t.title}</button>
+                    <button data-page onClick={() => setOpenSub(!openSub)} >{t.title}</button>
                 }
 
                 {t.sub && showSubPages && (

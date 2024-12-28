@@ -8,12 +8,14 @@ import { MyLink } from '../../components/link/link'
 import { useEffect, useState } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { usePathname } from 'next/navigation'
 gsap.registerPlugin(ScrollTrigger);
 
 
 export const Header = () => {
   const [isDown, setDirection] = useState(false);
   const [isOpenMenu, setOpenMenu] = useState(false)
+  const path = usePathname()
 
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export const Header = () => {
   useEffect(() => {
     setOpenMenu(false)
     return () => { }
-  }, [isDown])
+  }, [isDown, path])
 
 
   return (
@@ -56,7 +58,7 @@ export const Header = () => {
           <span className={css.s} ></span>
           <span></span>
         </button>
-        <Menu />
+        <Menu subDeps={[path, isOpenMenu]} />
         <MyLink href={'/contacts'} title='Contact us'>Contact us</MyLink>
       </div>
     </header>
