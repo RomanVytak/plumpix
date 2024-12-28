@@ -64,6 +64,8 @@ a {
 button {
   border: none;
   outline: none;
+  background: transparent;
+  color: inherit;
 }
 
 .swiper-pagination {

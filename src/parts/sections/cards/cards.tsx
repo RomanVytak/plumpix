@@ -1,16 +1,22 @@
 import { MyLink } from '../../../components/link/link';
 import s from './cards.module.scss'
 
-export const Cards = ({ title, data }: { title: string, data: any[] }) => {
-  if (!data) {
-    return null;
-  }
+type Props = {
+  title: string;
+  type?: 'colorful';
+  data: any[];
+  button?: { title: string, link: string };
+}
+
+export const Cards = ({ title, data, button, type }: Props) => {
+
+  if (!data) return null;
 
   return (
-    <section className={s.root}>
+    <section className={`${s.root} ${type ? s[type] : ""}`}>
       <div className="wrapper">
         <h2>{title}</h2>
-        <div className={s.items}>
+        <div className={`wrapper-grid ${s.items}`}>
           {data.map((t) => {
             return (
               <div className={s.card} key={t.title}>
@@ -21,6 +27,12 @@ export const Cards = ({ title, data }: { title: string, data: any[] }) => {
             )
           })}
         </div>
+        {
+          button &&
+          <div className={s.button}>
+            <MyLink href={button.link} type='black' title={button.title}>{button.title}</MyLink>
+          </div>
+        }
       </div>
     </section>
   )

@@ -1,0 +1,24 @@
+@import "src/styles/common";
+
+.intro {
+  min-height: calc(100vh - min-max(60, 90));
+
+  [data-wrapper] {
+    padding-block: min-max(40, 60)  min-max(100, 150);
+  }
+
+  .wrapper {
+    align-self: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: min-max(24, 32);
+    align-items: center;
+  }
+
+  .number {
+    font-size: min-max(80, 150);
+    line-height: 100%;
+    color: var(--plump);
+  }
+}

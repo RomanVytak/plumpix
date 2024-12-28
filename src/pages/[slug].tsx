@@ -5,6 +5,7 @@ import { Reviews } from "../parts/sections/reviews/reviews"
 import { Form } from "../parts/sections/form/form"
 import { TechStack } from "../parts/sections/techstack/techstack"
 import { Cards } from "../parts/sections/cards/cards"
+import { Stages } from "../parts/sections/stages/stages"
 
 
 
@@ -12,7 +13,9 @@ const Page = ({ post }) => {
   return (
     <>
       <Article data={post.article} />
-      <Cards title={post.cards.title} data={post.cards.items} />
+      <Cards {...post.cards} />
+      <Cards {...post.why_hire} type="colorful" />
+      <Stages {...post.stages} />
       <Reviews />
       <TechStack />
       <Form />
