@@ -12,7 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export const Header = () => {
-  const [isDown, setDirection] = useState(false)
+  const [isDown, setDirection] = useState(false);
+  const [isOpenMenu, setOpenMenu] = useState(false)
+
 
   useEffect(() => {
     let st = null;
@@ -34,12 +36,26 @@ export const Header = () => {
     }
   }, [])
 
+  useEffect(() => {
+    setOpenMenu(false)
+    return () => { }
+  }, [isDown])
+
+
   return (
-    <header className={css.header} {...isDown ? { 'data-hide': 'true' } : {}}>
+    <header className={css.header}
+      {...isDown ? { 'data-hide': 'true' } : {}}
+      {...isOpenMenu ? { 'data-open': 'true' } : {}}
+    >
       <div className={`wrapper ${css.wrapper}`}>
         <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo'>
           <PlumpixLogo />
         </Link>
+        <button onClick={() => setOpenMenu(!isOpenMenu)} className={css.burger}>
+          <span></span>
+          <span className={css.s} ></span>
+          <span></span>
+        </button>
         <Menu />
         <MyLink href={'/contacts'} title='Contact us'>Contact us</MyLink>
       </div>

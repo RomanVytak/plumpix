@@ -41,7 +41,7 @@ export const Menu = ({ showSubPages = true }) => {
                 {
                   t.link ?
                     <Link href={t.link} data-page>{t.title}</Link> :
-                    <button data-page aria-hidden='true'>{t.title}</button>
+                    <button data-page >{t.title}</button>
                 }
 
                 {t.sub && showSubPages && (
