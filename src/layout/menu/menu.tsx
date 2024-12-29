@@ -36,7 +36,7 @@ export const Menu = ({ showSubPages = true, subDeps = [] }) => {
   }, [...subDeps])
 
   return (
-    <menu >
+    <menu {...( showSubPages ? { 'data-child': 'true' } : {})} >
       <ul>
         {
           dataMenu.map((t) => {

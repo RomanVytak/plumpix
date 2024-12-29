@@ -11,7 +11,7 @@ const data = {
 export const Text = () => {
   return (
     <section className={css.intro}>
-      <div className={`wrapper ${css.wrapper}`}>
+      <div className={`wrapper ${css.wrapper}`} data-fade data-children>
         <h1>{data.title}</h1>
         <p className={`${css.text} font_18_reg`}>{data.text}</p>
         <div >

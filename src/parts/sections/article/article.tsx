@@ -15,14 +15,14 @@ export const Article = ({ data }: { data: ArticleProps }) => {
     <section className={css.root}>
       <div className={`wrapper ${css.wrapper}`}>
         <div className={`wrapper-grid ${css.grid}`}>
-          <div className={css.text}>
+          <div className={css.text} data-fade data-children>
             <h1>{data.title}</h1>
             <p className="font_18_reg">{data.text}</p>
             {data.button && data.link && (
               <MyLink href={data.link} title={data.button}>{data.button}</MyLink>
             )}
           </div>
-          <div className={css.images}>
+          <div className={css.images} data-fade>
             <Image src={data.image} alt={data.title} width={355} height={370} />
           </div>
         </div>

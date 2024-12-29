@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import css from './stages.module.scss'
 import gsap from 'gsap';
+import { AnimationContext } from '../../../context/animation';
 
 type Stage = {
   tab: string;
@@ -15,16 +16,11 @@ type Props = {
 
 export const Stages = ({ title, data }: Props) => {
   const [activetab, setActivetab] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const animation = useContext(AnimationContext);
 
-  useEffect(() => {
-    const mm = gsap.matchMedia();
-    mm.add("(min-width: 769px)", () => setIsMobile(false));
-    mm.add("(max-width: 768px)", () => setIsMobile(true));
-    return () => {
-      mm.kill();
-    }
-  }, [])
+  const isMobile = animation.isMobile;
+
+
 
 
   if (!data) return null;
@@ -32,9 +28,9 @@ export const Stages = ({ title, data }: Props) => {
   return (
     <section className={`${css.root}`}>
       <div className="wrapper ">
-        <h2>{title}</h2>
-        <div className={`wrapper-grid ${css.items}`}>
-          <div className={css.items_navs}>
+        <h2 data-fade>{title}</h2>
+        <div className={`wrapper-grid ${css.items}`} data-fade data-children>
+          <div className={css.items_navs} >
             {
               data.map((t, i) => {
                 return (

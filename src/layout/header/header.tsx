@@ -1,65 +1,47 @@
 import css from './header.module.scss'
 import { Menu } from '../menu/menu'
 import Link from 'next/link'
-// import clsx from 'clsx'
-// import { EScrollDirection, useGetScrollPosition } from '../../hooks'
 import { PlumpixLogo } from '../../components/logo/logo'
 import { MyLink } from '../../components/link/link'
-import { useEffect, useState } from 'react'
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useContext, useEffect, useState } from 'react'
+
 import { usePathname } from 'next/navigation'
-gsap.registerPlugin(ScrollTrigger);
+import { AnimationContext } from '../../context/animation'
 
 
 export const Header = () => {
-  const [isDown, setDirection] = useState(false);
   const [isOpenMenu, setOpenMenu] = useState(false)
   const path = usePathname()
+  const animation = useContext(AnimationContext);
+
+  const isScrollTop = animation.isScrollTop;
 
 
-  useEffect(() => {
-    let st = null;
-
-    const rs = new ResizeObserver(() => ScrollTrigger.refresh());
-
-    setTimeout(() => {
-      st = ScrollTrigger.create({
-        onUpdate: self => {
-          // console.log(self.direction);
-          setDirection(self.direction === 1)
-        }
-      });
-    }, 1000)
-    rs.observe(document.body);
-    return () => {
-      rs.disconnect();
-      st && st.kill();
-    }
-  }, [])
 
   useEffect(() => {
     setOpenMenu(false)
     return () => { }
-  }, [isDown, path])
+  }, [isScrollTop, path])
 
 
   return (
     <header className={css.header}
-      {...isDown ? { 'data-hide': 'true' } : {}}
+      {...isScrollTop ? { 'data-hide': 'true' } : {}}
       {...isOpenMenu ? { 'data-open': 'true' } : {}}
     >
       <div className={`wrapper ${css.wrapper}`}>
-        <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo'>
+        <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo' data-child>
           <PlumpixLogo />
         </Link>
-        <button onClick={() => setOpenMenu(!isOpenMenu)} className={css.burger}>
+        <button onClick={() => setOpenMenu(!isOpenMenu)} className={css.burger} data-child>
           <span></span>
           <span className={css.s} ></span>
           <span></span>
         </button>
         <Menu subDeps={[path, isOpenMenu]} />
-        <MyLink href={'/contacts'} title='Contact us'>Contact us</MyLink>
+        <div data-child>
+          <MyLink href={'/contacts'} title='Contact us'>Contact us</MyLink >
+        </div>
       </div>
     </header>
   )

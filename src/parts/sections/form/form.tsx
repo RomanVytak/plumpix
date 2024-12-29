@@ -42,10 +42,10 @@ export const Form = ({ data }: Props) => {
 
   return (
     <section className={css.root}>
-      <div className="wrapper md" data-wrapper>
+      <div className="wrapper md" data-wrapper data-fade='in'>
         <div className={`wrapper-grid ${css.grid}`}>
           <div className={css.grid_left}>
-            <div className={css.ceo}>
+            <div className={css.ceo} data-fade>
               <div>
                 <a href='/' target='_blank' className={`${css.link} font_18`} >
                   <img src="/socials/linkedin.svg" alt="Roman Vytak" />
@@ -55,13 +55,13 @@ export const Form = ({ data }: Props) => {
               </div>
             </div>
           </div>
-          <div className={css.grid_form}>
-            <h2 className={data?.subtitle ? '' : 'font_48'}>{data?.title || defTitle}</h2>
-            {data?.subtitle && <p>{data.subtitle}</p>}
+          <div className={css.grid_form} data-fade data-children>
+            <h2 data-child className={data?.subtitle ? '' : 'font_48'}>{data?.title || defTitle}</h2>
+            {data?.subtitle && <p data-child>{data.subtitle}</p>}
 
             <form onSubmit={onSubmit} >
               <FormLabels labels={labels} />
-              <div className={css.status}>
+              <div className={css.status} data-child>
                 <button type='submit' className={css.submit} disabled={submiting}>Send message</button>
                 {submiting && <div className={css.loader}></div>}
               </div>

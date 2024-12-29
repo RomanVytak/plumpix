@@ -9,7 +9,7 @@ type Props = {
 export const Textarea = (props: Props) => {
   const { title, error, ...rest } = props
   return (
-    <label>
+    <label data-child>
       <span>{title}</span>
       <textarea  {...rest} rows={5} />
       {error && <span data-error>{error}</span>}

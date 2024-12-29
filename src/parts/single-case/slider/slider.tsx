@@ -7,13 +7,14 @@ import { Mousewheel, Pagination } from 'swiper/modules'
 export const Slider = ({ data }: { data: string[] }) => {
   return (
     <section className={s.root}>
-      <div className={`wrapper md ${s.wrapper}`}>
+      <div className={`wrapper md`} data-fade>
         <Swiper
           className={s.slider}
           modules={[Pagination, Mousewheel]}
           spaceBetween={16}
           mousewheel={{ forceToAxis: true }}
-          pagination={{ el: '#pagination', clickable: true }}
+          
+          pagination={{ el: '#data-pagination', clickable: true }}
 
         >
           {data.map((t) =>
@@ -22,7 +23,7 @@ export const Slider = ({ data }: { data: string[] }) => {
             </SwiperSlide>
           )}
         </Swiper>
-        <div id="pagination" className={'swiper-pagination dark'} />
+        <div id="data-pagination" className={'swiper-pagination dark'} />
       </div>
     </section>
   )

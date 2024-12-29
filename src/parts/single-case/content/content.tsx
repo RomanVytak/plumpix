@@ -1,8 +1,9 @@
 import css from './content.module.scss'
 import { CaseProps } from "../../../pages/cases/_/types"
-import { useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { AnimationContext } from '../../../context/animation';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -29,32 +30,28 @@ export const Content = ({ data, title }: { data: string, title?: string }) => {
 export const CaseContent = ({ data }: { data: CaseProps }) => {
   const sidebarRef = useRef();
   const contentRef = useRef();
-
+  const animation = useContext(AnimationContext);
+  const isMobile = animation.isMobile;
+  
   useEffect(() => {
 
-    const mm = gsap.matchMedia();
-    let trigger = null
+    if (isMobile) return;
 
-
-    mm.add("(min-width: 769px)", () => {
-      const header = document.querySelector('header');
-      trigger = ScrollTrigger.create({
-        trigger: sidebarRef.current,
-        start: `top ${header.offsetHeight}px`,
-        end: "bottom bottom",
-        endTrigger: contentRef.current,
-        pin: true,
-        // invalidateOnRefresh: true,
-        // markers: true
-      });
-
-      return () => trigger && trigger.kill();
+    const header = document.querySelector('header');
+    const trigger = ScrollTrigger.create({
+      trigger: sidebarRef.current,
+      start: `top ${header.offsetHeight}px`,
+      end: "bottom bottom",
+      endTrigger: contentRef.current,
+      pin: true,
+      // invalidateOnRefresh: true,
+      // markers: true
     });
+
     return () => {
       trigger && trigger.kill();
-      mm.kill();
     }
-  }, []);
+  }, [isMobile]);
 
 
 
@@ -97,7 +94,7 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
             </div>
           </div>
 
-          <div className={css.root_right_col} ref={contentRef}>
+          <div className={css.root_right_col} ref={contentRef} data-fade data-children>
             {content.map((item) => (
               <Content key={item.key} data={data[item.key]} title={item.title} />
             ))}

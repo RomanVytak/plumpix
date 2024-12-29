@@ -10,15 +10,24 @@ const data = {
 
 const progress = [
   {
-    value: '100%',
+    value: {
+      num: '100',
+      mark: '%'
+    },
     text: 'positive feedback',
   },
   {
-    value: '30+',
+    value: {
+      num: '30',
+      mark: '+'
+    },
     text: 'finished projects',
   },
   {
-    value: '10+',
+    value: {
+      num: '10',
+      mark: '+'
+    },
     text: 'clients worldwide',
   },
 ]
@@ -27,17 +36,20 @@ export const HomeText = () => {
   return (
     <section className={css.intro}>
       <div className="wrapper" data-wrapper>
-        <div className={css.wrapper}>
-          <h1>{data.title}</h1>
-          <p className={css.text}>{data.text}</p>
+        <div className={css.wrapper} data-children data-fade>
+          <h1 >{data.title}</h1>
+          <p className={css.text} >{data.text}</p>
           <div >
             <MyLink href={data.link} title='Start with a free consultation'>{data.button}</MyLink>
           </div>
           <div className={css.progress}>
             {progress.map((t) => {
               return (
-                <div key={t.value}>
-                  <p className={css.value}>{t.value}</p>
+                <div key={t.text}>
+                  <p className={css.value} >
+                    <span data-count={t.value.num}></span>
+                    <span>{t.value.mark}</span>
+                  </p>
                   <p className={css.text}>{t.text}</p>
                 </div>
               )

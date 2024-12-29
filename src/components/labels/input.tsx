@@ -10,7 +10,7 @@ type Props = {
 export const Input = (props: Props) => {
   const { title, error, ...rest } = props
   return (
-    <label>
+    <label data-child>
       <span>{title}</span>
       <input type="text" {...rest} />
       {error && <span data-error>{error}</span>}

@@ -53,9 +53,9 @@ export const Reviews = () => {
     <section className={s.root}>
       <div className="wrapper">
         <div className={s.wrap}>
-          <h2>{`What our clients say about PlumPix`}</h2>
+          <h2 data-fade>{`What our clients say about PlumPix`}</h2>
 
-          <div className={s.slider}>
+          <div className={s.slider} >
             <Swiper
               modules={[Pagination, Mousewheel]}
               pagination={{
@@ -65,6 +65,7 @@ export const Reviews = () => {
               className={s.swiper}
               slidesPerView={1}
               spaceBetween={16}
+              data-children data-fade
               mousewheel={{ forceToAxis: true }}
               breakpoints={{
                 769: { slidesPerView: 2 },
@@ -73,7 +74,7 @@ export const Reviews = () => {
             >
               {temp.map((t) => {
                 return (
-                  <SwiperSlide key={t.name} className={s.slide} >
+                  <SwiperSlide key={t.name} className={s.slide} data-child>
                     <div className={s.info}>
                       <Image src={t.image} alt={t.name} width={100} height={100} />
                       <div className={s.nameWrap}>

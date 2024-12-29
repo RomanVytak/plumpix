@@ -12,7 +12,7 @@ export const Soon = () => {
   return (
     <section className={css.soon}>
       <div className={`wrapper`} data-wrapper>
-        <div className={css.wrapper}>
+        <div className={css.wrapper} data-fade data-children>
 
           <h2 className="font_48">{data.title}</h2>
           <p className={`${css.text} font_18_reg`}>{data.text}</p>

@@ -6,6 +6,7 @@
     border-radius: min-max(12, 24);
     color: var(--white);
     padding: min-max(24, 40) min-max(16, 30);
+    overflow: hidden;
 
     .items {
       display: flex;

@@ -8,11 +8,11 @@ export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) =>
   return (
     <section className={s.root}>
       <div className={`wrapper ${s.wrapper}`}>
-        {title && <h2>{title}</h2>}
-        <div className={s.items}>
+        {title && <h2 data-fade>{title}</h2>}
+        <div className={s.items} >
           {data.map((t) => {
             return (
-              <div key={t.slug} className={s.item}>
+              <div key={t.slug} className={s.item} data-fade>
                 <div className={s.image}>
                   <Image src={t.home.image} alt={t.home.name} width={402} height={428} />
                 </div>

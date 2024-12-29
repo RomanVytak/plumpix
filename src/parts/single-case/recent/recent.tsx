@@ -17,7 +17,7 @@ export const Recent = ({ data }: { data: CasesProps }) => {
   return (
     <section className={s.root}>
       <div className="wrapper md">
-        <h2>{`More of recent case studie`}</h2>
+        <h2 data-fade >{`More of recent case studie`}</h2>
 
         <div className={s.slider}>
           <Swiper
@@ -29,6 +29,7 @@ export const Recent = ({ data }: { data: CasesProps }) => {
             className={s.swiper}
             slidesPerView={1}
             spaceBetween={16}
+            data-children data-fade
             mousewheel={{ forceToAxis: true }}
             breakpoints={{
               769: { slidesPerView: 2 },
@@ -37,7 +38,7 @@ export const Recent = ({ data }: { data: CasesProps }) => {
           >
             {data.map((t) => {
               return (
-                <SwiperSlide key={t.slug} className={s.slide} >
+                <SwiperSlide key={t.slug} className={s.slide} data-child >
                   <div className={s.image}>
                     <Image src={t.home.image} alt={t.home.name} width={400} height={400} />
                   </div>
