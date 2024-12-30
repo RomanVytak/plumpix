@@ -2,7 +2,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { createContext } from 'react';
-import SmoothScrolling from '../components/lenis/SmoothScrolling';
+// import SmoothScrolling from '../components/lenis/SmoothScrolling';
 
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollTrigger);
@@ -73,7 +73,7 @@ export const Animation = ({ children }) => {
           scrollTrigger: {
             trigger,
             start: () => fade == "in" ? "top 98%" : "top 95%",
-            toggleActions: "play none none reverse",
+            // toggleActions: "play none none reverse",
           },
         });
 
@@ -120,7 +120,7 @@ export const Animation = ({ children }) => {
 
     initAnimaton()
     return () => {
-      tls.forEach(tl => tl && tl.kill());
+      tls.forEach(tl => tl && tl.revert().kill());
     }
   }, [path])
 
@@ -147,9 +147,9 @@ export const Animation = ({ children }) => {
 
   return <>
     <AnimationContext.Provider value={{ isScrollTop, isMobile }}>
-      <SmoothScrolling >
-        {children}
-      </SmoothScrolling>
+      {/* <SmoothScrolling > */}
+      {children}
+      {/* </SmoothScrolling> */}
     </AnimationContext.Provider>
 
   </>
