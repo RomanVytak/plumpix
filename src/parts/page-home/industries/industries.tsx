@@ -28,7 +28,7 @@ export const Industries = () => {
   return (
     <section className={css.root}>
       <div className={`wrapper ${css.wrapper}`}>
-        <h2 data-fade>Industries we work with</h2>
+        <h2 data-fade>{`Industries we work with`}</h2>
         <div className={css.items} data-fade data-children>
           {temt.map((t) => {
             return (

@@ -1,9 +1,8 @@
-import { title } from 'process';
+import { CONTENT_TYPES } from "../const";
 
 export const pages_data = [
   /**
-   * dedicated-team
-   * Dedicated team Page
+   * Dedicated team Page (dedicated-team)
    */
   {
     slug: 'dedicated-team',
@@ -11,16 +10,16 @@ export const pages_data = [
     /**
      * article
      */
-    article: {
+    [CONTENT_TYPES.article]: {
       title: 'We are a full-stack development company',
       text: 'We empower tech companies to win in today’s competitive digital economy by providing expert engineering and consultancy services. Choosing the right people, the most appropriate technology and effective and transparent processes, we ensure radical efficiency. That’s why we’re called Radency',
       image: '/img/cases/case.jpg',
     },
 
     /**
-     * cards
+     * white_cards
      */
-    cards: {
+    [CONTENT_TYPES.white_cards]: {
       title: 'Why plumpix?',
       data: [
         {
@@ -43,57 +42,16 @@ export const pages_data = [
         },
       ],
     },
-  },
-
-  /**
-   * custom-development
-   * Custom Development Page
-   */
-
-  {
-    slug: 'custom-software-development',
 
     /**
-     * article
+     * blue_cards
      */
-    article: {
-      title: 'We empower tech companies to win in today’s',
-      text: 'We ensure radical efficiency. That’s why we’re called Radency',
-      image: '/img/cases/case.jpg',
-    },
-
-    /**
-     * cards
-     */
-    cards: {
-      title: 'Why plumpix?',
-      data: [
-        {
-          title: '111 Custom Software Developmen',
-          text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
-          button: 'Learn more',
-          link: '#',
-        },
-        {
-          title: 'Custom Software Developme',
-          text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
-          button: 'Learn more',
-          link: '#',
-        },
-        {
-          title: 'Custom Software Developm',
-          text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
-          button: 'Learn more',
-          link: '#',
-        },
-      ],
-    },
-    why_hire: {
+    [CONTENT_TYPES.blue_cards]: {
       title: 'Why hire developers from PlumPix',
       data: [
         {
-          title: 'Top 1% talent',
-          text: 'To close 1 position we review >100 candidates, check around 40 technical test tasks, conduct ~15 interviews.',
+          title: 'Top Talent in Software Development',
+          text: 'We carefully vet every candidate to ensure we bring the best to your projects. Our rigorous process includes reviewing 100+ resumes, evaluating 40+ technical tasks, and conducting around 15 interviews to fill a single position.',
         },
         {
           title: 'Team Scalability',
@@ -123,38 +81,111 @@ export const pages_data = [
       },
     },
 
-    stages: {
-      title: 'Stages of our  development process',
+    /**
+     * techstack
+     */
+    [CONTENT_TYPES.techstack]: true,
+
+    /**
+     * stages
+     */
+    [CONTENT_TYPES.stages]: null,
+  },
+
+  /**
+   * Custom Development Page (custom-development)
+   */
+  {
+    slug: 'custom-software-development',
+
+    /**
+     * article
+     */
+    [CONTENT_TYPES.article]: {
+      title: 'We help tech companies thrive and succeed in the modern landscape',
+      text: 'We’ll assist you in building attractive, high-performing, and secure web applications customized to meet your business objectives',
+      image: '/img/cases/case.jpg',
+    },
+
+    /**
+     * white_cards
+     */
+    [CONTENT_TYPES.white_cards]: {
+      title: 'Why plumpix?',
+      data: [
+        {
+          title: 'Tailored Solutions for Your Business',
+          text: 'We prioritize your unique business goals, delivering custom software solutions that align with your specific requirements and drive growth',
+          button: 'Learn more',
+        },
+        {
+          title: 'Proven Expertise',
+          text: 'With years of experience in software development, our skilled team combines technical proficiency and industry insights to create innovative, reliable, and scalable solutions',
+          button: 'Learn more',
+        },
+        {
+          title: 'Agile and Flexible Approach',
+          text: 'We use agile methodologies to adapt to your evolving needs, ensuring efficient project management and seamless collaboration throughout the development process',
+          button: 'Learn more',
+        },
+        {
+          title: 'End-to-End Development Services',
+          text: 'From concept and design to deployment and support, we handle every stage of the software development lifecycle, providing comprehensive and hassle-free service',
+          button: 'Learn more',
+        },
+        {
+          title: 'Cutting-Edge Technologies',
+          text: 'Our team stays ahead of the curve by leveraging the latest tools and technologies, ensuring your software is built for performance, security, and future-readiness',
+          button: 'Learn more',
+        },
+        {
+          title: 'Client-Centric Commitment',
+          text: 'Your success is our priority. We pride ourselves on clear communication, transparency, and delivering exceptional results that exceed expectations',
+          button: 'Learn more',
+        },
+      ],
+    },
+
+    /**
+     * reviews
+     */
+    [CONTENT_TYPES.reviews]: true,
+
+    /**
+     * techstack
+     */
+    [CONTENT_TYPES.techstack]: true,
+
+    /**
+     * stages
+     */
+    [CONTENT_TYPES.stages]: {
+      title: 'Phases of Our Development Workflow',
       data: [
         {
           tab: 'Discovery Phase',
-          title: 'What is Discovery Phase',
-          content:
-            'The first stage of creating a web application is the discovery phase, which may have multiple levels and different scenarios depending on your project. For clients who build every feature by themselves from scratch, our job is to analyze the overall project in light of your future goals. You can be sure: every element is structured to support long-term scalability and adaptability.\n\nIn another scenario, we dedicate a team to analyzing your infrastructure, the architecture of your app, your code, and your deployment approach. This thorough analysis helps us uncover any inefficiencies or areas for improvement, ensuring your system is optimized for growth. During this phase, we create a roadmap that serves as a guide for future goals. You get a solid foundation for future development.',
+          title: 'Discovery Phase',
+          content: 'The first step in crafting your software is understanding the full scope of your project. For new builds, we analyze your goals and define the best approach for success. For existing systems, we assess your infrastructure, app architecture, codebase, and deployment strategies. This phase culminates in a detailed roadmap that aligns with your vision and sets a clear path for development.',
         },
         {
           tab: 'Wireframing & Design',
           title: 'Wireframing & Design',
-          content:
-            'This phase involves various steps, from basic research to design system creation and building high-fidelity clickable prototypes. We ensure that every design decision is rooted in understanding your users’ needs and behaviors. If your business needs help with a custom UI/UX design, we assign a design team fully dedicated to assisting you.\n\nOur approach to designing web apps is customer-centric, which means that we adapt our approach depending on your goals. We prioritize creating intuitive and visually appealing interfaces that enhance user engagement and satisfaction. Take a look at our UI/UX design page for more information about our design approach.',
+          content: 'This phase focuses on translating ideas into visuals. We create wireframes to map out user flows and design intuitive, aesthetically pleasing interfaces. Our goal is to ensure a seamless user experience that reflects your brand and meets your target audience’s needs.',
         },
         {
           tab: 'Architecture & DevOps',
           title: 'Architecture & DevOps',
-          content:
-            'To provide quality web application development services, it’s essential that our developers understand the scope of your project. Thus, the next step is DevOps, which ensures seamless collaboration and efficient workflows. With early DevOps integration, you get a perfectly streamlined development lifecycle, reduced bottlenecks, and better overall productivity.\n\nDuring this stage, as a web application development company, we select and set up an appropriate architecture that allows your application to be both scalable and secure. You get all the tools to handle future growth while maintaining top-tier performance and security standards. For the DevOps phase, we assign certified cloud architects and the CTO. For more details, check out our cloud expertise.',
+          content: 'We design scalable, secure system architecture tailored to your project’s requirements. Alongside this, our DevOps experts implement automation and streamlined workflows for efficient development, deployment, and system management. This phase ensures a strong foundation for your application.',
         },
         {
           tab: 'Backend and Frontend Development',
           title: 'Backend and Frontend Development',
-          content:
-            'In the next stage, we develop backend and frontend solutions. Backend development involves integrating third-party server-side solutions and APIs. Frontend developers focus on the API endpoint structure and aim to provide scalable assets that perform seamlessly on a wide range of devices and platforms.\n\nOur project managers rely on agile development practices and maintain clear communication between teams to ensure that every team member is up-to-date with your project’s progress. To maintain high quality, we test projects at every development stage and address issues as soon as they occur. If you’re interested in our software development life cycle (SDLC) process for web applications.',
+          content: 'Our developers work on both sides of your application. The backend focuses on building robust, scalable systems to handle data and processes, while the front-end delivers a user-friendly, dynamic interface. Together, they create a seamless and powerful software solution.',
         },
         {
           tab: 'Maintenance and Support',
           title: 'Maintenance and Support',
-          content:
-            'Our maintenance stage focuses on providing architectural support for your application. As a custom web development company, we go beyond the standard “one and done” app development practice. You can be sure that your application is consistently optimized, evolving alongside your business needs to meet future demands.\n\nWe do care about our client’s success, which is why we offer maintenance and support after building your application. You get the team proactive in identifying potential issues and preventing problems before they affect your operations. We understand that challenges may arise in the future, so we remain dedicated to providing immediate solutions to any technical problems you encounter.',
+          content: 'After launch, we provide continuous monitoring, updates, and improvements. From bug fixes to adapting to new technologies, our maintenance ensures your software stays reliable, secure, and aligned with your business needs.',
         },
       ],
     },

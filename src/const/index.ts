@@ -56,3 +56,12 @@ export const TECHSTACK = {
     name: '.NET',
   },
 }
+
+export enum CONTENT_TYPES {
+  article = 'article',
+  white_cards = 'white_cards',
+  blue_cards = 'blue_cards',
+  techstack = 'techstack',
+  reviews = 'reviews',
+  stages = 'stages',
+}

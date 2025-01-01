@@ -2,9 +2,9 @@ import { MyLink } from '../../../components/link/link'
 import css from './homeText.module.scss'
 
 const data = {
-  title: 'Transform your business with solution-driven teams',
-  text: 'Comprehensive end-to-end software engineering covering prototyping, deployment, scaling, and ongoing support.',
-  button: 'Start with a free consultation',
+  title: 'From Design and Engineering to Launch and Lupport',
+  text: 'We ensures your software product is expertly crafted every step of the way. Whether you need us to start from scratch or jump in mid-process, we’re here to help.',
+  button: 'Get Started with a Free Consultation',
   link: '#',
 }
 

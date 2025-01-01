@@ -14,9 +14,9 @@ const Home = () => {
   return (
     <>
       <HomeText />
-      <Cards title="What we can provide for you" data={offers_home} />
+      <Cards title="How We Can Help You" data={offers_home} />
       <Reviews />
-      <Cases data={cases} title='Our cases of software product development service' />
+      <Cases data={cases} title='Our Software Product Development Success Stories' />
       <Industries />
       <TechStack />
       <Form />

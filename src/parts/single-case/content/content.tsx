@@ -6,14 +6,11 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { AnimationContext } from '../../../context/animation';
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 const content = [
   { key: "about", },
   { key: "сhallenge", },
   { key: "content", title: "The process", }
 ]
-
 
 export const Content = ({ data, title }: { data: string, title?: string }) => {
   return (
@@ -40,12 +37,12 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
     const header = document.querySelector('header');
     const trigger = ScrollTrigger.create({
       trigger: sidebarRef.current,
-      start: `top ${header.offsetHeight}px`,
+      start: `top 10px`,
       end: "bottom bottom",
       endTrigger: contentRef.current,
       pin: true,
       // invalidateOnRefresh: true,
-      // markers: true
+      markers: true
     });
 
     return () => {

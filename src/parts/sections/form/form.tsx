@@ -7,10 +7,9 @@ type Props = {
     title?: string
     subtitle?: string
   }
-
 }
 
-const labels = {
+const LABELS = {
   email: {
     title: 'Email*',
     type: 'text',
@@ -22,11 +21,9 @@ const labels = {
     type: 'textarea',
     placeholder: 'Tell u briefly about ypur project, or ak u anything',
   }
-
 }
 
-const defTitle = 'Let’s discuss your project';
-
+const defTitle = 'Let’s Plan Your Project Together';
 
 export const Form = ({ data }: Props) => {
   const [submiting, setSubmiting] = useState(false)
@@ -49,25 +46,22 @@ export const Form = ({ data }: Props) => {
               <div>
                 <a href='/' target='_blank' className={`${css.link} font_18`} >
                   <img src="/socials/linkedin.svg" alt="Roman Vytak" />
-                  Roman Vytak
+                  {`Roman Vytak`}
                 </a>
-                <p>CEO in PlumPi</p>
+                <p>{`CEO in PlumPi`}</p>
               </div>
             </div>
           </div>
           <div className={css.grid_form} data-fade data-children>
             <h2 data-child className={data?.subtitle ? '' : 'font_48'}>{data?.title || defTitle}</h2>
             {data?.subtitle && <p data-child>{data.subtitle}</p>}
-
             <form onSubmit={onSubmit} >
-              <FormLabels labels={labels} />
+              <FormLabels labels={LABELS} />
               <div className={css.status} data-child>
                 <button type='submit' className={css.submit} disabled={submiting}>Send message</button>
                 {submiting && <div className={css.loader}></div>}
               </div>
             </form>
-
-
           </div>
         </div>
       </div>

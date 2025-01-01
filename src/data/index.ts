@@ -1,19 +1,19 @@
 export const offers_home = [
   {
-    title: 'Custom Software Development',
-    text: 'to deliver personalized solutions that meet your business requirements and enhance overall efficiency',
+    title: 'Bespoke Software Solutions',
+    text: 'Leverage our expertise to create an MVP from the ground up and transform it into a comprehensive, feature-rich platform.',
     button: 'Learn more',
     link: '#',
   },
   {
     title: 'Dedicated Development Team',
-    text: 'Expertly managed dedicated engineering teams customized to meet your technology-driven requirements',
+    text: 'Enhance your capacity with our full-stack engineers who become an integral part of your team, working seamlessly within your business.',
     button: 'Learn more',
     link: '#',
   },
   {
-    title: 'Custom Software Reengineering',
-    text: 'Enhancing your software solution by modernizing legacy systems and optimizing infrastructure',
+    title: 'Software Reengineering Solutions',
+    text: 'Revitalize your systems with our full-stack engineers, integrated into your business to modernize and enhance your software.',
     button: 'Learn more',
     link: '#',
   },

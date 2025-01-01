@@ -6,18 +6,27 @@ import { Form } from "../parts/sections/form/form"
 import { TechStack } from "../parts/sections/techstack/techstack"
 import { Cards } from "../parts/sections/cards/cards"
 import { Stages } from "../parts/sections/stages/stages"
-
-
+import { CONTENT_TYPES } from "../const"
 
 const Page = ({ post }) => {
   return (
     <>
-      <Article data={post.article} />
-      <Cards {...post.cards} />
-      <Cards {...post.why_hire} type="colorful" />
-      <Stages {...post.stages} />
-      <Reviews />
-      <TechStack />
+      {Object.keys(post).map((contentBlock: any) => {
+        switch (contentBlock) {
+          case CONTENT_TYPES.article:
+            return <Article data={post.article} />
+          case CONTENT_TYPES.white_cards:
+            return <Cards {...post.white_cards} />
+          case CONTENT_TYPES.blue_cards:
+            return <Cards {...post.blue_cards} type="colorful" />
+          case CONTENT_TYPES.reviews:
+            return <Reviews />
+          case CONTENT_TYPES.techstack:
+            return <TechStack />
+          case CONTENT_TYPES.stages:
+            return <Stages {...post.stages} />
+        }
+      })}
       <Form />
     </>
   )
@@ -51,3 +60,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
+
+
+// return (
+//   <>
+//     {post.article && }
+//     {post.white_cards && }
+//     {post.blue_cards && }
+//     {post.reviews && }
+//     {post.techstack && }
+//     {post.stages && }
+
+//   </>
+// )

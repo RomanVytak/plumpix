@@ -5,12 +5,17 @@ type Props = {
   title: string;
   type?: 'colorful';
   data: any[];
-  button?: { title: string, link: string };
+  button?: {
+    title: string,
+    link: string
+  };
 }
 
 export const Cards = ({ title, data, button, type }: Props) => {
 
-  if (!data) return null;
+  if (!data) {
+    return null;
+  }
 
   return (
     <section className={`${s.root} ${type ? s[type] : ""}`}>
@@ -27,12 +32,11 @@ export const Cards = ({ title, data, button, type }: Props) => {
             )
           })}
         </div>
-        {
-          button &&
+        {button && (
           <div className={s.button} data-fade>
             <MyLink href={button.link} type='black' title={button.title}>{button.title}</MyLink>
           </div>
-        }
+        )}
       </div>
     </section>
   )
