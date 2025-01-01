@@ -4,6 +4,7 @@ import 'swiper/css'
 import s from './recent.module.scss'
 import Image from 'next/image'
 import { MyLink } from '../../../components/link/link'
+import { CasesProps } from '../../../types'
 
 export const Recent = ({ data }: { data: CasesProps }) => {
 
