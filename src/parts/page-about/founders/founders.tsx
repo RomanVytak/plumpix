@@ -24,9 +24,9 @@ export const Founders = () => {
           <h2>{`Meet the founders`}</h2>
           {temp.map((t) => {
             return (
-              <div key={t.name} className={css.item} >
+              <div key={t.name} className={css.item}>
                 <div className={css.ceo}>
-                  <a href='/' target='_blank' className={`${css.link} font_18`} >
+                  <a href='/' target='_blank' className={`${css.link} font_18`}>
                     <img src="/socials/linkedin.svg" alt={t.name} />
                     {t.name}
                   </a>

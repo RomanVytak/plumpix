@@ -54,8 +54,7 @@ export const Reviews = () => {
       <div className="wrapper">
         <div className={s.wrap}>
           <h2 data-fade>{`What our clients say about PlumPix`}</h2>
-
-          <div className={s.slider} >
+          <div className={s.slider}>
             <Swiper
               modules={[Pagination, Mousewheel]}
               pagination={{
@@ -100,7 +99,6 @@ export const Reviews = () => {
           </div>
         </div>
       </div>
-
-    </section >
+    </section>
   )
 }

@@ -14,7 +14,7 @@ export const Text = () => {
       <div className={`wrapper ${css.wrapper}`} data-fade data-children>
         <h1>{data.title}</h1>
         <p className={`${css.text} font_18_reg`}>{data.text}</p>
-        <div >
+        <div>
           <MyLink href={data.link} icon={true} type='stroke' title={data.button}>{data.button}</MyLink>
         </div>
       </div>

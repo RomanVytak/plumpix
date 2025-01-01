@@ -1,6 +1,6 @@
 import Image from "next/image"
 import css from './intro.module.scss'
-import { CaseProps } from "../../../pages/cases/_/types"
+import { CaseProps } from "../../../types"
 
 export const Intro = ({ data }: { data: CaseProps['home'] }) => {
   return (

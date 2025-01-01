@@ -4,10 +4,8 @@ import Link from 'next/link'
 import { PlumpixLogo } from '../../components/logo/logo'
 import { MyLink } from '../../components/link/link'
 import { useContext, useEffect, useState } from 'react'
-
 import { usePathname } from 'next/navigation'
 import { AnimationContext } from '../../context/animation'
-
 
 export const Header = () => {
   const [isOpenMenu, setOpenMenu] = useState(false)
@@ -16,13 +14,10 @@ export const Header = () => {
 
   const isScrollTop = animation.isScrollTop;
 
-
-
   useEffect(() => {
     setOpenMenu(false)
     return () => { }
   }, [isScrollTop, path])
-
 
   return (
     <header className={css.header}
@@ -34,13 +29,13 @@ export const Header = () => {
           <PlumpixLogo />
         </Link>
         <button onClick={() => setOpenMenu(!isOpenMenu)} className={css.burger} data-child>
-          <span></span>
-          <span className={css.s} ></span>
-          <span></span>
+          <span />
+          <span className={css.s} />
+          <span />
         </button>
         <Menu subDeps={[path, isOpenMenu]} />
         <div data-child>
-          <MyLink href={'/contacts'} title='Contact us'>Contact us</MyLink >
+          <MyLink href={'/contacts'} title='Contact us'>Contact us</MyLink>
         </div>
       </div>
     </header>

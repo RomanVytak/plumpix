@@ -1,4 +1,4 @@
-import { TECHSTACK } from "../../../const";
+import { TECHSTACK } from "../const";
 
 export const cases = [
   {

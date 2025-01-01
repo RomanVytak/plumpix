@@ -24,7 +24,6 @@ const dataMenu = [
     title: 'About us',
     link: '/about'
   }
-
 ]
 
 export const Menu = ({ showSubPages = true, subDeps = [] }) => {
@@ -36,28 +35,28 @@ export const Menu = ({ showSubPages = true, subDeps = [] }) => {
   }, [...subDeps])
 
   return (
-    <menu {...( showSubPages ? { 'data-child': 'true' } : {})} >
+    <menu {...(showSubPages ? { 'data-child': 'true' } : {})}>
       <ul>
         {
           dataMenu.map((t) => {
+            if (!t.link && !showSubPages) {
+              return null;
+            }
 
-            if (!t.link && !showSubPages) return null
             return (
-              <li key={t.title}
+              <li
+                key={t.title}
                 {...(t.sub && showSubPages ? { 'data-has-sub': 'true' } : {})}
                 {...(t.sub && openSub ? { 'data-open': 'true' } : {})}
-
               >
-                {
-                  t.link ?
-                    <Link href={t.link} data-page>{t.title}</Link> :
-                    <button data-page onClick={() => setOpenSub(!openSub)} >{t.title}</button>
-                }
-
+                {t.link ? (
+                  <Link href={t.link} data-page>{t.title}</Link>
+                ) : (
+                  <button data-page onClick={() => setOpenSub(!openSub)}>{t.title}</button>
+                )}
                 {t.sub && showSubPages && (
                   <div data-sub-menu>
-
-                    <ul data-sub >
+                    <ul data-sub>
                       {t.sub.map((sub) => {
                         return (
                           <li key={sub.title}>

@@ -2,7 +2,7 @@
 
 export const Favicons = () => {
   return (
-    < >
+    <>
       {/* <!-- Стандартний favicon для браузерів --> */}
       <link rel="icon" href="/favicons/favicon.ico" sizes="any" type="image/x-icon" />
 

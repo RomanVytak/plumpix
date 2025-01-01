@@ -14,7 +14,7 @@ export const Page404 = () => {
         <div className={css.wrapper}>
           <span className={`${css.number} font_48`}>404</span>
           <h1 dangerouslySetInnerHTML={{ __html: data.title }} />
-          <div >
+          <div>
             <MyLink href={data.link} title={data.button}>{data.button}</MyLink>
           </div>
         </div>

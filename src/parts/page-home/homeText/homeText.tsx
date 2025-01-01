@@ -37,16 +37,16 @@ export const HomeText = () => {
     <section className={css.intro}>
       <div className="wrapper" data-wrapper>
         <div className={css.wrapper} data-children data-fade>
-          <h1 >{data.title}</h1>
-          <p className={css.text} >{data.text}</p>
-          <div >
+          <h1>{data.title}</h1>
+          <p className={css.text}>{data.text}</p>
+          <div>
             <MyLink href={data.link} title='Start with a free consultation'>{data.button}</MyLink>
           </div>
           <div className={css.progress}>
             {progress.map((t) => {
               return (
                 <div key={t.text}>
-                  <p className={css.value} >
+                  <p className={css.value}>
                     <span data-count={t.value.num}></span>
                     <span>{t.value.mark}</span>
                   </p>

@@ -4,20 +4,17 @@ import 'swiper/css'
 import s from './recent.module.scss'
 import Image from 'next/image'
 import { MyLink } from '../../../components/link/link'
-import { CasesProps } from '../../../pages/cases/_/types'
-
-
 
 export const Recent = ({ data }: { data: CasesProps }) => {
 
-
-  if (!data.length) return null;
-
+  if (!data.length) {
+    return null;
+  }
 
   return (
     <section className={s.root}>
       <div className="wrapper md">
-        <h2 data-fade >{`More of recent case studie`}</h2>
+        <h2 data-fade>{`More of recent case studie`}</h2>
 
         <div className={s.slider}>
           <Swiper
@@ -38,7 +35,7 @@ export const Recent = ({ data }: { data: CasesProps }) => {
           >
             {data.map((t) => {
               return (
-                <SwiperSlide key={t.slug} className={s.slide} data-child >
+                <SwiperSlide key={t.slug} className={s.slide} data-child>
                   <div className={s.image}>
                     <Image src={t.home.image} alt={t.home.name} width={400} height={400} />
                   </div>
@@ -60,7 +57,6 @@ export const Recent = ({ data }: { data: CasesProps }) => {
           <div id="pagination" className={'swiper-pagination dark'} />
         </div>
       </div>
-
-    </section >
+    </section>
   )
 }

@@ -1,9 +1,9 @@
 import css from './content.module.scss'
-import { CaseProps } from "../../../pages/cases/_/types"
 import { useContext, useEffect, useRef } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { AnimationContext } from '../../../context/animation';
+import { CaseProps } from '../../../types';
 gsap.registerPlugin(ScrollTrigger);
 
 const content = [
@@ -29,12 +29,13 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
   const contentRef = useRef();
   const animation = useContext(AnimationContext);
   const isMobile = animation.isMobile;
-  
+
   useEffect(() => {
 
-    if (isMobile) return;
+    if (isMobile) {
+      return;
+    }
 
-    const header = document.querySelector('header');
     const trigger = ScrollTrigger.create({
       trigger: sidebarRef.current,
       start: `top 10px`,
@@ -50,8 +51,6 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
     }
   }, [isMobile]);
 
-
-
   return (
     <section className={css.root}>
       <div className={`wrapper md ${css.wrapper}`}>
@@ -62,35 +61,27 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
                 <h2 className="font_28">Product Team</h2>
                 <div className={css.list}>
                   {data.team.map((item) => (
-                    <p key={item} >{item}</p>
+                    <p key={item}>{item}</p>
                   ))}
                 </div>
-
                 <div className={css.duration}>
                   <p>Duration: {data.duration}</p>
                 </div>
               </div>
-
               <div className={css.line}></div>
-
               <div className={css.col}>
                 <h2 className="font_28">Technologies</h2>
-
                 <div className={css.tech}>
-                  {
-                    data.technologies.map((item) => (
-                      <div className={css.tech_item} key={item.name}>
-                        <img src={item.icon} alt={item.name} />
-                        <p>{item.name}</p>
-                      </div>
-                    ))
-                  }
+                  {data.technologies.map((item) => (
+                    <div className={css.tech_item} key={item.name}>
+                      <img src={item.icon} alt={item.name} />
+                      <p>{item.name}</p>
+                    </div>
+                  ))}
                 </div>
-
               </div>
             </div>
           </div>
-
           <div className={css.root_right_col} ref={contentRef} data-fade data-children>
             {content.map((item) => (
               <Content key={item.key} data={data[item.key]} title={item.title} />

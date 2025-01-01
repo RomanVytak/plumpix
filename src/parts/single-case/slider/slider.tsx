@@ -13,9 +13,7 @@ export const Slider = ({ data }: { data: string[] }) => {
           modules={[Pagination, Mousewheel]}
           spaceBetween={16}
           mousewheel={{ forceToAxis: true }}
-          
           pagination={{ el: '#data-pagination', clickable: true }}
-
         >
           {data.map((t) =>
             <SwiperSlide key={t} className={s.slide}>

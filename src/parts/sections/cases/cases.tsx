@@ -1,15 +1,15 @@
 import Image from 'next/image'
 import s from './cases.module.scss'
-import { CaseProps } from '../../../pages/cases/_/types'
 import { Tags } from '../../../components/tags/tags'
 import { MyLink } from '../../../components/link/link'
+import { CaseProps } from '../../../types'
 
 export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) => {
   return (
     <section className={s.root}>
       <div className={`wrapper ${s.wrapper}`}>
         {title && <h2 data-fade>{title}</h2>}
-        <div className={s.items} >
+        <div className={s.items}>
           {data.map((t) => {
             return (
               <div key={t.slug} className={s.item} data-fade>

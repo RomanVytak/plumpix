@@ -1,11 +1,11 @@
 import { GetStaticPaths, GetStaticProps } from "next/types";
-import { cases } from "./_/data";
-import { CaseProps, CasesProps } from "./_/types";
+import { cases } from "../../data/cases";
 import { Slider } from "../../parts/single-case/slider/slider";
 import { Intro } from "../../parts/single-case/intro/intro";
 import { Form } from "../../parts/sections/form/form";
 import { CaseContent } from "../../parts/single-case/content/content";
 import { Recent } from "../../parts/single-case/recent/recent";
+import { CaseProps, CasesProps } from "../../types";
 
 const formData = {
   title: "Build your project with us",

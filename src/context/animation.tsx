@@ -147,7 +147,7 @@ export const Animation = ({ children }) => {
 
   return <>
     <AnimationContext.Provider value={{ isScrollTop, isMobile }}>
-      {/* <SmoothScrolling > */}
+      {/* <SmoothScrolling> */}
       {children}
       {/* </SmoothScrolling> */}
     </AnimationContext.Provider>

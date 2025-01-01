@@ -44,7 +44,7 @@ export const Form = ({ data }: Props) => {
           <div className={css.grid_left}>
             <div className={css.ceo} data-fade>
               <div>
-                <a href='/' target='_blank' className={`${css.link} font_18`} >
+                <a href='/' target='_blank' className={`${css.link} font_18`}>
                   <img src="/socials/linkedin.svg" alt="Roman Vytak" />
                   {`Roman Vytak`}
                 </a>
@@ -55,7 +55,7 @@ export const Form = ({ data }: Props) => {
           <div className={css.grid_form} data-fade data-children>
             <h2 data-child className={data?.subtitle ? '' : 'font_48'}>{data?.title || defTitle}</h2>
             {data?.subtitle && <p data-child>{data.subtitle}</p>}
-            <form onSubmit={onSubmit} >
+            <form onSubmit={onSubmit}>
               <FormLabels labels={LABELS} />
               <div className={css.status} data-child>
                 <button type='submit' className={css.submit} disabled={submiting}>Send message</button>

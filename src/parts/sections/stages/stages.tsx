@@ -28,7 +28,7 @@ export const Stages = ({ title, data }: Props) => {
       <div className="wrapper ">
         <h2 data-fade>{title}</h2>
         <div className={`wrapper-grid ${css.items}`} data-fade data-children>
-          <div className={css.items_navs} >
+          <div className={css.items_navs}>
             {data.map((t, i) => {
               return (
                 <div className={css.nav_row} key={t.tab}>
@@ -36,11 +36,11 @@ export const Stages = ({ title, data }: Props) => {
                     className={`font_18 ${css.nav} ${activetab === i ? css.active : ''}`}
                     aria-label={t.tab}
                     onClick={() => setActivetab(i)}
-                  >{t.tab}
+                  >
+                    {t.tab}
                     {isMobile && <div className={`${css.arrow} mask_arrow`}></div>}
                   </button>
-                  {
-                    isMobile &&
+                  {isMobile && (
                     <div className={`${css.nav_content} ${activetab === i ? css.active : ''}`}>
                       <div className={css.nav_wrapper}>
                         <div className={`${css.card}`}>
@@ -49,21 +49,23 @@ export const Stages = ({ title, data }: Props) => {
                         </div>
                       </div>
                     </div>
-                  }
+                  )}
                 </div>
               )
             })}
           </div>
-          {!isMobile && <div className={css.items_content}>
-            {data.map((t, i) => {
-              return (
-                <div className={`${css.card} ${activetab === i ? css.active : ''}`} key={t.title}>
-                  <h3>{t.title}</h3>
-                  <p>{t.content}</p>
-                </div>
-              )
-            })}
-          </div>}
+          {!isMobile && (
+            <div className={css.items_content}>
+              {data.map((t, i) => {
+                return (
+                  <div className={`${css.card} ${activetab === i ? css.active : ''}`} key={t.title}>
+                    <h3>{t.title}</h3>
+                    <p>{t.content}</p>
+                  </div>
+                )
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>

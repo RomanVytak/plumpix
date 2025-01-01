@@ -15,7 +15,7 @@ export const TechStack = () => {
               return (
                 <div key={name} className={`${css.item} font_18_reg`}>
                   <Image src={icon} alt={name} width={30} height={30} />
-                  <p >{name}</p>
+                  <p>{name}</p>
                 </div>
               )
             })}
