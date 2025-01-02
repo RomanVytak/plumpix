@@ -2,10 +2,8 @@ import Link from 'next/link'
 import { PlumpixLogo } from '../../components/logo/logo'
 import css from './footer.module.scss'
 import { Menu } from '../menu/menu'
-import { title } from 'process';
 
-
-const dataMail = 'ask@binary-studio.com';
+const dataMail = 'ask@plumpix.io';
 
 const forQuestions = [
   {
@@ -18,12 +16,9 @@ const forQuestions = [
     link: '/',
     title: 'Ask questions'
   }
-
 ]
 
-
 export const Footer = () => {
-
   return (
     <footer className={css.footer}>
       <div className="wrapper md" data-wrapper>
@@ -39,7 +34,6 @@ export const Footer = () => {
                 <div className="mask_mail" data-mail></div>
                 {dataMail}
               </a>
-
               <div className={css.column}>
                 {forQuestions.map((t) =>
                   <a key={t.title} href={t.link} className={css.item} aria-label={t.title} target='_blank'>
@@ -50,23 +44,23 @@ export const Footer = () => {
               </div>
             </div>
             <Menu showSubPages={false} />
-
             <div className={css.contacts}>
               <div className={css.column}>
                 <p className='font_18_bold'>Headquarters</p>
                 <p className={css.location}>
                   <img src="/icons/flag_ua.svg" alt="Lviv, Ukraine" />
-                  Lviv, Ukraine</p>
+                  {`Lviv, Ukraine`}
+                </p>
               </div>
               <div className={css.column}>
-                <p className='font_18_bold'>International Offices</p>
+                <p className='font_18_bold'>{`International Offices`}</p>
                 <p className={css.location}>
                   <img src="/icons/flag_uk.svg" alt="Wimborne, United Kingdom" />
-                  Wimborne, United Kingdom
+                  {`Wimborne, United Kingdom`}
                 </p>
                 <p className={css.location}>
                   <img src="/icons/flag_cy.svg" alt="Limassol, Cyprus" />
-                  Limassol, Cyprus
+                  {`Limassol, Cyprus`}
                 </p>
               </div>
             </div>
