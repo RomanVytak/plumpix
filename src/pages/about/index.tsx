@@ -10,7 +10,7 @@ const About = () => {
     <>
       <Article data={article_about} />
       <Mapa />
-      <Cards title="Our Values" data={offers_home} />
+      <Cards title="Our Core Values" data={offers_home} />
       <Founders />
       <Form />
     </>

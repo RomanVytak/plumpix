@@ -58,19 +58,19 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
           <div className={css.root_left_col}>
             <div className={css.information} ref={sidebarRef}>
               <div className={css.col}>
-                <h2 className="font_28">Product Team</h2>
+                <h2 className="font_28">{`Product Team`}</h2>
                 <div className={css.list}>
                   {data.team.map((item) => (
                     <p key={item}>{item}</p>
                   ))}
                 </div>
                 <div className={css.duration}>
-                  <p>Duration: {data.duration}</p>
+                  <p>{`Duration:`} {data.duration}</p>
                 </div>
               </div>
               <div className={css.line}></div>
               <div className={css.col}>
-                <h2 className="font_28">Technologies</h2>
+                <h2 className="font_28">{`Technologies`}</h2>
                 <div className={css.tech}>
                   {data.technologies.map((item) => (
                     <div className={css.tech_item} key={item.name}>
@@ -82,6 +82,7 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
               </div>
             </div>
           </div>
+
           <div className={css.root_right_col} ref={contentRef} data-fade data-children>
             {content.map((item) => (
               <Content key={item.key} data={data[item.key]} title={item.title} />

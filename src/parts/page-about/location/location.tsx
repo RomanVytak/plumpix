@@ -1,8 +1,8 @@
 import css from './location.module.scss'
 
 const data = {
-  title: 'Based in Ukraine, <br> we serve the world.',
-  subtitle: "Our main office is located in Lviv, Ukraine"
+  title: 'Headquartered in Ukraine, Delivering Globally',
+  subtitle: 'Our main office is located in Lviv, but our expertise knows no borders',
 }
 
 export const Mapa = () => {

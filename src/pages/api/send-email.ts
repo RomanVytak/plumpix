@@ -23,7 +23,7 @@ export default async function handler(
     const mailOptions = {
       from: email,
       to: process.env.GMAIL_USER,
-      subject: 'Повідомлення з сайту plumpix.io',
+      subject: 'Повідомлення з сайту PlumPix.io',
       text: `Ім'я: ${name}\nEmail: ${email}\nПовідомлення: ${message}`,
     };
 

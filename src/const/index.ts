@@ -39,6 +39,10 @@ export const TECHSTACK = {
     icon: '/icons/techstack/azure.svg',
     name: 'Azure',
   },
+  bootstrap: {
+    icon: '/icons/techstack/bootstrap.svg',
+    name: 'Bootstrap',
+  },
   wp: {
     icon: '/icons/techstack/wordpress.svg',
     name: 'WordPress',
@@ -54,6 +58,18 @@ export const TECHSTACK = {
   net: {
     icon: '/icons/techstack/net.svg',
     name: '.NET',
+  },
+  graphql: {
+    icon: '/icons/techstack/graphql.svg',
+    name: 'GraphQL',
+  },
+  php: {
+    icon: '/icons/techstack/php.svg',
+    name: 'php',
+  },
+  redux: {
+    icon: '/icons/techstack/redux.svg',
+    name: 'Redux',
   },
 }
 

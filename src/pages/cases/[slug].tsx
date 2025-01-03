@@ -7,19 +7,13 @@ import { CaseContent } from "../../parts/single-case/content/content";
 import { Recent } from "../../parts/single-case/recent/recent";
 import { CaseProps, CasesProps } from "../../types";
 
-const formData = {
-  title: "Build your project with us",
-  subtitle: "Contact us to discuss all benefits of this model for  your specific business."
-}
-
 const Case = ({ post, recent }: { post: CaseProps, recent: CasesProps }) => {
-
   return (
     <>
       <Intro data={post.home} />
       <CaseContent data={post} />
       <Slider data={post.slider} />
-      <Form data={formData} />
+      <Form />
       <Recent data={recent} />
     </>
   )

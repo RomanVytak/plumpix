@@ -5,7 +5,7 @@ export const Textarea = (props: FieldProps) => {
   return (
     <label data-child>
       <span>{title}</span>
-      <textarea  {...rest} onChange={handleChange} rows={4} value={value} />
+      <textarea  {...rest} onChange={handleChange} rows={3} value={value} />
       {error && <span data-error>{error}</span>}
     </label>
   )

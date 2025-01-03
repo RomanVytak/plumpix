@@ -2,13 +2,6 @@ import { useState } from 'react'
 import { FormLabels } from '../../../components/labels/Form'
 import css from './form.module.scss'
 
-type Props = {
-  data?: {
-    title?: string
-    subtitle?: string
-  }
-}
-
 const LABELS = {
   name: {
     title: 'Name*',
@@ -35,15 +28,13 @@ enum MESSAGES {
   success = 'Message sent successfully!',
 }
 
-const defTitle = 'Let’s Plan Your Project Together';
-
 const DEFAULT_DATA = {
   email: '',
   message: '',
   name: '',
 }
 
-export const Form = ({ data }: Props) => {
+export const Form = () => {
   const [submiting, setSubmiting] = useState(false);
   const [status, setStatus] = useState('');
   const [formData, setFormData] = useState({
@@ -77,7 +68,7 @@ export const Form = ({ data }: Props) => {
 
       if (data.success) {
         setStatus(MESSAGES.success);
-        setFormData({...DEFAULT_DATA});
+        setFormData({ ...DEFAULT_DATA });
       } else {
         setStatus(MESSAGES.error);
       }
@@ -87,8 +78,6 @@ export const Form = ({ data }: Props) => {
       setSubmiting(e => !e);
     }
   };
-
-  console.log('--- formData ', formData)
 
   return (
     <section className={css.root}>
@@ -106,8 +95,7 @@ export const Form = ({ data }: Props) => {
             </div>
           </div>
           <div className={css.grid_form} data-fade data-children>
-            <h2 data-child className={data?.subtitle ? '' : 'font_48'}>{data?.title || defTitle}</h2>
-            {data?.subtitle && <p data-child>{data.subtitle}</p>}
+            <h2 data-child className="font_48">{`Start Creating Something Exceptional Together!`}</h2>
             <form onSubmit={handleSubmit}>
               <FormLabels labels={LABELS} handleChange={handleChange} formData={formData} />
               <div className={css.status} data-child>

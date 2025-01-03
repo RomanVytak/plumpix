@@ -11,8 +11,8 @@ export const pages_data = [
      * article
      */
     [CONTENT_TYPES.article]: {
-      title: 'We are a full-stack development company',
-      text: 'We empower tech companies to win in today’s competitive digital economy by providing expert engineering and consultancy services. Choosing the right people, the most appropriate technology and effective and transparent processes, we ensure radical efficiency. That’s why we’re called Radency',
+      title: 'Build Your Remote Development Team with PlumPix',
+      text: 'Accelerate Your Business Growth and Simplify Hiring Processes: Empower Your Team to Scale Effectively Without the Burden of Recruitment Challenges',
       image: '/img/cases/case.jpg',
     },
 
@@ -20,23 +20,23 @@ export const pages_data = [
      * white_cards
      */
     [CONTENT_TYPES.white_cards]: {
-      title: 'Why plumpix?',
+      title: 'How to Strengthen Your Team with PlumPix',
       data: [
         {
-          title: '111 Custom Software Developmen',
-          text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
+          title: 'Discovery',
+          text: 'Start by scheduling a call to discuss your project requirements and technical needs. We\'ll carefully select experts who are the perfect technical and cultural fit for your team.',
           button: 'Learn more',
           link: '',
         },
         {
-          title: 'Custom Software Developme',
-          text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
+          title: 'Team Setup',
+          text: 'With our extensive pool of vetted in-house developers, we can launch most projects within just 1–2 weeks.',
           button: 'Learn more',
           link: '',
         },
         {
-          title: 'Custom Software Developm',
-          text: 'Rely on our product development expertise to build an MVP from scratch and evolve it into a full-featured platform',
+          title: 'Reliable Delivery',
+          text: 'Your PlumPix team seamlessly integrates with your in-house team or operates independently, delivering dependable results from day one.',
           button: 'Learn more',
           link: '',
         },
@@ -47,31 +47,31 @@ export const pages_data = [
      * blue_cards
      */
     [CONTENT_TYPES.blue_cards]: {
-      title: 'Why hire developers from PlumPix',
+      title: 'Why Partner with PlumPix Developers',
       data: [
         {
-          title: 'Top Talent in Software Development',
-          text: 'We carefully vet every candidate to ensure we bring the best to your projects. Our rigorous process includes reviewing 100+ resumes, evaluating 40+ technical tasks, and conducting around 15 interviews to fill a single position.',
+          title: 'Elite Talent Pool',
+          text: 'We select only the best candidates. Our rigorous hiring process involves screening over 100 applicants, evaluating 40 technical assessments, and conducting 15 interviews for each position.',
         },
         {
-          title: 'Team Scalability',
-          text: 'We can extend your existing team or build a new dedicated team from scratch. Plus, we can scale the team according to your growing needs, or, by contrast, provide you with part-time specialists if you require a limited scope of tasks.',
+          title: 'Flexible Team Solutions',
+          text: 'Whether expanding your current team or creating a dedicated one, we adapt to your needs. Scale up as your project grows or bring in part-time experts for focused tasks.',
         },
         {
-          title: 'Predictable and transparent pricing',
-          text: "A dedicated team model is a cost-effective solution when done right. If you hire a dedicated development team with Binary, you'll have a clear budget estimate for the project and transparent cost tracking in the process.",
+          title: 'Clear and Cost-Effective Pricing',
+          text: 'A dEnjoy predictable costs with no surprises. Our dedicated team model ensures accurate budget estimates and transparent expense tracking throughout your project.',
         },
         {
-          title: 'Kick off in 5 days or less',
-          text: 'Build and onboard your team in days. Get your project on track with dedicated talent.',
+          title: 'Rapid Onboarding Process',
+          text: 'Get started in just five days. Our streamlined approach ensures your project gains momentum with the right talent, fast.',
         },
         {
-          title: 'Wide tech expertise',
-          text: 'We work with all major tech platforms and have extensive expertise with AWS, GCP, Java, Python, Ruby, .NET, JS and Flutter.',
+          title: 'Diverse Technical Expertise',
+          text: 'We deliver across a wide range of technologies, including React, TypeScript, Node.js, Angular, Vue, Python, Laravel, and Symphony, ensuring your project benefits from cutting-edge knowledge.',
         },
         {
-          title: 'Results focused',
-          text: 'Maintain full control of the results and the technical ownership of the project team.',
+          title: 'Ownership and Results Focus',
+          text: 'Keep control while achieving exceptional outcomes. With PlumPix, you maintain technical ownership, while we focus on delivering measurable results for your business.',
         },
       ],
 
@@ -111,7 +111,7 @@ export const pages_data = [
      * white_cards
      */
     [CONTENT_TYPES.white_cards]: {
-      title: 'Why plumpix?',
+      title: 'Why PlumPix?',
       data: [
         {
           title: 'Tailored Solutions for Your Business',

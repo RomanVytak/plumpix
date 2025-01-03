@@ -22,7 +22,7 @@ export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) =>
                     <Tags tags={t.home.tags} />
                   </div>
                   <p className={s.text}>
-                    {t.about}
+                    {t.preview}
                   </p>
                   <div className={s.button}>
                     <MyLink href={`cases/${t.slug}`} title='Learn more' icon={true} type='stroke'>Learn more</MyLink>

@@ -24,7 +24,7 @@ export const Footer = () => {
       <div className="wrapper md" data-wrapper>
         <div className={`wrapper-grid ${css.grid}`} data-fade='in'>
           <div className={css.grid_left} data-fade>
-            <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo'>
+            <Link href={'/'} className={`site-logo`} aria-label='PlumPix Logo'>
               <PlumpixLogo textColor='white' />
             </Link>
           </div>

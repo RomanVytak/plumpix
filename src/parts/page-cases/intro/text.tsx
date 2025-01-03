@@ -3,7 +3,7 @@ import css from './text.module.scss'
 
 const data = {
   title: 'Our Case Studies',
-  text: `Explore our portfolio of innovative software solutions. From FinTech and Healthcare to MarTech and beyond, we’ve delivered cutting-edge projects for diverse industries.`,
+  text: `Explore our portfolio of innovative software solutions. From FinTech and Healthcare to MarTech and beyond, we’ve delivered cutting-edge projects for diverse industries. We’ve also crafted our own digital products, showcasing our expertise and creativity.`,
   button: 'Get in touch',
   link: '/contacts',
 }

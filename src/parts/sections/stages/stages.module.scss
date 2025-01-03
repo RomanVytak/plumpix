@@ -6,7 +6,7 @@
 
     &_navs {
       background-color: var(--plump);
-      padding: min-max(24, 32) min-max(16, 30);
+      padding: min-max(24, 40) min-max(16, 30);
       border-radius: min-max(12, 24);
       display: flex;
       flex-direction: column;
@@ -24,7 +24,7 @@
     .nav_row {
       .nav {
         background: transparent;
-        font-size: min-max(18, 22);
+        font-size: min-max(16, 20);
         text-align: left;
         transition: var(--transition);
         cursor: pointer;
@@ -37,6 +37,7 @@
         gap: 12px;
         width: 100%;
         justify-content: space-between;
+        padding-left: 1em;
 
         .arrow {
           --bg: var(--white);
@@ -45,12 +46,12 @@
         &::before {
           content: "";
           position: absolute;
-          width: 4px;
-          height: 4px;
+          width: 6px;
+          height: 6px;
           border-radius: 50%;
           background-color: var(--white);
-          left: 0.7em;
-          top: calc(0.7em - 2px);
+          left: 0;
+          top: calc(0.7em - 3px);
           opacity: 0;
           transition: var(--transition);
         }
@@ -61,9 +62,6 @@
 
         &.active {
           opacity: 1;
-          padding-left: 1.4em;
-          font-weight: 600;
-          font-family: var(--raleway-bold);
 
           &::before {
             opacity: 1;
@@ -100,7 +98,6 @@
 
       @include mq-min-768 {
         inset: 0;
-        min-height: min-max(250, 370);
         margin: 0;
 
         &:not(.active) {
