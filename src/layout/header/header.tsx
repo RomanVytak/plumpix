@@ -25,7 +25,7 @@ export const Header = () => {
       {...isOpenMenu ? { 'data-open': 'true' } : {}}
     >
       <div className={`wrapper ${css.wrapper}`}>
-        <Link href={'/'} className={`site-logo`} aria-label='Plumpix Logo' data-child>
+        <Link href={'/'} className={`${css.logo} site-logo`} aria-label='Plumpix Logo' data-child>
           <PlumpixLogo />
         </Link>
         <button onClick={() => setOpenMenu(!isOpenMenu)} className={css.burger} data-child>

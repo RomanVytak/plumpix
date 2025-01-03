@@ -7,8 +7,8 @@ const dataMail = 'ask@plumpix.io';
 
 const forQuestions = [
   {
-    icon: 'book.svg',
-    link: '/',
+    icon: 'google-meet.svg',
+    link: 'https://calendar.app.google/2tCsPP7RwBfJE9vV9',
     title: 'Book a meeting'
   },
   {

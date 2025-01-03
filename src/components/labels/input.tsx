@@ -1,18 +1,12 @@
+import { FieldProps } from "./types"
 
-type Props = {
-  title: string
-  error?: string
-  name: string
-  placeholder?: string
-  required?: boolean
-}
+export const Input = (props: FieldProps) => {
+  const { title, error, handleChange, value, ...rest } = props
 
-export const Input = (props: Props) => {
-  const { title, error, ...rest } = props
   return (
     <label data-child>
       <span>{title}</span>
-      <input type="text" {...rest} />
+      <input type="text" {...rest} onChange={handleChange} value={value} />
       {error && <span data-error>{error}</span>}
     </label>
   )

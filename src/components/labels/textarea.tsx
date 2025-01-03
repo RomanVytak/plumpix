@@ -1,17 +1,11 @@
+import { FieldProps } from "./types"
 
-type Props = {
-  title: string
-  error?: string
-  name: string
-  placeholder?: string
-}
-
-export const Textarea = (props: Props) => {
-  const { title, error, ...rest } = props
+export const Textarea = (props: FieldProps) => {
+  const { title, error, handleChange,value, ...rest } = props
   return (
     <label data-child>
       <span>{title}</span>
-      <textarea  {...rest} rows={5} />
+      <textarea  {...rest} onChange={handleChange} rows={4} value={value} />
       {error && <span data-error>{error}</span>}
     </label>
   )

@@ -101,7 +101,6 @@
       padding: 6px min-max(16, 24);
       border-radius: 50px;
       border: 1px solid #697dd9;
-      justify-content: center;
 
       @include hover {
         color: var(--plump);
@@ -109,7 +108,7 @@
       }
 
       .icon {
-        width: min-max(24, 32);
+        width: min-max(18, 20);
         height: auto;
       }
     }

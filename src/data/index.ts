@@ -3,19 +3,19 @@ export const offers_home = [
     title: 'Bespoke Software Solutions',
     text: 'Leverage our expertise to create an MVP from the ground up and transform it into a comprehensive, feature-rich platform.',
     button: 'Learn more',
-    link: '#',
+    // link: '#',
   },
   {
     title: 'Dedicated Development Team',
     text: 'Enhance your capacity with our full-stack engineers who become an integral part of your team, working seamlessly within your business.',
     button: 'Learn more',
-    link: '#',
+    // link: '#',
   },
   {
     title: 'Software Reengineering Solutions',
     text: 'Revitalize your systems with our full-stack engineers, integrated into your business to modernize and enhance your software.',
     button: 'Learn more',
-    link: '#',
+    // link: '#',
   },
 ]
 

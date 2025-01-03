@@ -43,7 +43,7 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
       endTrigger: contentRef.current,
       pin: true,
       // invalidateOnRefresh: true,
-      markers: true
+      // markers: true
     });
 
     return () => {
