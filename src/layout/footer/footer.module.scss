@@ -29,7 +29,6 @@
     color: var(--white);
     padding-block: min-max(24, 40);
     width: 100%;
-    align-items: flex-start;
 
     @include mq-max-768 {
       align-items: center;
@@ -39,6 +38,9 @@
     &_left {
       padding-inline: min-max(16, 30);
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 15px;
     }
 
     &_right {
@@ -58,7 +60,7 @@
         }
       }
 
-      & > * {
+      &>* {
         flex: 5;
       }
     }

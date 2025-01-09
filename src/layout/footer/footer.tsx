@@ -19,6 +19,8 @@ const forQuestions = [
 ]
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className={css.footer}>
       <div className="wrapper md" data-wrapper>
@@ -27,6 +29,7 @@ export const Footer = () => {
             <Link href={'/'} className={`site-logo`} aria-label='PlumPix Logo'>
               <PlumpixLogo textColor='white' />
             </Link>
+            <p className="copy">© {currentYear} PlumPix</p>
           </div>
           <div className={css.grid_right} data-fade data-children>
             <div className={css.contacts}>

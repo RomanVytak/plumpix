@@ -23,18 +23,21 @@ export const pages_data = [
       title: 'How to Strengthen Your Team with PlumPix',
       data: [
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Discovery',
           text: 'Start by scheduling a call to discuss your project requirements and technical needs. We\'ll carefully select experts who are the perfect technical and cultural fit for your team.',
           button: 'Learn more',
           link: '',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Team Setup',
           text: 'With our extensive pool of vetted in-house developers, we can launch most projects within just 1–2 weeks.',
           button: 'Learn more',
           link: '',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Reliable Delivery',
           text: 'Your PlumPix team seamlessly integrates with your in-house team or operates independently, delivering dependable results from day one.',
           button: 'Learn more',
@@ -50,26 +53,32 @@ export const pages_data = [
       title: 'Why Partner with PlumPix Developers',
       data: [
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Elite Talent Pool',
           text: 'We select only the best candidates. Our rigorous hiring process involves screening over 100 applicants, evaluating 40 technical assessments, and conducting 15 interviews for each position.',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Flexible Team Solutions',
           text: 'Whether expanding your current team or creating a dedicated one, we adapt to your needs. Scale up as your project grows or bring in part-time experts for focused tasks.',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Clear and Cost-Effective Pricing',
           text: 'A dEnjoy predictable costs with no surprises. Our dedicated team model ensures accurate budget estimates and transparent expense tracking throughout your project.',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Rapid Onboarding Process',
           text: 'Get started in just five days. Our streamlined approach ensures your project gains momentum with the right talent, fast.',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Diverse Technical Expertise',
           text: 'We deliver across a wide range of technologies, including React, TypeScript, Node.js, Angular, Vue, Python, Laravel, and Symphony, ensuring your project benefits from cutting-edge knowledge.',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Ownership and Results Focus',
           text: 'Keep control while achieving exceptional outcomes. With PlumPix, you maintain technical ownership, while we focus on delivering measurable results for your business.',
         },
@@ -114,31 +123,37 @@ export const pages_data = [
       title: 'Why PlumPix?',
       data: [
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Tailored Solutions for Your Business',
           text: 'We prioritize your unique business goals, delivering custom software solutions that align with your specific requirements and drive growth',
           button: 'Learn more',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Proven Expertise',
           text: 'With years of experience in software development, our skilled team combines technical proficiency and industry insights to create innovative, reliable, and scalable solutions',
           button: 'Learn more',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Agile and Flexible Approach',
           text: 'We use agile methodologies to adapt to your evolving needs, ensuring efficient project management and seamless collaboration throughout the development process',
           button: 'Learn more',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'End-to-End Development Services',
           text: 'From concept and design to deployment and support, we handle every stage of the software development lifecycle, providing comprehensive and hassle-free service',
           button: 'Learn more',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Cutting-Edge Technologies',
           text: 'Our team stays ahead of the curve by leveraging the latest tools and technologies, ensuring your software is built for performance, security, and future-readiness',
           button: 'Learn more',
         },
         {
+          icon: '/icons/title/icon1.svg',
           title: 'Client-Centric Commitment',
           text: 'Your success is our priority. We pride ourselves on clear communication, transparency, and delivering exceptional results that exceed expectations',
           button: 'Learn more',

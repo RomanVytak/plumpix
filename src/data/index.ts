@@ -1,17 +1,20 @@
 export const offers_home = [
   {
+    icon: '/icons/title/icon1.svg',
     title: 'Embrace Curiosity',
     text: 'Stay open to new ideas, seek knowledge, and strive for personal and professional growth.',
     button: 'Learn more',
     // link: '#',
   },
   {
+    icon: '/icons/title/icon1.svg',
     title: 'Focus on Results',
     text: 'Stay focused on achieving meaningful results that make a difference.',
     button: 'Learn more',
     // link: '#',
   },
   {
+    icon: '/icons/title/icon1.svg',
     title: 'Act with Integrity',
     text: 'Build trust through honesty and transparency with your team, clients, and yourself.',
     button: 'Learn more',

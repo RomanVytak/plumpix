@@ -62,11 +62,16 @@
     align-items: flex-end;
     flex: 1;
     margin-top: min-max(16, 24);
+
     .links {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
+
+      .site {
+        color: var(--plump);
+      }
     }
   }
 }

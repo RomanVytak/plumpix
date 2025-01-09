@@ -11,9 +11,19 @@ type ButtonProps = {
   color?: 'black'
   icon?: boolean
   onlyIcon?: boolean
+  target?: '_blank'
 }
 
-export const MyLink = ({ children, href, type = 'color', size = 'big', onlyIcon, icon, title }: ButtonProps) => {
+export const MyLink = ({
+  children,
+  href,
+  type = 'color',
+  size = 'big',
+  onlyIcon,
+  icon,
+  title,
+  target
+}: ButtonProps) => {
   return (
     <Link
       href={href}
@@ -21,6 +31,7 @@ export const MyLink = ({ children, href, type = 'color', size = 'big', onlyIcon,
         [css.circle]: onlyIcon
       })}
       aria-label={title}
+      target={target}
     >
       {children}
       {(onlyIcon || icon) && <div className='mask_arrow' data-arrow aria-hidden='true'></div>}
