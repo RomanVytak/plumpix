@@ -14,7 +14,7 @@ export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) =>
             return (
               <div key={t.slug} className={s.item} data-fade>
                 <div className={s.image}>
-                  <Image src={t.home.image} alt={t.home.name} width={402} height={428} />
+                  <Image src={t.home.preview} alt={t.home.name} width={402} height={428} />
                 </div>
                 <div className={s.content}>
                   <p className='font_36'>{t.home.name}</p>
