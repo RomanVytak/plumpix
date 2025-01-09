@@ -1,5 +1,4 @@
 
-
 export const Favicons = () => {
   return (
     <>
@@ -23,7 +22,6 @@ export const Favicons = () => {
       <meta name="theme-color" content="#ffffff" />
 
       <link rel="manifest" href="/favicons/manifest.json" />
-
     </>
   )
 }
