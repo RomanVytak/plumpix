@@ -2,10 +2,10 @@ import { MyLink } from '../../../components/link/link'
 import css from './homeText.module.scss'
 
 const data = {
-  title: 'From Design and Engineering to Launch and Lupport',
+  title: 'From Design and Engineering to Launch and Support',
   text: 'We ensures your software product is expertly crafted every step of the way. Whether you need us to start from scratch or jump in mid-process, we’re here to help.',
   button: 'Get Started with a Free Consultation',
-  link: '#',
+  link: '/contacts',
 }
 
 const progress = [
