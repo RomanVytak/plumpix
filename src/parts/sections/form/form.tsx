@@ -31,7 +31,7 @@ type Status = {
 enum MESSAGES {
   error = 'An error occurred while sending the message.',
   // fail = 'Failed to send the message.',
-  // success = 'Message sent successfully!',
+  success = 'Your message has been sent!',
 }
 
 const DEFAULT_DATA = {
@@ -39,9 +39,12 @@ const DEFAULT_DATA = {
   message: '',
   name: '',
 }
+
 const DEFAULT_STATUS = {
-  success: null, message: ""
+  success: null,
+  message: '',
 }
+
 const HEADERS = {
   method: 'POST',
   headers: {
@@ -53,12 +56,9 @@ const PopUp = ({ callback }: { callback: () => void }) => {
   const [active, setActive] = useState((false));
 
   useEffect(() => {
-
     setTimeout(() => {
       setActive(true)
     }, 10)
-
-
   }, [])
 
   const exit = () => {
@@ -66,20 +66,22 @@ const PopUp = ({ callback }: { callback: () => void }) => {
     setTimeout(callback, 300)
   }
 
-
-
-
-  return <>
+  return (
     <div className={clsx(css.popup, active && css.active)}>
+      <span className={css.over} onClick={exit} />
       <div className={css.wrapper}>
-        <p className='font_48'>Your message has been sent!</p>
-        <p className={clsx('font_18_regular', css.subtitle)}> We’ll get back to you as soon as possible.</p>
-        <button className={`font_18 ${css.close}`} aria-label='close popup'
+        <p className={css.title}>{`Your message has been sent!`}</p>
+        <p className={clsx('font_18_regular', css.subtitle)}>{`We’ll get back to you as soon as possible.`}</p>
+        <button
+          className={`font_18 ${css.close}`}
+          aria-label='close popup'
           onClick={exit}
-        >Close</button>
+        >
+          {`Close`}
+        </button>
       </div>
     </div>
-  </>
+  )
 }
 
 export const Form = () => {
@@ -107,11 +109,9 @@ export const Form = () => {
 
       const data = await response.json();
 
-
       data.success && setFormData({ ...DEFAULT_DATA });
       setStatus(data);
       setSubmiting(e => !e);
-
     } catch (error) {
       setStatus({
         success: false,
@@ -154,10 +154,7 @@ export const Form = () => {
           </div>
         </div>
       </section>
-
       {status.success && <PopUp callback={clearStatus} />}
-
     </>
-
   )
 }
