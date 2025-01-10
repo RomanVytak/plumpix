@@ -9,13 +9,13 @@ import { DefaultSeo } from 'next-seo';
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <Favicons />
+      </Head>
       <DefaultSeo
         title='PlumPix - Custom Software Product Development Company'
         description='From Design and Engineering to Launch and Support'
       />
-      <Head>
-        <Favicons />
-      </Head>
       <Layout>
         <main>
           <Component {...pageProps} />

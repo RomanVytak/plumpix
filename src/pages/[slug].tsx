@@ -11,20 +11,20 @@ import { CONTENT_TYPES } from "../const"
 const Page = ({ post }) => {
   return (
     <>
-      {Object.keys(post).map((contentBlock: any) => {
+      {Object.keys(post).map((contentBlock: any, index:number) => {
         switch (contentBlock) {
           case CONTENT_TYPES.article:
-            return <Article data={post.article} />
+            return <Article key={index} data={post.article} />
           case CONTENT_TYPES.white_cards:
-            return <Cards {...post.white_cards} />
+            return <Cards key={index} {...post.white_cards} />
           case CONTENT_TYPES.blue_cards:
-            return <Cards {...post.blue_cards} type="colorful" />
+            return <Cards key={index} {...post.blue_cards} type="colorful" />
           case CONTENT_TYPES.reviews:
-            return <Reviews />
+            return <Reviews key={index} />
           case CONTENT_TYPES.techstack:
-            return <TechStack />
+            return <TechStack key={index} />
           case CONTENT_TYPES.stages:
-            return <Stages {...post.stages} />
+            return <Stages key={index} {...post.stages} />
         }
       })}
       <Form />

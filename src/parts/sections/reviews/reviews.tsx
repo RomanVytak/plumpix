@@ -55,9 +55,9 @@ export const Reviews = () => {
                 1024: { slidesPerView: 3, }
               }}
             >
-              {temp.map((t) => {
+              {temp.map((t,index) => {
                 return (
-                  <SwiperSlide key={t.name} className={s.slide} data-child>
+                  <SwiperSlide key={t.name + index} className={s.slide} data-child>
                     <div className={s.info}>
                       <Image src={t.image} alt={t.name} width={100} height={100} />
                       <div className={s.nameWrap}>

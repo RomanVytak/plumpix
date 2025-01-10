@@ -9,7 +9,7 @@ export default async function handler(
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
-      return res.status(400).json({ success: false, message: 'Всі поля обов’язкові.' });
+      return res.status(400).json({ success: false, message: 'All fields are required.' });
     }
 
     const transporter = nodemailer.createTransport({
@@ -31,15 +31,15 @@ export default async function handler(
       await transporter.sendMail(mailOptions);
       return res.status(200).json({ success: true, message: 'Email відправлено!' });
     } catch (error) {
-      console.error('Помилка при відправці:', error);
+      console.error('An error occurred while sending:', error);
       return res
         .status(500)
-        .json({ success: false, message: 'Не вдалося відправити email.' });
+        .json({ success: false, message: 'Failed to send email.' });
     }
   } else {
     res.setHeader('Allow', ['POST']);
     return res
       .status(405)
-      .json({ success: false, message: `Метод ${req.method} не дозволений.` });
+      .json({ success: false, message: `The method ${req.method} is not allowed.` });
   }
 }

@@ -21,6 +21,7 @@ export const FormLabels: React.FC<FormLabelsProps> = ({ labels, handleChange, fo
   return Object.entries(labels).map(([key, label]) => {
     switch (label.type) {
       case 'text':
+      case 'email':
         return <Input
           {...label}
           handleChange={handleChange}

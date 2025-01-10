@@ -6,7 +6,10 @@ export function middleware(req: NextRequest) {
   const password = process.env.BASIC_AUTH_PASSWORD || "";
 
   // Skip authentication for API routes (optional)
-  if (req.nextUrl.pathname.startsWith("/api")) {
+  if (
+    req.nextUrl.pathname.startsWith('/api') ||
+    req.nextUrl.pathname.startsWith('/favicons')
+  ) {
     return NextResponse.next();
   }
 

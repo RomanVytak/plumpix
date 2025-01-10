@@ -3,7 +3,7 @@
 .root {
   .grid {
     background: var(--plump);
-    background: var(--plump);
+    // background: var(--plump);
     border-radius: min-max(12, 24);
     color: var(--white);
     padding-block: min-max(24, 40);
@@ -156,6 +156,65 @@
       100% {
         transform: rotate(360deg);
       }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // display: none;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity var(--transition);
+  text-align: center;
+
+  @include mq-max-768 {
+    padding: 16px;
+    align-items: normal;
+
+    .wrapper {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  .wrapper {
+    padding: min-max(40, 120) min-max(24, 100);
+    background: var(--plump);
+    border-radius: min-max(12, 24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    gap: min-max(32, 40);
+  }
+
+  .subtitle {
+    font-size: min-max(18, 25);
+  }
+
+  .close {
+    text-align: center;
+    border-radius: min-max(32, 42);
+    padding: min-max(12, 16) min-max(20, 32);
+    border: 1px solid var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 200px;
+    margin-top: min-max(8, 20);
+
+    @include hover {
+      background-color: var(--white);
+      color: var(--plump);
     }
   }
 }
