@@ -15,10 +15,10 @@
       align-self: flex-end;
 
       .link {
-        color: var(--black);
         display: flex;
-        gap: min-max(8, 12);
         align-items: center;
+        gap: min-max(8, 12);
+        color: var(--black);
       }
 
       p {
