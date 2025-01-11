@@ -114,8 +114,9 @@
 
       &:valid {
         @include hover {
-          background-color: transparent;
+          background-color: var(--white);
           border-color: var(--white);
+          color: var(--plump);
         }
       }
 

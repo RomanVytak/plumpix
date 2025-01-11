@@ -1,8 +1,8 @@
 @mixin font_48 {
-  @include use-font(var(--raleway-bold), min-max(28, 48), 700, 115%, 0em);
+  @include use-font(var(--raleway-bold), min-max(36, 48), 700, 115%, 0em);
 }
 @mixin font_36 {
-  @include use-font(var(--raleway-bold), min-max(22, 36), 700, 115%, 0em);
+  @include use-font(var(--raleway-bold), min-max(26, 36), 700, 125%, 0em);
 }
 @mixin font_28 {
   @include use-font(var(--raleway-bold), min-max(18, 28), 700, 125%, 0em);
@@ -11,14 +11,14 @@
   @include use-font(var(--raleway-bold), min-max(16, 25), 700, 125%, 0em);
 }
 @mixin font_18 {
-  @include use-font(var(--raleway-medium), min-max(14, 18), 500, 140%, 0em);
+  @include use-font(var(--raleway-medium), min-max(16, 18), 500, 160%, 0em);
 }
 @mixin font_18_bold {
-  @include use-font(var(--raleway-bold), min-max(14, 18), 600, 140%, 0em);
+  @include use-font(var(--raleway-bold), min-max(16, 18), 600, 160%, 0em);
 }
 @mixin font_18_reg {
-  @include use-font(var(--raleway-regular), min-max(14, 18), 400, 140%, 0em);
+  @include use-font(var(--raleway-regular), min-max(16, 18), 400, 160%, 0em);
 }
 @mixin font_16 {
-  @include use-font(var(--raleway-regular), min-max(14, 16), 400, 160%, 0em);
+  @include use-font(var(--raleway-regular), min-max(16, 16), 400, 160%, 0em);
 }

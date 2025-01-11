@@ -32,7 +32,7 @@
     }
 
     @include hover {
-      background: #5972e5;
+      background: var(--black);
     }
   }
 

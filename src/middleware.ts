@@ -5,6 +5,11 @@ export function middleware(req: NextRequest) {
   const username = process.env.BASIC_AUTH_USERNAME || "";
   const password = process.env.BASIC_AUTH_PASSWORD || "";
 
+  // Skip authentication for localhost
+  if (req.nextUrl.hostname === "localhost") {
+    return NextResponse.next();
+  }
+
   // Skip authentication for API routes (optional)
   if (
     req.nextUrl.pathname.startsWith('/api') ||

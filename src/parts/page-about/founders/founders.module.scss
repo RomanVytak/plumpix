@@ -13,12 +13,14 @@
 
     .ceo {
       align-self: flex-end;
+
       .link {
         color: var(--black);
         display: flex;
         gap: min-max(8, 12);
         align-items: center;
       }
+
       p {
         margin-top: min-max(4, 8);
       }
