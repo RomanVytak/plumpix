@@ -36,8 +36,8 @@ export const Animation = ({ children }) => {
       scr.disable()
 
       tl.fromTo(fades,
-        { y: "-50px", opacity: 0, },
-        { duration: 1.5, y: 0, opacity: 1, stagger: 0.075, }
+        { y: "-20px", opacity: 0, },
+        { duration: 0.5, y: 0, opacity: 1, stagger: 0.075, }
       ).then(e => {
         fades.forEach(f => f.removeAttribute("data-child"))
         tl.revert().kill()
@@ -86,8 +86,8 @@ export const Animation = ({ children }) => {
             break;
           default:
             tl.fromTo(fadeElement,
-              { ...(y ? { y } : { y: "50px" }), opacity: 0, },
-              { duration: 1.5, y: 0, opacity: 1, stagger: 0.075, }
+              { ...(y ? { y } : { y: "20px" }), opacity: 0, },
+              { duration: 0.6, y: 0, opacity: 1, stagger: 0.075, }
             );
             break;
         }
