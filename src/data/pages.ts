@@ -205,4 +205,83 @@ export const pages_data = [
       ],
     },
   },
+
+  /**
+   * Privacy Policy
+   */
+  {
+    slug: 'privacy-policy',
+
+    /**
+     * plain text
+     */
+    [CONTENT_TYPES.plainText]: `
+      <h2>Privacy Policy</h2>
+
+      <p>Plumpix.io ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site or use our services</p>
+
+      <h3>1. Information We Collect</h3>
+
+      <p>We may collect information about you in a variety of ways. The information we may collect includes:</p>
+
+      <h4>1.1 Personal Data</h4>
+      <ul>
+        <li>Information you provide directly: Name, email address, phone number, or other contact details when you register for our services, contact us, or subscribe to our newsletter.</li>
+        <li>Account information: Usernames, passwords, and other registration information.</li>
+      </ul>
+
+      <h4>1.2 Non-Personal Data</h4>
+      <ul>
+        <li>Usage data: Details about your interactions with our website and services, including pages viewed, time spent on pages, and clicks.</li>
+        <li>Device information: IP address, browser type, operating system, and device identifiers.</li>
+        <li>Cookies and tracking technologies: Information collected through cookies, web beacons, or similar technologies.</li>
+      </ul>
+
+      <h3>2. How We Use Your Information</h3>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li>To provide and manage our services</li>
+        <li>To communicate with you about updates, offers, or services</li>
+        <li>To analyze website usage and improve user experience.</li>
+        <li>To comply with legal obligations or enforce our terms and policies.</li>
+      </ul>
+
+      <h3>3. How We Share Your Information</h3>
+      <p>We may share your information with third parties under the following circumstances:</p>
+      <ul>
+        <li>Service Providers: With vendors and partners who help us deliver our services.</li>
+        <li>Legal Requirements: When required by law or to protect the rights and safety of Plumpix.io, our users, or others.</li>
+        <li>Business Transfers: In connection with mergers, acquisitions, or sale of company assets.</li>
+      </ul>
+      <p>We will never sell your personal data to third parties.</p>
+
+      <h3>4. Data Retention</h3>
+      <p>We retain your information only as long as necessary for the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
+
+      <h3>5. Data Security</h3>
+      <p>We implement reasonable technical and organizational measures to protect your information from unauthorized access, use, or disclosure. However, no security measures are infallible, and we cannot guarantee absolute security.</p>
+
+      <h3>6. Your Rights</h3>
+      <p>Depending on your jurisdiction, you may have the following rights:</p>
+      <ul>
+        <li>Access: Request access to the personal data we hold about you.</li>
+        <li>Correction: Request correction of inaccurate or incomplete data.</li>
+        <li>Deletion: Request deletion of your personal data.</li>
+        <li>Objection: Object to the processing of your data for specific purposes.</li>
+      </ul>
+      <p>To exercise these rights, contact us at [Insert Contact Email].</p>
+
+      <h3>7. Cookies and Tracking Technologies</h3>
+      <p>We use cookies and similar technologies to enhance your browsing experience. You can control cookie settings through your browser. Note that disabling cookies may affect website functionality.</p>
+
+      <h3>8. Third-Party Links</h3>
+      <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those websites. We encourage you to review their privacy policies.</p>
+
+      <h3>9. Updates to This Privacy Policy</h3>
+      <p>We may update this Privacy Policy from time to time. Any changes will be effective upon posting the revised policy on this page. We encourage you to review this Privacy Policy periodically.</p>
+
+      <h3>10. Contact Us</h3>
+      <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:ask@plumpix.io">ask@plumpix.io</a></p>
+    `
+  }
 ];

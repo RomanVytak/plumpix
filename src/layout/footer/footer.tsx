@@ -3,18 +3,18 @@ import { PlumpixLogo } from '../../components/logo/logo'
 import css from './footer.module.scss'
 import { Menu } from '../menu/menu'
 
-const dataMail = 'ask@plumpix.io';
-
 const forQuestions = [
+  {
+    icon: 'email.svg',
+    link: 'mailto:ask@plumpix.io',
+    title: 'ask@plumpix.io',
+    target: false,
+  },
   {
     icon: 'google-meet.svg',
     link: 'https://calendar.app.google/2tCsPP7RwBfJE9vV9',
-    title: 'Book a meeting'
-  },
-  {
-    icon: 'whatsapp.svg',
-    link: '/',
-    title: 'Ask questions'
+    title: 'Book a meeting',
+    target: true,
   }
 ]
 
@@ -33,23 +33,25 @@ export const Footer = () => {
           </div>
           <div className={css.grid_right} data-fade data-children>
             <div className={css.contacts}>
-              <a className={css.mail} href={`mailto:${dataMail}`}>
-                <div className="mask_mail" data-mail></div>
-                {dataMail}
-              </a>
               <div className={css.column}>
                 {forQuestions.map((t) =>
-                  <a key={t.title} href={t.link} className={css.item} aria-label={t.title} target='_blank'>
+                  <a
+                    key={t.title}
+                    href={t.link}
+                    className={css.item}
+                    aria-label={t.title}
+                    target={t.target ? '_blank' : '_self'}
+                  >
                     <img src={`/socials/${t.icon}`} alt={t.title} className={css.icon} />
                     {t.title}
                   </a>
                 )}
               </div>
             </div>
-            <Menu showSubPages={false} />
+            <Menu showSubPages={false} location='footer' />
             <div className={css.contacts}>
               <div className={css.column}>
-                <p className='font_18_bold'>Headquarters</p>
+                <p className='font_18_bold'>{`Headquarters`}</p>
                 <p className={css.location}>
                   <img src="/icons/flag_ua.svg" alt="Lviv, Ukraine" />
                   {`Lviv, Ukraine`}

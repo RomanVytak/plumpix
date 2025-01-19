@@ -115,19 +115,4 @@
       }
     }
   }
-
-  .mail {
-    display: flex;
-    align-items: center;
-    color: var(--white);
-    gap: min-max(8, 12);
-
-    @include hover {
-      color: var(--plump);
-
-      [data-mail] {
-        --color: var(--plump);
-      }
-    }
-  }
 }

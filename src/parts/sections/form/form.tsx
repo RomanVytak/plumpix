@@ -19,7 +19,7 @@ const LABELS = {
   message: {
     title: 'How can we help you?*',
     type: 'textarea',
-    placeholder: 'Tell us briefly about ypur project, or ak us anything',
+    placeholder: 'Tell us briefly about your project, or ask us anything',
     required: true,
   }
 }
@@ -138,7 +138,7 @@ export const Form = () => {
               </div>
             </div>
             <div className={css.grid_form} data-fade data-children>
-              <h2 data-child className="font_48">{`Start Creating Something Exceptional Together!`}</h2>
+              <h2 data-child className="font_36">{`Start Creating Something Exceptional Together!`}</h2>
               <form onSubmit={handleSubmit}>
                 <FormLabels labels={LABELS} handleChange={handleChange} formData={formData} />
                 {

@@ -128,15 +128,6 @@ button {
   transition: var(--transition);
   background-color: var(--bg);
 }
-.mask_mail {
-  --color: var(--white);
-  width: min-max(20, 24);
-  aspect-ratio: 1;
-  flex: none;
-  mask: url("/icons/email.svg") no-repeat center;
-  transition: var(--transition);
-  background-color: var(--color);
-}
 
 [data-fade] {
   &:not([data-child]) {
@@ -146,12 +137,12 @@ button {
   &[data-children] {
     opacity: 1;
 
-    & > * {
+    &>* {
       opacity: 0;
     }
   }
-  // transform: translateY(2vw);
 }
+
 [data-child] {
   opacity: 0;
 }

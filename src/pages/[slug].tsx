@@ -7,11 +7,12 @@ import { TechStack } from "../parts/sections/techstack/techstack"
 import { Cards } from "../parts/sections/cards/cards"
 import { Stages } from "../parts/sections/stages/stages"
 import { CONTENT_TYPES } from "../const"
+import { PlainText } from "../parts/sections/plainText/plainText"
 
 const Page = ({ post }) => {
   return (
     <>
-      {Object.keys(post).map((contentBlock: any, index:number) => {
+      {Object.keys(post).map((contentBlock: any, index: number) => {
         switch (contentBlock) {
           case CONTENT_TYPES.article:
             return <Article key={index} data={post.article} />
@@ -25,6 +26,8 @@ const Page = ({ post }) => {
             return <TechStack key={index} />
           case CONTENT_TYPES.stages:
             return <Stages key={index} {...post.stages} />
+          case CONTENT_TYPES.plainText:
+            return <PlainText key={index} data={post.plainText} />
         }
       })}
       <Form />
@@ -60,16 +63,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
-
-
-// return (
-//   <>
-//     {post.article && }
-//     {post.white_cards && }
-//     {post.blue_cards && }
-//     {post.reviews && }
-//     {post.techstack && }
-//     {post.stages && }
-
-//   </>
-// )

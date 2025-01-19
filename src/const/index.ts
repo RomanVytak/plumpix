@@ -80,4 +80,5 @@ export enum CONTENT_TYPES {
   techstack = 'techstack',
   reviews = 'reviews',
   stages = 'stages',
+  plainText = 'plainText',
 }

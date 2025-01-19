@@ -33,7 +33,7 @@ export const Header = () => {
           <span className={css.s} />
           <span />
         </button>
-        <Menu subDeps={[path, isOpenMenu]} />
+        <Menu subDeps={[path, isOpenMenu]} location="header" />
         <div data-child>
           <MyLink href={'/contacts'} title='Contact us'>Contact us</MyLink>
         </div>

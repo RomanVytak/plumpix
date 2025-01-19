@@ -3,7 +3,6 @@
 .root {
   .grid {
     background: var(--plump);
-    // background: var(--plump);
     border-radius: min-max(12, 24);
     color: var(--white);
     padding-block: min-max(24, 40);
@@ -20,7 +19,7 @@
       flex-direction: column;
       gap: min-max(15, 30);
       grid-column: 2/4;
-      padding-right: min-max(16, 30);
+      padding: min-max(16, 30) min-max(16, 30) min-max(16, 30) 0;
 
       @include mq-max-768 {
         order: -1;
