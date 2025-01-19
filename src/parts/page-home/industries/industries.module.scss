@@ -5,6 +5,7 @@
     flex-direction: column;
     gap: min-max(24, 40);
   }
+
   .items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -13,11 +14,28 @@
     @include mq-max-768 {
       grid-template-columns: repeat(3, 1fr);
     }
+
     @include mq-max-640 {
       grid-template-columns: repeat(2, 1fr);
     }
 
+    .itemWrap.itemButton {
+      @include hover {
+        .item {
+          background-color: var(--plump);
+          color: var(--white);
+        }
+
+        .button {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(-15px);
+        }
+      }
+    }
+
     .item {
+      position: relative;
       background: #f7f7f7;
       border-radius: min-max(12, 24);
       aspect-ratio: 1;
@@ -39,15 +57,31 @@
         background-color: var(--white);
 
         img {
-          width: 60%;
+          width: 40%;
           height: auto;
         }
       }
 
-      @include hover {
-        background-color: var(--plump);
-        color: var(--white);
+      .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
+    }
+
+    .button {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 0;
+      width: 100%;
+      padding: 15px 0 0;
+      display: flex;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: var(--transition);
     }
   }
 }

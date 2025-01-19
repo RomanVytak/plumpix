@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import { MyLink } from '../../../components/link/link';
+import { OfferCardProps } from '../../../types';
 import s from './cards.module.scss'
 
 type Props = {
   title: string;
   type?: 'colorful';
-  data: any[];
+  data: OfferCardProps[];
   button?: {
     title: string,
     link: string
@@ -13,7 +13,6 @@ type Props = {
 }
 
 export const Cards = ({ title, data, button, type }: Props) => {
-
   if (!data) {
     return null;
   }
@@ -26,10 +25,19 @@ export const Cards = ({ title, data, button, type }: Props) => {
           {data.map((t) => {
             return (
               <div className={s.card} key={t.title}>
-                <Image src={t.icon} alt={t.title} width={50} height={50} />
                 <h3>{t.title}</h3>
                 <p>{t.text}</p>
-                {t.link && <MyLink href={t.link} icon={true} type='stroke' size='medium' title={t.button}>{t.button}</MyLink>}
+                {t.link && t.link && (
+                  <MyLink
+                    href={t.link}
+                    icon={true}
+                    type='white'
+                    size='medium'
+                    title={t.button}
+                  >
+                    {t.button}
+                  </MyLink>
+                )}
               </div>
             )
           })}

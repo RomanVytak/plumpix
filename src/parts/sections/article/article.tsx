@@ -1,14 +1,7 @@
 import Image from "next/image"
 import css from './article.module.scss'
 import { MyLink } from "../../../components/link/link"
-
-type ArticleProps = {
-  title: string
-  text: string
-  button?: string
-  link?: string
-  image: string
-}
+import { ArticleProps } from "../../../types"
 
 export const Article = ({ data }: { data: ArticleProps }) => {
   return (

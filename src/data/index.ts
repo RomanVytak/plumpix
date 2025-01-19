@@ -1,52 +1,48 @@
-export const offers_home = [
+import { ArticleProps, OfferCardProps } from "../types"
+
+export const offers_home: OfferCardProps[] = [
   {
-    icon: '/icons/title/icon1.svg',
+    title: 'Custom Software Development',
+    text: 'Leverage our expertise to create an MVP from the ground up and transform it into a comprehensive, feature-rich platform.',
+    button: 'Learn more',
+    link: '/custom-software-development',
+  },
+  {
+    title: 'Dedicated Development Team',
+    text: 'Enhance your capacity with our full-stack engineers who become an integral part of your team, working seamlessly within your business.',
+    button: 'Learn more',
+    link: '/dedicated-team',
+  },
+  {
+    title: 'Software Reengineering Solutions',
+    text: 'Revitalize your systems with our engineers, seamlessly integrated into your business to modernize and enhance your software.',
+    button: 'Learn more',
+    link: '/contacts',
+  },
+]
+
+export const offers_about: OfferCardProps[] = [
+  {
     title: 'Embrace Curiosity',
     text: 'Stay open to new ideas, seek knowledge, and strive for personal and professional growth.',
-    button: 'Learn more',
+    // button: 'Learn more',
     // link: '#',
   },
   {
-    icon: '/icons/title/icon1.svg',
     title: 'Focus on Results',
     text: 'Stay focused on achieving meaningful results that make a difference.',
-    button: 'Learn more',
+    // button: 'Learn more',
     // link: '#',
   },
   {
-    icon: '/icons/title/icon1.svg',
     title: 'Act with Integrity',
     text: 'Build trust through honesty and transparency with your team, clients, and yourself.',
-    button: 'Learn more',
+    // button: 'Learn more',
     // link: '#',
   },
 ]
 
-// export const cases_home = [
-//   {
-//     image: '/img/cases/case.jpg',
-//     name: 'Corporate EdTech Solution',
-//     tags: ['Team Extension', 'Team: 4', 'Duration: 12+ month'],
-//     text: 'Learning management platform assists companies in their change management and employee training efforts. Users can create courses, upload videos, track progress of their employees and integrate quizzes and forms into the platform.',
-//     link: '/cases/case1',
-//   },
-//   {
-//     image: '/img/cases/case.jpg',
-//     name: 'Corporate EdTech Solutio',
-//     tags: ['Team Extension', 'Team: 4', 'Duration: 12+ month'],
-//     text: 'Learning management platform assists companies in their change management and employee training efforts. Users can create courses, upload videos, track progress of their employees and integrate quizzes and forms into the platform.',
-//     link: '/cases/case2',
-//   },
-//   {
-//     image: '/img/cases/case.jpg',
-//     name: 'Corporate EdTech Soluti',
-//     tags: ['Team Extension', 'Team: 4', 'Duration: 12+ month'],
-//     text: 'Learning management platform assists companies in their change management and employee training efforts. Users can create courses, upload videos, track progress of their employees and integrate quizzes and forms into the platform.',
-//     link: '/cases/case3',
-//   },
-// ]
-
-export const article_dedicated = {
+export const article_dedicated: ArticleProps = {
   title: 'Hire Dedicated Remote Development Teams with PlumPix',
   text: 'Build Faster, Achieve More: Grow your business without recruitment headaches',
   button: 'Contact us',
@@ -54,7 +50,7 @@ export const article_dedicated = {
   image: '/img/cases/case.jpg'
 }
 
-export const article_about = {
+export const article_about: ArticleProps = {
   title: 'We are a full-stack development company',
   text: 'We help tech companies thrive in today’s fast-paced digital economy by delivering top-tier engineering and consulting services. By combining the right talent, cutting-edge technologies, and transparent, efficient processes, we guarantee impactful results. That’s the philosophy behind PlumPix',
   image: '/img/cases/case.jpg'

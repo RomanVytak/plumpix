@@ -15,7 +15,7 @@
     margin-top: min-max(24, 40);
 
     .slide {
-      background: var(--white);
+      background: var(--gray);
       border-radius: min-max(12, 24);
       padding: min-max(24, 40) min-max(20, 35);
       display: flex;
@@ -71,6 +71,10 @@
 
       .site {
         color: var(--plump);
+        font-family: var(--raleway-medium);
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
       }
     }
   }

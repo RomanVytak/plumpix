@@ -72,7 +72,7 @@ export const Reviews = () => {
                     <div className={s.buttons}>
                       <div className={s.links}>
                         <a className={s.site} href={t.link} target='_blank'>{t.site}</a>
-                        <MyLink href={t.link} title='Read more' onlyIcon={true} target="_blank" />
+                        <MyLink href={t.link} title='Read more' onlyIcon={true} type='white' target="_blank" />
                       </div>
                     </div>
                   </SwiperSlide>

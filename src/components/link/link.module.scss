@@ -50,6 +50,26 @@
     }
   }
 
+  &.white {
+    background: var(--white);
+    border: 1px solid var(--white);
+    color: var(--plump);
+
+    [data-arrow] {
+      --bg: var(--plump);
+    }
+
+    @include hover {
+      background-color: var(--plump);
+      border-color: var(--plump);
+      color: var(--white);
+
+      [data-arrow] {
+        --bg: var(--white);
+      }
+    }
+  }
+
   &.stroke {
     border: 1px solid #deddee;
     color: var(--plump);
