@@ -13,7 +13,8 @@ export const pages_data = [
     [CONTENT_TYPES.article]: {
       title: 'Build Your Remote Development Team with PlumPix',
       text: 'Accelerate Your Business Growth and Simplify Hiring Processes: Empower Your Team to Scale Effectively Without the Burden of Recruitment Challenges',
-      image: '/img/cases/case.jpg',
+      image: '/img/dedicated-team.png',
+      imageBg: true,
     },
 
     /**
@@ -23,19 +24,19 @@ export const pages_data = [
       title: 'How to Strengthen Your Team with PlumPix',
       data: [
         {
-          title: 'Discovery',
+          title: '1. Discovery',
           text: 'Start by scheduling a call to discuss your project requirements and technical needs. We\'ll carefully select experts who are the perfect technical and cultural fit for your team.',
           button: 'Learn more',
           link: '',
         },
         {
-          title: 'Team Setup',
+          title: '2. Team Setup',
           text: 'With our extensive pool of vetted in-house developers, we can launch most projects within just 1–2 weeks.',
           button: 'Learn more',
           link: '',
         },
         {
-          title: 'Reliable Delivery',
+          title: '3. Reliable Delivery',
           text: 'Your PlumPix team seamlessly integrates with your in-house team or operates independently, delivering dependable results from day one.',
           button: 'Learn more',
           link: '',
@@ -104,7 +105,8 @@ export const pages_data = [
     [CONTENT_TYPES.article]: {
       title: 'We help tech companies thrive and succeed in the modern landscape',
       text: 'We’ll assist you in building attractive, high-performing, and secure web applications customized to meet your business objectives',
-      image: '/img/cases/case.jpg',
+      image: '/img/custom-software-development.png',
+      tags: ['Frontend development', 'Backend development', 'MVP development']
     },
 
     /**

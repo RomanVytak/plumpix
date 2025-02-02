@@ -2,6 +2,7 @@ import Image from "next/image"
 import css from './article.module.scss'
 import { MyLink } from "../../../components/link/link"
 import { ArticleProps } from "../../../types"
+import clsx from "clsx"
 
 export const Article = ({ data }: { data: ArticleProps }) => {
   return (
@@ -15,8 +16,21 @@ export const Article = ({ data }: { data: ArticleProps }) => {
               <MyLink href={data.link} title={data.button}>{data.button}</MyLink>
             )}
           </div>
-          <div className={css.images} data-fade>
-            <Image src={data.image} alt={data.title} width={355} height={370} />
+          <div className={clsx(css.images, {
+            [css.blue]: data.imageBg
+          })} data-fade>
+            <Image src={data.image} alt={data.title} width={1400} height={1400} />
+            {data.tags && (
+              <div className={css.tags}>
+                <div className={css.wrap}>
+                  {data.tags.map((tag) => {
+                    return (
+                      <span key={tag}>{tag}</span>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

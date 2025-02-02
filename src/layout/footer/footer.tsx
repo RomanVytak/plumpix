@@ -58,14 +58,14 @@ export const Footer = () => {
                 </p>
               </div>
               <div className={css.column}>
-                <p className='font_18_bold'>{`International Offices`}</p>
-                <p className={css.location}>
-                  <img src="/icons/flag_uk.svg" alt="Wimborne, United Kingdom" />
-                  {`Wimborne, United Kingdom`}
-                </p>
+                <p className='font_18_bold'>{`Representative Offices`}</p>
                 <p className={css.location}>
                   <img src="/icons/flag_cy.svg" alt="Limassol, Cyprus" />
                   {`Limassol, Cyprus`}
+                </p>
+                <p className={css.location}>
+                  <img src="/icons/flag_de.svg" alt="Stuttgart, Deutschland" />
+                  {`Stuttgart, Deutschland`}
                 </p>
               </div>
             </div>

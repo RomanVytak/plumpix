@@ -125,17 +125,28 @@ export const Form = () => {
     <>
       <section className={css.root}>
         <div className="wrapper md" data-wrapper data-fade='in'>
-          <div className={`wrapper-grid ${css.grid}`}>
+          <div className={css.grid}>
             <div className={css.grid_left}>
+
               <div className={css.ceo} data-fade>
+                <div className={css.top}>
+                  <img src="/img/quote.svg" alt="Roman Vytak" />
+                  <p>{`We are glad`}<br />{`to welcome you!`}</p>
+                </div>
+
                 <div>
-                  <a href='/' target='_blank' className={`${css.link} font_18`}>
+                  <div className={css.img}>
+                    {/* <img src="/socials/linkedin.svg" alt="Roman Vytak" /> */}
+                  </div>
+                  <p>{`Roman Vytak`}</p>
+                  {/* <a href='/' target='_blank' className={`${css.link} font_18`}>
                     <img src="/socials/linkedin.svg" alt="Roman Vytak" />
                     {`Roman Vytak`}
-                  </a>
+                  </a> */}
                   <p>{`CEO at Plumpix`}</p>
                 </div>
               </div>
+
             </div>
             <div className={css.grid_form} data-fade data-children>
               <h2 data-child className="font_36">{`Start Creating Something Exceptional Together!`}</h2>

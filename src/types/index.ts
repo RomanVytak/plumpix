@@ -7,8 +7,10 @@ export type ArticleProps = {
   title: string
   text: string
   image: string
+  imageBg?: boolean
   button?: string
   link?: string
+  tags?: string[]
 }
 
 export type OfferCardProps = {
