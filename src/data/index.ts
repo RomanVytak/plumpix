@@ -42,16 +42,15 @@ export const offers_about: OfferCardProps[] = [
   },
 ]
 
-export const article_dedicated: ArticleProps = {
-  title: 'Hire Dedicated Remote Development Teams with PlumPix',
-  text: 'Build Faster, Achieve More: Grow your business without recruitment headaches',
-  button: 'Contact us',
-  link: '#',
-  image: '/img/cases/case.jpg'
-}
+// export const article_dedicated: ArticleProps = {
+//   title: 'Hire Dedicated Remote Development Teams with PlumPix',
+//   text: 'Build Faster, Achieve More: Grow your business without recruitment headaches',
+//   button: 'Contact us',
+//   link: '#',
+//   image: '/img/cases/case.jpg'
+// }
 
-export const article_about: ArticleProps = {
+export const page_about: ArticleProps = {
   title: 'We are a full-stack development company',
   text: 'We help tech companies thrive in today’s fast-paced digital economy by delivering top-tier engineering and consulting services. By combining the right talent, cutting-edge technologies, and transparent, efficient processes, we guarantee impactful results. That’s the philosophy behind PlumPix',
-  image: '/img/cases/case.jpg'
 }

@@ -6,7 +6,7 @@ export type CaseProps = CasesProps[0];
 export type ArticleProps = {
   title: string
   text: string
-  image: string
+  image?: string
   imageBg?: boolean
   button?: string
   link?: string

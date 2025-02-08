@@ -8,7 +8,7 @@ export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) =>
   return (
     <section className={s.root}>
       <div className={`wrapper ${s.wrapper}`}>
-        {title && <h2 data-fade>{title}</h2>}
+        {title && <h2 data-fade dangerouslySetInnerHTML={{ __html: title }} />}
         <div className={s.items}>
           {data.map((t) => {
             return (

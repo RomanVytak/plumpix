@@ -21,7 +21,7 @@ export const pages_data = [
      * white_cards
      */
     [CONTENT_TYPES.white_cards]: {
-      title: 'How to Strengthen Your Team with PlumPix',
+      title: 'How to Strengthen<br>Your Team with PlumPix',
       data: [
         {
           title: '1. Discovery',
@@ -48,7 +48,7 @@ export const pages_data = [
      * blue_cards
      */
     [CONTENT_TYPES.blue_cards]: {
-      title: 'Why Partner with PlumPix Developers',
+      title: 'Why Partner with<br>PlumPix Developers',
       data: [
         {
           title: 'Elite Talent Pool',
@@ -162,7 +162,7 @@ export const pages_data = [
      * stages
      */
     [CONTENT_TYPES.stages]: {
-      title: 'Phases of Our Development Workflow',
+      title: 'Phases of Our<br>Development Workflow',
       data: [
         {
           tab: 'Discovery Phase',

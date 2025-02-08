@@ -1,0 +1,26 @@
+@import "src/styles/common";
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: min-max(8, 12);
+  background: #353535;
+  border-radius: min-max(24, 42);
+  color: var(--white);
+  padding: min-max(8, 14) min-max(12, 18);
+  font-size: min-max(12, 18);
+  
+  &.small {
+    gap: 8px;
+    padding: 6px min-max(12, 14);
+    font-size: min-max(12, 14);
+
+    img {
+      width: min-max(16, 20);
+    }
+  }
+
+  img {
+    width: min-max(16, 30);
+  }
+}

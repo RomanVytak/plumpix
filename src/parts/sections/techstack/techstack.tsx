@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import css from './techstack.module.scss'
 import { TECHSTACK } from '../../../const';
+import { TechstackItem } from '../../../components/techstackItem/techstackItem';
 
 export const TechStack = () => {
   return (
@@ -13,10 +13,7 @@ export const TechStack = () => {
               const name = TECHSTACK[t].name;
               const icon = TECHSTACK[t].icon;
               return (
-                <div key={name} className={`${css.item} font_18_reg`}>
-                  <Image src={icon} alt={name} width={30} height={30} />
-                  <p>{name}</p>
-                </div>
+                <TechstackItem key={name} icon={icon} name={name} />
               )
             })}
           </div>

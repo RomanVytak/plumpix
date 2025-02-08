@@ -2,7 +2,7 @@
 
 .intro {
   padding-top: min-max(60, 90);
-  background: url('/img/home.jpg') no-repeat center / cover;
+  background: url('/img/contacts.jpg') no-repeat center / cover;
   background-size: auto 100%;
 
   [data-wrapper] {
@@ -17,24 +17,5 @@
     flex-direction: column;
     gap: min-max(20, 32);
     align-items: center;
-  }
-
-  .text {
-    @include font_18_reg;
-  }
-
-  .progress {
-    display: flex;
-    gap: min-max(16, 40);
-    margin-top: min-max(16, 24);
-
-    .value {
-      @include font_36;
-      color: var(--plump);
-    }
-
-    .text {
-      margin-top: 0.5em;
-    }
   }
 }

@@ -149,7 +149,7 @@ export const Form = () => {
 
             </div>
             <div className={css.grid_form} data-fade data-children>
-              <h2 data-child className="font_36">{`Start Creating Something Exceptional Together!`}</h2>
+              <h2 data-child className="font_36" dangerouslySetInnerHTML={{ __html: 'Start Creating Something<br>Exceptional Together!' }} />
               <form onSubmit={handleSubmit}>
                 <FormLabels labels={LABELS} handleChange={handleChange} formData={formData} />
                 {

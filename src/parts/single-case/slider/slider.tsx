@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import s from './slider.module.scss'
 import 'swiper/css'
 import Image from 'next/image'
-import { Mousewheel, Pagination } from 'swiper/modules'
+import { Mousewheel, Pagination, Autoplay } from 'swiper/modules'
 
 export const Slider = ({ data }: { data: string[] }) => {
   return (
@@ -10,10 +10,12 @@ export const Slider = ({ data }: { data: string[] }) => {
       <div className={`wrapper md`} data-fade>
         <Swiper
           className={s.slider}
-          modules={[Pagination, Mousewheel]}
+          modules={[Pagination, Mousewheel, Autoplay]}
           spaceBetween={16}
           mousewheel={{ forceToAxis: true }}
           pagination={{ el: '#data-pagination', clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
         >
           {data.map((t) =>
             <SwiperSlide key={t} className={s.slide}>

@@ -116,8 +116,6 @@ export const Animation = ({ children }) => {
       fades.forEach(animateFades)
     }
 
-
-
     initAnimaton()
     return () => {
       tls.forEach(tl => tl && tl.revert().kill());
@@ -143,15 +141,13 @@ export const Animation = ({ children }) => {
     }
   }, [])
 
-
-
-  return <>
-    <AnimationContext.Provider value={{ isScrollTop, isMobile }}>
-      {/* <SmoothScrolling> */}
-      {children}
-      {/* </SmoothScrolling> */}
-    </AnimationContext.Provider>
-
-  </>
-
-}
+  return (
+    <>
+      <AnimationContext.Provider value={{ isScrollTop, isMobile }}>
+        {/* <SmoothScrolling> */}
+        {children}
+        {/* </SmoothScrolling> */}
+      </AnimationContext.Provider>
+    </>
+  )
+};

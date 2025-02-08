@@ -20,7 +20,7 @@ export const Cards = ({ title, data, button, type }: Props) => {
   return (
     <section className={`${s.root} ${type ? s[type] : ""}`}>
       <div className="wrapper">
-        <h2 data-fade>{title}</h2>
+        <h2 data-fade dangerouslySetInnerHTML={{ __html: title }} />
         <div className={`wrapper-grid ${s.items}`} data-fade data-children>
           {data.map((t) => {
             return (
@@ -44,7 +44,7 @@ export const Cards = ({ title, data, button, type }: Props) => {
         </div>
         {button && (
           <div className={s.button} data-fade>
-            <MyLink href={button.link} type='black' title={button.title}>{button.title}</MyLink>
+            <MyLink href={button.link} type='black-white' title={button.title}>{button.title}</MyLink>
           </div>
         )}
       </div>

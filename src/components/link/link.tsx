@@ -7,7 +7,7 @@ type ButtonProps = {
   href: string
   title: string
   size?: 'big' | 'medium'
-  type?: 'color' | 'stroke' | 'black' | 'white'
+  type?: 'color' | 'stroke' | 'black-white' | 'white' | 'black-blue'
   color?: 'black'
   icon?: boolean
   onlyIcon?: boolean

@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { AnimationContext } from '../../../context/animation';
 import { CaseProps } from '../../../types';
+import { TechstackItem } from '../../../components/techstackItem/techstackItem';
 gsap.registerPlugin(ScrollTrigger);
 
 const content = [
@@ -31,7 +32,6 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
   const isMobile = animation.isMobile;
 
   useEffect(() => {
-
     if (isMobile) {
       return;
     }
@@ -39,7 +39,7 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
     const trigger = ScrollTrigger.create({
       trigger: sidebarRef.current,
       start: `top 10px`,
-      end: "bottom bottom",
+      end: "bottom+=10px bottom",
       endTrigger: contentRef.current,
       pin: true,
       // invalidateOnRefresh: true,
@@ -55,6 +55,7 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
     <section className={css.root}>
       <div className={`wrapper md ${css.wrapper}`}>
         <div className={`wrapper-grid ${css.root_grid}`}>
+
           <div className={css.root_left_col}>
             <div className={css.information} ref={sidebarRef}>
               <div className={css.col}>
@@ -73,10 +74,7 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
                 <h2 className="font_28">{`Technologies`}</h2>
                 <div className={css.tech}>
                   {data.technologies.map((item) => (
-                    <div className={css.tech_item} key={item.name}>
-                      <img src={item.icon} alt={item.name} />
-                      <p>{item.name}</p>
-                    </div>
+                    <TechstackItem key={item.name} icon={item.icon} name={item.name} variant="small" />
                   ))}
                 </div>
               </div>
@@ -88,6 +86,7 @@ export const CaseContent = ({ data }: { data: CaseProps }) => {
               <Content key={item.key} data={data[item.key]} title={item.title} />
             ))}
           </div>
+
         </div>
       </div>
     </section>

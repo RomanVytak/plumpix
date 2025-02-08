@@ -16,7 +16,7 @@ const Home = () => {
       <HomeText />
       <Cards title="How We Can Help You" data={offers_home} />
       <Reviews />
-      <Cases data={cases} title='Our Software Product Development Success Stories' />
+      <Cases data={cases} title='Our Software Product<br>Development Success Stories' />
       <Industries />
       <TechStack />
       <Form />

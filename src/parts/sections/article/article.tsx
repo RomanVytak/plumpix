@@ -19,7 +19,9 @@ export const Article = ({ data }: { data: ArticleProps }) => {
           <div className={clsx(css.images, {
             [css.blue]: data.imageBg
           })} data-fade>
-            <Image src={data.image} alt={data.title} width={1400} height={1400} />
+            {data.image && (
+              <Image src={data.image} alt={data.title} width={1400} height={1400} />
+            )}
             {data.tags && (
               <div className={css.tags}>
                 <div className={css.wrap}>

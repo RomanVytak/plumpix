@@ -14,21 +14,6 @@
       flex-wrap: wrap;
       gap: min-max(8, 16) min-max(8, 10);
       margin-top: min-max(24, 40);
-
-      .item {
-        display: flex;
-        align-items: center;
-        gap: min-max(8, 12);
-        background: #353535;
-        border-radius: min-max(24, 42);
-        color: var(--white);
-        padding: min-max(8, 14) min-max(12, 18);
-        font-size: min-max(12, 18);
-
-        img {
-          width: min-max(16, 30);
-        }
-      }
     }
   }
 }

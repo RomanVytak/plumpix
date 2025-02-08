@@ -37,7 +37,7 @@ export const Reviews = () => {
     <section className={s.root}>
       <div className="wrapper">
         <div className={s.wrap}>
-          <h2 data-fade>{`What our clients say about PlumPix`}</h2>
+          <h2 data-fade dangerouslySetInnerHTML={{ __html: 'What our clients say<br>about PlumPix' }} />
           <div className={s.slider}>
             <Swiper
               modules={[Pagination, Mousewheel]}
@@ -55,7 +55,7 @@ export const Reviews = () => {
                 1024: { slidesPerView: 3, }
               }}
             >
-              {temp.map((t,index) => {
+              {temp.map((t, index) => {
                 return (
                   <SwiperSlide key={t.name + index} className={s.slide} data-child>
                     <div className={s.info}>

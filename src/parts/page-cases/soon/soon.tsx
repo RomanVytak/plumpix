@@ -16,7 +16,7 @@ export const Soon = () => {
           <h2 className="font_48">{data.title}</h2>
           <p className={`${css.text} font_18_reg`}>{data.text}</p>
           <div className={css.button}>
-            <MyLink href={data.link} type='black' title={data.button}>{data.button}</MyLink>
+            <MyLink href={data.link} type='black-white' title={data.button}>{data.button}</MyLink>
           </div>
         </div>
       </div>

@@ -23,7 +23,11 @@
     color: var(--white);
     display: flex;
     flex-direction: column;
-    gap: min-max(24, 45);
+    gap: min-max(24, 40);
+
+    @include mq-min-768 {
+      min-height: calc(100vh - 20px);
+    }
 
     .col {
       display: flex;
@@ -54,20 +58,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: min-max(8, 10) min-max(8, 16);
-
-      &_item {
-        display: flex;
-        align-items: center;
-        gap: min-max(6, 12);
-        padding: min-max(8, 12) min-max(12, 18);
-        background-color: #353535;
-        border-radius: 50px;
-      }
-
-      img {
-        width: min-max(16, 30);
-        height: auto;
-      }
     }
   }
 

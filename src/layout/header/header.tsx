@@ -6,13 +6,30 @@ import { MyLink } from '../../components/link/link'
 import { useContext, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { AnimationContext } from '../../context/animation'
+import clsx from 'clsx'
 
 export const Header = () => {
   const [isOpenMenu, setOpenMenu] = useState(false)
   const path = usePathname()
   const animation = useContext(AnimationContext);
+  const [scrolled, setScrolled] = useState(false);
 
   const isScrollTop = animation.isScrollTop;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     setOpenMenu(false)
@@ -20,7 +37,9 @@ export const Header = () => {
   }, [isScrollTop, path])
 
   return (
-    <header className={css.header}
+    <header className={clsx(css.header, {
+      [css.scrolled]: scrolled
+    })}
       {...isScrollTop ? { 'data-hide': 'true' } : {}}
       {...isOpenMenu ? { 'data-open': 'true' } : {}}
     >

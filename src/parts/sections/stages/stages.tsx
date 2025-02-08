@@ -26,7 +26,7 @@ export const Stages = ({ title, data }: Props) => {
   return (
     <section className={`${css.root}`}>
       <div className="wrapper">
-        <h2 data-fade>{title}</h2>
+        <h2 data-fade dangerouslySetInnerHTML={{ __html: title }} />
         <div className={`wrapper-grid ${css.items}`} data-fade data-children>
           <div className={css.items_navs}>
             {data.map((t, i) => {

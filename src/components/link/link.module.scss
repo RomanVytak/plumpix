@@ -36,7 +36,7 @@
     }
   }
 
-  &.black {
+  &.black-white {
     background: var(--black);
     border: 1px solid var(--black);
 
@@ -46,6 +46,20 @@
 
     @include hover {
       background-color: transparent;
+      border-color: var(--white);
+    }
+  }
+
+  &.black-blue {
+    background: var(--black);
+    border: 1px solid var(--black);
+
+    [data-arrow] {
+      --bg: var(--white);
+    }
+
+    @include hover {
+      background-color: var(--plump);
       border-color: var(--white);
     }
   }

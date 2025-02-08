@@ -14,7 +14,13 @@ body {
 
 main {
   overflow: hidden;
+
+  // this padding is used on some pages separately
   padding-top: min-max(60, 90);
+
+  .no-p-t & {
+    padding-top: 0;
+  }
 }
 
 section {

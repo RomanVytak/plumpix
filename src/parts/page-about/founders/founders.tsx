@@ -21,7 +21,7 @@ export const Founders = () => {
     <section className={css.root}>
       <div className={`wrapper md ${css.wrapper}`}>
         <div className={`wrapper-grid`} data-fade data-children>
-          <h2>{`Meet the founders`}</h2>
+          <h2 dangerouslySetInnerHTML={{ __html: 'Meet Brains<br>Behind the Brand' }} />
           {temp.map((t) => {
             return (
               <div key={t.name} className={css.item}>
