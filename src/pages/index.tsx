@@ -8,8 +8,6 @@ import { TechStack } from "../parts/sections/techstack/techstack"
 import { Cases } from "../parts/sections/cases/cases"
 import { Cards } from "../parts/sections/cards/cards"
 
-
-
 const Home = () => {
   return (
     <>

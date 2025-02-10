@@ -34,14 +34,19 @@
         object-fit: cover;
       }
     }
+
     .content {
       display: flex;
       flex-direction: column;
       padding: min-max(8, 16);
-      gap: min-max(16, 24);
+      gap: min-max(16, 20);
 
       .title {
         font-size: min-max(16, 20);
+
+        a {
+          color: var(--black);
+        }
       }
 
       p {
@@ -51,7 +56,7 @@
 
     .tags {
       display: flex;
-      gap: min-max(8, 12);
+      gap: 8px;
       flex-wrap: wrap;
 
       span {

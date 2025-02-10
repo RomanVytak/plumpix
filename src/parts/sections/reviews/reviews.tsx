@@ -37,7 +37,7 @@ export const Reviews = () => {
     <section className={s.root}>
       <div className="wrapper">
         <div className={s.wrap}>
-          <h2 data-fade dangerouslySetInnerHTML={{ __html: 'What our clients say<br>about PlumPix' }} />
+          <h2 data-fade dangerouslySetInnerHTML={{ __html: 'What our clients<br>say about PlumPix' }} />
           <div className={s.slider}>
             <Swiper
               modules={[Pagination, Mousewheel]}

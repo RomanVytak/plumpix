@@ -3,6 +3,7 @@ import s from './cases.module.scss'
 import { Tags } from '../../../components/tags/tags'
 import { MyLink } from '../../../components/link/link'
 import { CaseProps } from '../../../types'
+import Link from 'next/link'
 
 export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) => {
   return (
@@ -14,10 +15,16 @@ export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) =>
             return (
               <div key={t.slug} className={s.item} data-fade>
                 <div className={s.image}>
-                  <Image src={t.home.preview} alt={t.home.name} width={402} height={428} />
+                  <Link href={`cases/${t.slug}`}>
+                    <Image src={t.home.preview} alt={t.home.name} width={402} height={428} />
+                  </Link>
                 </div>
                 <div className={s.content}>
-                  <p className='font_36'>{t.home.name}</p>
+                  <p className={`${s.name} font_36`}>
+                    <Link href={`cases/${t.slug}`}>
+                      {t.home.name}
+                    </Link>
+                  </p>
                   <div className={s.tags}>
                     <Tags tags={t.home.tags} />
                   </div>
@@ -25,7 +32,7 @@ export const Cases = ({ data, title }: { data: CaseProps[], title?: string }) =>
                     {t.preview}
                   </p>
                   <div className={s.button}>
-                    <MyLink href={`cases/${t.slug}`} title='Learn more' icon={true} type='stroke'>Learn more</MyLink>
+                    <MyLink href={`cases/${t.slug}`} title='Learn more' icon={true} type='stroke'>{`Learn more`}</MyLink>
                   </div>
                 </div>
               </div>

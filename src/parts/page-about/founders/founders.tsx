@@ -3,16 +3,16 @@ import css from './founders.module.scss'
 
 const temp = [
   {
-    name: 'Roman',
+    name: 'Roman Vytak',
     image: '/img/cases/case.jpg',
-    position: 'CEO',
-    linkedin: '#',
+    position: 'Co-Founder, CEO, Developer',
+    // linkedin: '#',
   },
   {
-    name: 'Olena',
+    name: 'Olena Kobtseva',
     image: '/img/cases/case.jpg',
-    position: 'CEO',
-    linkedin: '#',
+    position: 'Co-Founder, Product Manager',
+    // linkedin: '#',
   }
 ]
 
@@ -26,10 +26,11 @@ export const Founders = () => {
             return (
               <div key={t.name} className={css.item}>
                 <div className={css.ceo}>
-                  <a href='/' target='_blank' className={`${css.link} font_18`}>
+                  <p className="font_18">{t.name}</p>
+                  {/* <a href='/' target='_blank' className={`${css.link} font_18`}>
                     <img src="/socials/linkedin.svg" alt={t.name} />
                     {t.name}
-                  </a>
+                  </a> */}
                   <p>{t.position}</p>
                 </div>
               </div>

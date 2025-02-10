@@ -5,6 +5,7 @@ import s from './recent.module.scss'
 import Image from 'next/image'
 import { MyLink } from '../../../components/link/link'
 import { CasesProps } from '../../../types'
+import Link from 'next/link'
 
 export const Recent = ({ data }: { data: CasesProps }) => {
 
@@ -15,7 +16,7 @@ export const Recent = ({ data }: { data: CasesProps }) => {
   return (
     <section className={s.root}>
       <div className="wrapper md">
-        <h2 data-fade>{`More of recent case studie`}</h2>
+        <h2 data-fade>{`More of recent Case Studie`}</h2>
 
         <div className={s.slider}>
           <Swiper
@@ -38,15 +39,21 @@ export const Recent = ({ data }: { data: CasesProps }) => {
               return (
                 <SwiperSlide key={t.slug} className={s.slide} data-child>
                   <div className={s.image}>
-                    <Image src={t.home.image} alt={t.home.name} width={400} height={400} />
+                    <Link href={t.slug}>
+                      <Image src={t.home.image} alt={t.home.name} width={400} height={400} />
+                    </Link>
                   </div>
 
                   <div className={s.content}>
                     <div className={`${s.tags} font_18`}>
                       {t.home.tags.map((t) => <span key={t}>{t}</span>)}
                     </div>
-                    <h3 className={s.title}>{t.home.name}</h3>
-                    <p>{t.about}</p>
+                    <h3 className={s.title}>
+                      <Link href={t.slug}>
+                        {t.home.name}
+                      </Link>
+                    </h3>
+                    <p>{t.preview}</p>
                     <div className={s.buttons}>
                       <MyLink href={t.slug} title='Learn more' size='medium' icon={true} type='stroke'>Learn more</MyLink>
                     </div>

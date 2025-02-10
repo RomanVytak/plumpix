@@ -28,6 +28,11 @@ const dataMenu = [
     location: ['header', 'footer'],
   },
   {
+    title: 'Contacts',
+    link: '/contacts',
+    location: ['footer'],
+  },
+  {
     title: 'Privacy Policy',
     link: '/privacy-policy',
     location: ['footer'],

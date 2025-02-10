@@ -5,7 +5,7 @@
     background: var(--plump);
     border-radius: min-max(12, 24);
     color: var(--white);
-    padding: min-max(24, 40) min-max(16, 32);
+    padding: min-max(24, 40) min-max(16, 36);
     display: flex;
     flex-direction: column;
 
@@ -28,7 +28,7 @@
       flex-direction: column;
       gap: min-max(15, 30);
       grid-column: 2/4;
-      padding: min-max(24, 32) min-max(16, 32);
+      padding: min-max(24, 32) min-max(16, 36);
 
       @include mq-max-768 {
         order: -1;

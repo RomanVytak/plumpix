@@ -17,10 +17,9 @@ export const Content = ({ data, title }: { data: string, title?: string }) => {
   return (
     <div className={css.content}>
       {title && <h2 className={css.title}>{title}</h2>}
-      <div
-        className={css.content_row}
-        dangerouslySetInnerHTML={{ __html: data }}
-      />
+      <div className={css.content_row}>
+        <div className={css.content_row_wrap} dangerouslySetInnerHTML={{ __html: data }} />
+      </div>
     </div>
   )
 }

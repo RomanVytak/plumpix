@@ -71,6 +71,10 @@ export const TECHSTACK = {
     icon: '/icons/techstack/redux.svg',
     name: 'Redux',
   },
+  magento: {
+    icon: '/icons/techstack/magento.svg',
+    name: 'Magento',
+  },
 }
 
 export enum CONTENT_TYPES {

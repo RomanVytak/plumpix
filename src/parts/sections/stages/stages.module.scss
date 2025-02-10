@@ -6,7 +6,7 @@
 
     &_navs {
       background-color: var(--plump);
-      padding: min-max(24, 40) min-max(16, 30);
+      padding: min-max(24, 40) min-max(16, 36);
       border-radius: min-max(12, 24);
       display: flex;
       flex-direction: column;
@@ -87,7 +87,7 @@
     .card {
       background: var(--gray);
       border-radius: min-max(12, 24);
-      padding: min-max(16, 32);
+      padding: min-max(16, 36);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
