@@ -103,8 +103,8 @@ export const pages_data = [
      * article
      */
     [CONTENT_TYPES.article]: {
-      title: 'We help tech companies thrive and succeed in the modern landscape',
-      text: 'We’ll assist you in building attractive, high-performing, and secure web applications customized to meet your business objectives',
+      title: 'Custom Software Development',
+      text: 'We help tech companies thrive and succeed by building attractive, high-performing, and secure web applications tailored to their unique business objectives, enhancing user experience, and adapting to the demands of the modern digital landscape.',
       image: '/img/custom-software-development.png',
       tags: ['Frontend development', 'Backend development', 'MVP development']
     },
