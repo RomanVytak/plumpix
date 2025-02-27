@@ -63,10 +63,10 @@ export const Footer = () => {
                   <img src="/icons/flag_cy.svg" alt="Limassol, Cyprus" />
                   {`Limassol, Cyprus`}
                 </p>
-                <p className={css.location}>
+                {/* <p className={css.location}>
                   <img src="/icons/flag_de.svg" alt="Stuttgart, Deutschland" />
                   {`Stuttgart, Deutschland`}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <DefaultSeo
         title='PlumPix - Custom Software Product Development Company'
-        description='From Design and Engineering to Launch and Support'
+        description='From Concept and Engineering to Launch and Support'
       />
       <Layout>
         <main>

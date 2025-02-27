@@ -25,7 +25,7 @@ export const Cards = ({ title, data, button, type }: Props) => {
           {data.map((t) => {
             return (
               <div className={s.card} key={t.title}>
-                <h3>{t.title}</h3>
+                <h3 dangerouslySetInnerHTML={{ __html: t.title }} />
                 <p>{t.text}</p>
                 {t.link && t.link && (
                   <MyLink

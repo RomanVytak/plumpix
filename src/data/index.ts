@@ -2,19 +2,19 @@ import { ArticleProps, OfferCardProps } from "../types"
 
 export const offers_home: OfferCardProps[] = [
   {
-    title: 'Custom Software Development',
+    title: 'Custom Software<br>Development',
     text: 'Leverage our expertise to create an MVP from the ground up and transform it into a comprehensive, feature-rich platform.',
     button: 'Learn more',
     link: '/custom-software-development',
   },
   {
-    title: 'Dedicated Development Team',
+    title: 'Dedicated<br>Development Team',
     text: 'Enhance your capacity with our full-stack engineers who become an integral part of your team, working seamlessly within your business.',
     button: 'Learn more',
     link: '/dedicated-team',
   },
   {
-    title: 'Software Reengineering Solutions',
+    title: 'Software Reengineering<br>Solutions',
     text: 'Revitalize your systems with our engineers, seamlessly integrated into your business to modernize and enhance your software.',
     button: 'Learn more',
     link: '/contacts',

@@ -102,7 +102,6 @@
       flex-wrap: wrap;
       padding-block: 8px;
       height: auto;
-      background-color: var(--white);
     }
   }
 
@@ -195,7 +194,7 @@
       &>ul {
         display: flex;
         gap: min-max(8, 16);
-        background-color: var(--white);
+        background-color: rgba(255, 255, 255, 0.75);
         padding: 4px;
         border-radius: min-max(32, 42);
       }
@@ -267,7 +266,7 @@
       }
 
       [data-sub] {
-        padding: 4px 8px;
+        padding: 8px;
         background-color: var(--white);
         box-shadow: 0px 1px 11.2px 0px #e5e8f2;
         border-radius: min-max(16, 24);
