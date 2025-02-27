@@ -1,0 +1,28 @@
+@import "src/styles/common";
+
+.root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+
+  &.show {
+    opacity: 1;
+    transition: opacity 3s 0s ease;
+  }
+
+  canvas {
+    opacity: .32;
+  }
+
+  .blur {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    // background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7960434173669468) 12%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 87%);
+  }
+}

@@ -11,7 +11,7 @@ const About = () => {
       <Article data={page_about} />
       <Mapa />
       <Cards title="Our Core Values" data={offers_about} />
-      <Founders />
+      {/* <Founders /> */}
       <Form />
     </>
   )

@@ -12,7 +12,8 @@ body {
   @include font_16;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -25,6 +26,12 @@ main {
   .no-p-t & {
     padding-top: 0;
   }
+}
+
+section,
+footer {
+  position: relative;
+  background: var(--white);
 }
 
 section {
