@@ -11,7 +11,9 @@
   justify-content: center;
 
   &.scrolled {
-    background: var(--white);
+    .wrapper {
+      background: var(--white);
+    }
   }
 
   &[data-hide] {
@@ -90,6 +92,11 @@
       menu {
         grid-template-rows: 1fr;
       }
+
+      .wrapper {
+        background: var(--white);
+        transition-delay: 0s;
+      }
     }
   }
 
@@ -97,8 +104,10 @@
     align-items: center;
     justify-content: space-between;
     height: min-max(60, 90);
+    transition: background var(--transition);
 
     @include mq-max-1024 {
+      transition-delay: .15s;
       flex-wrap: wrap;
       padding-block: 8px;
       height: auto;
