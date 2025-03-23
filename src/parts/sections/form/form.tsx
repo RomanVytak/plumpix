@@ -136,7 +136,7 @@ export const Form = () => {
 
                 <div>
                   <div className={css.img}>
-                    {/* <img src="/socials/linkedin.svg" alt="Roman Vytak" /> */}
+                    <img src="/img/rv.jpg" />
                   </div>
                   <p>{`Roman Vytak`}</p>
                   {/* <a href='/' target='_blank' className={`${css.link} font_18`}>

@@ -75,6 +75,10 @@ export const TECHSTACK = {
     icon: '/icons/techstack/magento.svg',
     name: 'Magento',
   },
+  express: {
+    icon: '/icons/techstack/express.svg',
+    name: 'Express.js',
+  },
 }
 
 export enum CONTENT_TYPES {

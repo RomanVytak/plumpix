@@ -8,7 +8,7 @@ export const cases = [
   {
     slug: 'case-abacus',
     home: {
-      tags: ['LMS platform', TECHSTACK.symphony.name, TECHSTACK.typeScript.name, TECHSTACK.bootstrap.name],
+      tags: ['LMS platform'],
       name: 'Seamless and intuitive LMS for optimizing the educational process',
       image: '/img/cases/abacus/home.jpg',
       preview: '/img/cases/abacus/preview.jpg',
@@ -62,18 +62,19 @@ export const cases = [
   {
     slug: 'case-face-and-skin',
     home: {
-      tags: ['SBP Booking', 'eCommerce', TECHSTACK.wp.name, TECHSTACK.typeScript.name],
+      tags: ['SBP Booking', 'eCommerce'],
       name: 'Web Application for Booking a Cosmetologist, eCommerce site',
       image: '/img/cases/face/home.jpg',
       preview: '/img/cases/face/preview.jpg',
     },
     team: ['2 backend engineers', '2 frontend engineers', '1 QA engineer', '1 designer'],
     duration: '6 months',
-    technologies: [TECHSTACK.php, TECHSTACK.graphql, TECHSTACK.magento, TECHSTACK.react, TECHSTACK.redux, TECHSTACK.next],
+    technologies: [TECHSTACK.node, TECHSTACK.express, TECHSTACK.graphql, TECHSTACK.react, TECHSTACK.next],
     preview: 'The platform is dedicated to teaching arithmetic through hands-on methods. It offers resources, courses, and materials for children learning the fundamentals of mathematics using visualization and practical exercises. The goal is to make learning arithmetic interactive and engaging, helping students playfully develop their math skills.',
     about: `
       <h3>About project</h3>
       <p>SBP Booking is a web application designed to simplify the process of booking professional cosmetologists. The platform connects clients with specialists, allowing them to choose services, check availability, and book appointments seamlessly. The goal was to develop a user-friendly, high-performance system that enhances the user experience and streamlines business operations for beauty professionals.</p>
+      <p>An eCommerce website was also implemented, enabling beauty professionals to sell products directly through the platform. This feature expands business opportunities and provides clients a convenient way to purchase beauty products online.</p>
     `,
     сhallenge: `
       <h3>Product feature</h3>
@@ -95,10 +96,14 @@ export const cases = [
       <p>The design focused on a clean, minimalistic aesthetic with a mobile-first approach. The UI was crafted to ensure quick navigation, clear service listings, and a smooth checkout process.</p>
 
       <h3>3. Development</h3>
-      <p>...</p>
-
-      <h3>4. Release</h3>
-      <p>...</p>
+      <p>The development process was centered around performance, security, and scalability. Key technologies and frameworks included:</p>
+      <ul>
+        <li>Frontend: React.js for a dynamic and responsive user interface.</li>
+        <li>Backend: Node.js with Express.js for a fast and scalable server-side environment.</li>
+        <li>Database: PostgreSQL to ensure data integrity and efficient query performance.</li>
+        <li>Authentication: JWT-based authentication for secure user sessions.</li>
+        <li>Notifications: Email and SMS reminders were integrated to improve appointment adherence.</li>
+      </ul>
     `,
     slider: [
       '/img/cases/face/slide1.jpg',
