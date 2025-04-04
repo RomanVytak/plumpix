@@ -8,24 +8,24 @@ import { MyLink } from '../../../components/link/link'
 const temp = [
   {
     image: '/img/review/sophia.png',
-    name: 'Sofia Pop',
-    position: 'SEO',
+    name: 'Nazar',
+    position: 'Co-founder',
     text: 'Plumpix approaches the project as if it were their own - dedicated and passionate. Their expertise, innovative mindset, and attention to detail ensured a smooth and efficient process. They are proactive, reliable, and always fully committed to delivering top-notch results.',
     site: 'enjoy.ua',
     link: 'https://enjoy.ua/',
   },
   {
-    image: '/img/review/sophia.png',
-    name: 'Sofia Pop',
-    position: 'SEO',
+    image: '/img/review/iryna.jpg',
+    name: 'Iryna',
+    position: 'Founder',
     text: 'Huge thanks to Plumpix for their exceptional partnership! They grasped our needs, provided intelligent solutions, and built a fast, efficient, and intuitive system. Their professionalism, creativity, and transparent communication made the entire journey stress-free.',
     site: 'faceandskin.com.ua',
     link: 'https://faceandskin.com.ua/',
   },
   {
-    image: '/img/review/sophia.png',
-    name: 'Sofia Map',
-    position: 'SEO',
+    image: '/img/review/eugen.jpg',
+    name: 'Yevhen',
+    position: 'Co-founder, Sales manager',
     text: 'Plumpix is always responsive and quick to act on any ideas. They crafted a modern, interactive, and highly functional solution that’s a pleasure to use. Their team brought fresh ideas, executed everything flawlessly, and ensured a smooth process from start to finish.',
     site: 'abacusarithmetic.com',
     link: 'https://info.abacusarithmetic.com/',
@@ -37,7 +37,7 @@ export const Reviews = () => {
     <section className={s.root}>
       <div className="wrapper">
         <div className={s.wrap}>
-          <h2 data-fade dangerouslySetInnerHTML={{ __html: 'What our clients<br>say about PlumPix' }} />
+          <h2 data-fade dangerouslySetInnerHTML={{ __html: 'What our clients say<br>about PlumPix' }} />
           <div className={s.slider}>
             <Swiper
               modules={[Pagination, Mousewheel]}
@@ -59,7 +59,9 @@ export const Reviews = () => {
                 return (
                   <SwiperSlide key={t.name + index} className={s.slide} data-child>
                     <div className={s.info}>
-                      <Image src={t.image} alt={t.name} width={100} height={100} />
+                      <div className={s.imageWrap}>
+                        <Image src={t.image} alt={t.name} width={100} height={100} />
+                      </div>
                       <div className={s.nameWrap}>
                         <h3 className={s.name}>{t.name}</h3>
                         <p className={s.position}>{t.position}</p>
