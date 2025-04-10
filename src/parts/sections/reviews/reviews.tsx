@@ -7,7 +7,7 @@ import { MyLink } from '../../../components/link/link'
 
 const temp = [
   {
-    image: '/img/review/sophia.png',
+    image: '/img/review/nazar.jpg',
     name: 'Nazar',
     position: 'Co-founder',
     text: 'Plumpix approaches the project as if it were their own - dedicated and passionate. Their expertise, innovative mindset, and attention to detail ensured a smooth and efficient process. They are proactive, reliable, and always fully committed to delivering top-notch results.',
@@ -25,7 +25,7 @@ const temp = [
   {
     image: '/img/review/eugen.jpg',
     name: 'Yevhen',
-    position: 'Co-founder, Sales manager',
+    position: 'Co-founder',
     text: 'Plumpix is always responsive and quick to act on any ideas. They crafted a modern, interactive, and highly functional solution that’s a pleasure to use. Their team brought fresh ideas, executed everything flawlessly, and ensured a smooth process from start to finish.',
     site: 'abacusarithmetic.com',
     link: 'https://info.abacusarithmetic.com/',
