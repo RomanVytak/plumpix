@@ -10,7 +10,7 @@ export const PlainText = ({ data }: Props) => {
   }
 
   return (
-    <section className={`${css.root}`}>
+    <section className={`${css.root}`} data-fade>
       <div className="wrapper">
         <div className={css.content} dangerouslySetInnerHTML={{ __html: data }} />
       </div>

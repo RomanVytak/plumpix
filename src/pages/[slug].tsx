@@ -10,8 +10,6 @@ import { CONTENT_TYPES } from "../const"
 import { PlainText } from "../parts/sections/plainText/plainText"
 
 const Page = ({ post }) => {
-  console.log('---- post ', post)
-
   return (
     <>
       {Object.keys(post).map((contentBlock: any, index: number) => {
