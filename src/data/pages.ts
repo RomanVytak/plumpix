@@ -91,6 +91,13 @@ export const pages_data = [
      * stages
      */
     [CONTENT_TYPES.stages]: null,
+
+    /**
+     * form
+     */
+    [CONTENT_TYPES.form]: {
+      title: 'Looking to hire a dedicated development team?'
+    }
   },
 
   /**

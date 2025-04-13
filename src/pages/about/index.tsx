@@ -12,7 +12,7 @@ const About = () => {
       <Mapa />
       <Cards title="Our Core Values" data={offers_about} />
       {/* <Founders /> */}
-      <Form />
+      <Form title="Tell us a bit about your idea - we'll get back to you shortly" />
     </>
   )
 }

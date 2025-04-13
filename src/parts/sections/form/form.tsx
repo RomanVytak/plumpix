@@ -17,12 +17,13 @@ const LABELS = {
     required: true,
   },
   message: {
-    title: 'How can we help you?*',
+    title: 'How can we assist you?*',
     type: 'textarea',
     placeholder: 'Tell us briefly about your project, or ask us anything',
     required: true,
   }
 }
+
 type Status = {
   success?: boolean | null,
   message?: string
@@ -84,7 +85,7 @@ const PopUp = ({ callback }: { callback: () => void }) => {
   )
 }
 
-export const Form = () => {
+export const Form = ({ title, size }: { title?: string, size?: 36 | 48 }) => {
   const [submiting, setSubmiting] = useState(false);
   const [status, setStatus] = useState<Status>(DEFAULT_STATUS);
   const [formData, setFormData] = useState(DEFAULT_DATA);
@@ -149,7 +150,13 @@ export const Form = () => {
 
             </div>
             <div className={css.grid_form} data-fade data-children>
-              <h2 data-child className="font_36" dangerouslySetInnerHTML={{ __html: 'Start Creating Something<br>Exceptional Together!' }} />
+              <h2
+                data-child
+                className={`font_${size || 36}`}
+                dangerouslySetInnerHTML={{
+                  __html: title || 'Start Creating Something<br>Exceptional Together!'
+                }}
+              />
               <form onSubmit={handleSubmit}>
                 <FormLabels labels={LABELS} handleChange={handleChange} formData={formData} />
                 {

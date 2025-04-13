@@ -89,4 +89,5 @@ export enum CONTENT_TYPES {
   reviews = 'reviews',
   stages = 'stages',
   plainText = 'plainText',
+  form = 'form',
 }

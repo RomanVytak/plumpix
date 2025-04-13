@@ -5,6 +5,7 @@ const data = {
   title: 'Start Creating Something<br>Exceptional Together!',
   button: 'Book a meeting',
   link: 'https://calendar.app.google/2tCsPP7RwBfJE9vV9',
+  or: 'Or you can fill out the form and we’ll get back to you sooner.',
 }
 
 export const HomeContacts = () => {
@@ -23,6 +24,7 @@ export const HomeContacts = () => {
               {data.button}
             </MyLink>
           </div>
+          <p>{data.or}</p>
         </div>
       </div>
     </section>

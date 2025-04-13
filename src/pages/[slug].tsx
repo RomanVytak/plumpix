@@ -10,6 +10,8 @@ import { CONTENT_TYPES } from "../const"
 import { PlainText } from "../parts/sections/plainText/plainText"
 
 const Page = ({ post }) => {
+  console.log('---- post ', post)
+
   return (
     <>
       {Object.keys(post).map((contentBlock: any, index: number) => {
@@ -30,7 +32,7 @@ const Page = ({ post }) => {
             return <PlainText key={index} data={post.plainText} />
         }
       })}
-      <Form />
+      <Form title={post?.form?.title} />
     </>
   )
 }

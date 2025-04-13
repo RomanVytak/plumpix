@@ -12,12 +12,12 @@ const Home = () => {
   return (
     <>
       <HomeText />
-      <Cards title="How We Can Help You" data={offers_home} />
+      <Cards title="What We Offer" data={offers_home} />
       <Reviews />
       <Cases data={cases} title='Our Software Product<br>Development Success Stories' />
       <Industries />
       <TechStack />
-      <Form />
+      <Form title="Let's discuss your project" size={48} />
     </>
   )
 }
