@@ -11,7 +11,7 @@ export const Article = ({ data }: { data: ArticleProps }) => {
         <div className={`wrapper-grid ${css.grid}`}>
           <div className={css.text} data-fade data-children>
             <h1>{data.title}</h1>
-            <p className="font_18_reg">{data.text}</p>
+            <p>{data.text}</p>
             {data.button && data.link && (
               <MyLink href={data.link} title={data.button}>{data.button}</MyLink>
             )}
